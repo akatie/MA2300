@@ -1,0 +1,67 @@
+\documentclass[nohyper,justified]{tufte-handout}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview=FitH}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+
+\title{MA 2300 Section 2}
+\author{Kate Davis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
+
+\usepackage[buttonsize=1em]{animate}
+
+\makeatother
+
+\begin{document}
+<<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
+library(knitr)
+options(formatR.arrow=TRUE,width=50)
+opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='tikz', fig.width=5, fig.height=5, fig.show='hold', cache=TRUE, par=TRUE)
+knit_hooks$set(par=function(before, options, envir){
+if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3)
+}, crop=hook_pdfcrop)
+HeightInWholeInches <- read.table("/extra/akd/MA2300/HeightInWholeInches.txt", header=TRUE, quote="\"", stringsAsFactors=FALSE)
+
+@
+
+\maketitle
+\begin{abstract}
+Lecture notes for MA 2300 Statistics I, Spring 2005, Section 2
+\end{abstract}
+
+\section{Statistical Data Analysis}
+
+Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percente), and monetary values are examples numeric data points. House numbers, credit scores, and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
+
+\subsection{Height in Whole Inches}
+
+Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points} of \textbf{Height in Whole Inches} of students in MA3200 Section 2, in the original order presented:
+
+<<rawdata,echo=FALSE>>=
+cat(HeightInWholeInches$Height)
+
+@
+
+This set of data has \Sexpr{nrow(HeightInWholeInches)} data points. To better evaluate this data, lets sort it.
+
+<<sorteddata,echo=FALSE>>=
+cat(sort(HeightInWholeInches$Height))
+@
+
+We can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is \Sexpr{min(HeightInWholeInches$Height)} and the highest or maximum value is \Sexpr{max(HeightInWholeInches$Height)}. The \textbf{Range}\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} is \Sexpr{max(HeightInWholeInches$Height)-min(HeightInWholeInches$Height)}
+
+
+\end{document}
