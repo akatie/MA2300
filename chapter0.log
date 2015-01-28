@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  28 JAN 2015 14:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  28 JAN 2015 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,9 +693,9 @@ LaTeX Info: Redefining \nameref on input line 77.
 \openout3 = `chapter0.out'.
 
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 87.
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 84.
 LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <8> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 87.
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 84.
 
 
 LaTeX Warning: Marginpar on page 1 moved.
@@ -703,62 +703,195 @@ LaTeX Warning: Marginpar on page 1 moved.
 
 LaTeX Warning: Marginpar on page 1 moved.
 
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 95.
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 91.
 (/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 95.
+(Font)              scaled to size 8.50006pt on input line 91.
 
-Overfull \hbox (128.065pt too wide) in paragraph at lines 97--97
-[]\T1/fvm/m/n/10 ## 64 70 72 73 69 67 68 66 62 71 66 72 67 74 71 72 67 71 65 65
- 69 71 69 72 71 68 63 54[] 
- []
-
-
-Overfull \hbox (128.065pt too wide) in paragraph at lines 108--108
-[]\T1/fvm/m/n/10 ## 54 62 63 64 65 65 66 66 67 67 67 68 68 69 69 69 70 71 71 71
- 71 71 72 72 72 72 73 74[] 
+Overfull \hbox (112.7139pt too wide) in paragraph at lines 93--93
+[]\T1/fvm/m/n/10 64 70 72 73 69 67 68 66 62 71 66 72 67 74 71 72 67 71 65 65 69
+ 71 69 72 71 68 63 54[] 
  []
 
 
 LaTeX Warning: Marginpar on page 1 moved.
+
+
+Overfull \hbox (112.7139pt too wide) in paragraph at lines 102--102
+[]\T1/fvm/m/n/10 54 62 63 64 65 65 66 66 67 67 67 68 68 69 69 69 70 71 71 71 71
+ 71 72 72 72 72 73 74[] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 106
+.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pplx.fd
+File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 106
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 106
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 106
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 106
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+<figure/graphics-center-chart-1.pdf, id=39, 361.35pt x 180.675pt>
+File: figure/graphics-center-chart-1.pdf Graphic file (type pdf)
+
+<use figure/graphics-center-chart-1.pdf>
+Package pdftex.def Info: figure/graphics-center-chart-1.pdf used on input line 
+160.
+(pdftex.def)             Requested size: 312.0pt x 156.0005pt.
+
+Overfull \hbox (11.53558pt too wide) in paragraph at lines 172--172
+|\T1/pplj/m/it/12 Distribution Shapes: His-tograms, Fre-quency Poly-gons, and O
+gives| 
+ []
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+[2] <figure/graphics-histogram-1.pdf, id=46, 361.35pt x 361.35pt>
+File: figure/graphics-histogram-1.pdf Graphic file (type pdf)
+
+<use figure/graphics-histogram-1.pdf>
+Package pdftex.def Info: figure/graphics-histogram-1.pdf used on input line 187
+.
+(pdftex.def)             Requested size: 152.88171pt x 152.87975pt.
+
+<figure/graphics-histogram-2.pdf, id=47, 361.35pt x 361.35pt>
+File: figure/graphics-histogram-2.pdf Graphic file (type pdf)
+
+<use figure/graphics-histogram-2.pdf>
+Package pdftex.def Info: figure/graphics-histogram-2.pdf used on input line 188
+.
+(pdftex.def)             Requested size: 152.88171pt x 152.87975pt.
+
+Underfull \hbox (badness 2644) in paragraph at lines 193--193
+\T1/pplj/m/n/10 mu-la-tive Fre-quency Poly-gon).
+ []
+
+<figure/graphics-ogive-1.pdf, id=48, 361.35pt x 361.35pt>
+File: figure/graphics-ogive-1.pdf Graphic file (type pdf)
+
+<use figure/graphics-ogive-1.pdf>
+Package pdftex.def Info: figure/graphics-ogive-1.pdf used on input line 201.
+(pdftex.def)             Requested size: 152.88171pt x 152.87975pt.
+
+Underfull \hbox (badness 5245) in paragraph at lines 206--206
+[]\T1/pplj/m/n/10 Figure 3: []Histograms with
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 206--206
+\T1/pplj/m/n/10 Ogive (Cu-mu-la-tive Fre-quency
+ []
 
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
-[1
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+[3 <./figure/graphics-center-chart-1.pdf> <./figure/graphics-histogram-1.pdf> <
+./figure/graphics-histogram-2.pdf>] [4 <./figure/graphics-ogive-1.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
- (./chapter0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
+(./chapter0.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
 Package rerunfilecheck Info: File `chapter0.out' has not changed.
-(rerunfilecheck)             Checksum: 84B9AF2892AF50F40CACC5CAE52E2755;350.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
+(rerunfilecheck)             Checksum: CEA2A38A1C96F26A11A8C5E0D889D096;1139.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
  ) 
 Here is how much of TeX's memory you used:
- 12671 strings out of 495028
- 179764 string characters out of 6181496
- 286394 words of memory out of 5000000
- 15672 multiletter control sequences out of 15000+600000
- 34654 words of font info for 52 fonts, out of 8000000 for 9000
+ 12800 strings out of 495028
+ 182108 string characters out of 6181496
+ 292475 words of memory out of 5000000
+ 15759 multiletter control sequences out of 15000+600000
+ 46282 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,11n,45p,713b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,11n,45p,1207b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/
-uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on chapter0.pdf (1 page, 55590 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on chapter0.pdf (4 pages, 98394 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 1093 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -29,39 +29,125 @@
 <<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
 library(knitr)
 options(formatR.arrow=TRUE,width=50)
-opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='tikz', fig.width=5, fig.height=5, fig.show='hold', cache=TRUE, par=TRUE)
+opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='pdf', fig.width=5, fig.height=5, fig.show='hold', cache=FALSE, par=TRUE)
 knit_hooks$set(par=function(before, options, envir){
 if (before && options$fig.show!='none') par(mar=c(4,4,.1,.1),cex.lab=.95,cex.axis=.9,mgp=c(2,.7,0),tcl=-.3)
 }, crop=hook_pdfcrop)
-HeightInWholeInches <- read.table("/extra/akd/MA2300/HeightInWholeInches.txt", header=TRUE, quote="\"", stringsAsFactors=FALSE)
+@
 
+<<data,include=FALSE,cache=FALSE,echo=FALSE>>=
+require(plyr)
+require(reshape2)
+require(xtable)
+require(ggplot2)
+require(ggthemes)
+require(scales)
+HeightInWholeInches <- read.table("/extra/akd/MA2300/HeightInWholeInches.txt", header=TRUE, quote="\"", stringsAsFactors=FALSE)
+orgdata=HeightInWholeInches
+orgdata$Observation=(1:nrow(orgdata))
+HeightInWholeInches$count=1
+hiwifreq=dcast(HeightInWholeInches,Height~count)
+names(hiwifreq)=c("Height","Frequency")
+hiwifreq$CumulativeFrequency=cumsum(hiwifreq$Frequency)
+hiwifreq$ecdf=(hiwifreq$CumulativeFrequency)/sum(hiwifreq$Frequency)
 @
 
 \maketitle
-\begin{abstract}
-Lecture notes for MA 2300 Statistics I, Spring 2005, Section 2
-\end{abstract}
+\section{Introduction to Data Analysis}
+Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
 
-\section{Statistical Data Analysis}
+\section{Height in Whole Inches}
+Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
 
-Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percente), and monetary values are examples numeric data points. House numbers, credit scores, and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
-
-\subsection{Height in Whole Inches}
-
-Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points} of \textbf{Height in Whole Inches} of students in MA3200 Section 2, in the original order presented:
-
-<<rawdata,echo=FALSE>>=
+<<rawdata,echo=FALSE,comment=''>>=
 cat(HeightInWholeInches$Height)
+hmax=max(HeightInWholeInches$Height)
+hmin=min(HeightInWholeInches$Height)
+hrange=hmax-hmin
+@
+This set of data has \Sexpr{nrow(HeightInWholeInches)} data points. To better evaluate this data, lets sort it. We\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is \Sexpr{hmin} inches and the highest or maximum value is \Sexpr{hmax} inches. The \textbf{Range} is \Sexpr{hrange} inches.
+
+<<sorteddata,echo=FALSE,comment=''>>=
+HeightInWholeInches$Height=(sort(HeightInWholeInches$Height))
+cat(HeightInWholeInches$Height)
+@
+
+This data set has \Sexpr{nrow(hiwifreq)} discrete values for height, fewer than the range of $20$ inches. There is a gap in observations between $54$ inches and $62$ inches, but all other height values in the range are represented.
+
+To gain more knowledge about this dataset, we must describe the \textbf{distribution}\marginnote{The Oxford English Dictionary defines \textbf{Distribution} as the \textit{way in which something is shared out among a group or spread over an area} } of values across the measurement range, with a goal of using that information for predictions, estimations and other inferences about the population when a complete \textbf{census}\marginnote{A \textbf{Census} is a complete enumeration of every unit, everyone or everything in a population.} 
+
+The \textbf{statistical distribution}\marginnote{A \textbf{Statistical Distribution} assigns probabilities to the possible values of a data set } can be estimated or inferred from a data set, and 
+is used to estimate the accuracy of these predictions, estimates, inferences.
+
+\section{Frequency Tables}
+We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
+
+<<Frequency-table,echo=FALSE,results='asis'>>=
+ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
+otable=xtable(hiwifreq[,c(1,2,3)],caption = "Frequency Table")
+print(otable,include.rownames=F, scalebox=0.95)
+@
+
+\section{Measures of Center}
+<<centers,echo=FALSE,include=FALSE>>=
+n=nrow(hiwifreq)
+moden=which(hiwifreq$Frequency==max(hiwifreq$Frequency))
+mode=hiwifreq$Height[moden[1]]
+mediann1=floor((n+1)/2)
+mediann2=ceiling((n+1)/2)
+median=(HeightInWholeInches$Height[mediann1]+HeightInWholeInches$Height[mediann2])/2
+mean=mean(HeightInWholeInches$Height)
 
 @
 
-This set of data has \Sexpr{nrow(HeightInWholeInches)} data points. To better evaluate this data, lets sort it.
+To understand more about the distribution of the height in inches of our studens, we first examine ``centers'' of the data: the mode, the median, and the mean.
 
-<<sorteddata,echo=FALSE>>=
-cat(sort(HeightInWholeInches$Height))
+The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is \Sexpr{mode} inches with frequency \Sexpr{hiwifreq$Frequency[moden]} students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \textit{unimodal}. A data set can have more than one mode, or be \textit{multi-modal}.
+
+The \textbf{median}\marginnote{The \textbf{median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order} of this dataset is \Sexpr{median} inches with frequency of \Sexpr{hiwifreq$Frequency[mediann1]} students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
+
+The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values} height is \Sexpr{mean} inches. The mean is the center that we will use to further examine the ``spread'' of the values.
+
+<<center-chart,echo=FALSE,include=TRUE,fig.cap="Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines",fig.height=2.5>>=
+cbreaks=sort(c(hmin,hmax,mode,median,round(mean,1)))
+centerchart=ggplot(orgdata,aes(x=Observation,y=Height))+geom_point() + theme_tufte() + 
+  geom_hline(yintercept=mode,color="green") +
+  geom_hline(yintercept=median,color="blue") +
+  geom_hline(yintercept=mean,color="red") +
+scale_y_continuous(breaks=round(cbreaks),labels=cbreaks)+
+scale_x_discrete(breaks=NULL)+theme(axis.ticks = element_blank())+
+  ggtitle("Height in Whole Inches with Centers")
+print(centerchart)
 @
 
-We can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is \Sexpr{min(HeightInWholeInches$Height)} and the highest or maximum value is \Sexpr{max(HeightInWholeInches$Height)}. The \textbf{Range}\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} is \Sexpr{max(HeightInWholeInches$Height)-min(HeightInWholeInches$Height)}
 
+
+\section{Distribution Shapes: Histograms, Frequency Polygons, and Ogives}
+
+Once we have calculated the frequencies and centers of our datasets we can start to explore the shape and spread of the distribution of values with charts. All charts can be drawn from the frequency table data.
+
+The \textbf{histogram}\marginnote{A \textbf{Histogram} is a visualization of a frequency table.} is a view of the overall pattern of the distribution. Histogram bars are evenly sized and each bar represents the same class levels of values, and is centered on the mean of the class. The height of the bar represents the number of observations in that class.
+
+The mode can easily be seen on a histogram, and the median is the vertical line at which there is equal area to the left and to the right in the chart. 
+
+A histogram's shape can be symmetric, skewed right with more of the observations on the right or higher values, or skewed to the left with more of the observations on the left or lower values.
+
+A frequency polygon simply displays the frequency for a class, and an ogive, or cumulative frequency polygon displays the cumulative frequency for a class. 
+
+<<histogram,echo=FALSE,out.width='.49\\linewidth',fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
+hbase=ggplot(HeightInWholeInches,aes(x=Height))+theme_tufte(base_size = 12, base_family = "")
+hhist=hbase+geom_histogram(binwidth=1,fill="white",color="grey")
+hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
+print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
+print(hfpoly+ggtitle("Frequency Polygram of Weights in Whole Inches"))
+@
+
+<<ogive,echo=FALSE,out.width='.49\\linewidth',fig.cap="Histograms with Ogive (Cumulative Frequency Polygon).">>=
+hogive=hhist+geom_line(data=hiwifreq,aes(y = CumulativeFrequency,color="Ogive"))
+print(hogive+ggtitle("Histogram of Weights in Whole Inches"))
+
+@
+
+\section{Measures of Spread}
 
 \end{document}
