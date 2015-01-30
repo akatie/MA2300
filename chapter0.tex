@@ -184,28 +184,28 @@ colorlinks=false]{hyperref}
 Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
 
 \section{Height in Whole Inches}
-Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points. Each data point within a data set is called an observation, denoted $x_i$. $n$ denotes the number of observations.} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
+Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points. Each data point within a data set is called an observation, denoted $x_i$, where $i$ is the number of the observation. For our data set, $x_3$ is 72. $N$ denotes the number of observations.} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
 64 70 72 73 69 67 68 66 62 71 66 72 67 74
-71 72 67 71 65 65 69 71 69 72 71 68 63 54
+71 72 67 71 65 65 69 71 69 72 71 68 63 64
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-This set of data has 28 data points. To better evaluate this data, lets sort it. We\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is 54 inches and the highest or maximum value is 74 inches. The \textbf{Range} is 20 inches.
+This set of data has 28 data points. To better evaluate this data, lets sort it. We\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is 62 inches and the highest or maximum value is 74 inches. The \textbf{Range} is 12 inches.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-54 62 63 64 65 65 66 66 67 67 67 68 68 69
+62 63 64 64 65 65 66 66 67 67 67 68 68 69
 69 69 70 71 71 71 71 71 72 72 72 72 73 74
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-This data set has 14 discrete values for height, fewer than the range of $20$ inches. There is a gap in observations between $54$ inches and $62$ inches, but all other height values in the range are represented.
+This data set has 13 discrete values for height, fewer than the range of $20$ inches. There is a gap in observations between $54$ inches and $62$ inches, but all other height values in the range are represented.
 
 To gain more knowledge about this dataset, we must describe the \textbf{distribution}\marginnote{The Oxford English Dictionary defines \textbf{Distribution} as the \textit{way in which something is shared out among a group or spread over an area} } of values across the measurement range, with a goal of using that information for predictions, estimations and other inferences about the population when a complete \textbf{census}\marginnote{A \textbf{Census} is a complete enumeration of every unit, everyone or everything in a population.} 
 
@@ -216,7 +216,7 @@ is used to estimate the accuracy of these predictions, estimates, inferences.
 We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Jan 30 11:37:12 2015
+% Fri Jan 30 21:06:29 2015
 \begin{table}[ht]
 \centering
 \scalebox{0.95}{
@@ -224,10 +224,9 @@ We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} i
   \hline
 Height & Frequency & CumulativeFrequency \\ 
   \hline
- 54 &   1 &   1 \\ 
-   62 &   1 &   2 \\ 
-   63 &   1 &   3 \\ 
-   64 &   1 &   4 \\ 
+ 62 &   1 &   1 \\ 
+   63 &   1 &   2 \\ 
+   64 &   2 &   4 \\ 
    65 &   2 &   6 \\ 
    66 &   2 &   8 \\ 
    67 &   3 &  11 \\ 
@@ -252,13 +251,24 @@ To understand more about the distribution of the height in inches of our studens
 
 The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is 71 inches with frequency 5 students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \textit{unimodal}. A data set can have more than one mode, or be \textit{multi-modal}.
 
-The \textbf{median}\marginnote{The \textbf{Median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order. The median is the 50th percentile} of this dataset is 69 inches with frequency of 1 students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
+The \textbf{median}\marginnote{The \textbf{Median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order. The median is the 50th percentile} of this dataset is 69 inches with frequency of NA students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
 
 The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values, denoted $\bar{x}$}. The mean is the center that we will use to further examine the ``spread'' of the values.
 
+The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
+
 $\bar{x}=\sum\limits_{i=0}^{n} x_i$
 
-In our data set, the mean height is 68.17857 inches, which we round to 68.2
+
+$=x_1+x_2+x_3+ \dots +x_{25}+x_{26}+x_{27}+x_{28}$
+
+
+
+$=  64 + 70 + 72 + 73 + 69 + 67 + 68 + 66 + 62 + 71 + 66 + 72 + 67 + 74 + 71 + 72 + 67 + 71 + 65 + 65 + 69 + 71 + 69 + 72 + 71 + 68 + 63 +64 $
+$= 1919 $
+
+
+In our data set, the mean height is 1919 divided by 28, or 68.53571 inches, which we round to 68.5
 
 \begin{figure}
 \begin{knitrout}
@@ -274,6 +284,115 @@ In our data set, the mean height is 68.17857 inches, which we round to 68.2
 \caption{Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines}
 \end{figure}
 
+
+
+\section{Measures of Spread}
+
+The ``spread'' of the distribution of a dataset can be quantified by range, first and third quartiles, variance and standard deviation.
+
+The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
+
+
+
+In our height dataset of 28, the first quartile is the 7th observation, 66, and the third quartile is the 21th observation, 71.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+62 63 64 64 65 65 66
+66 67 67 67 68 68 69
+69 69 70 71 71 71 71
+71 72 72 72 72 73 74
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+We would like to measure the \textbf{Deviation}\marginnote{The \textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
+
+
+\begin{figure}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-mean-center-chart-1} 
+
+}
+
+
+
+\end{knitrout}
+\end{figure}
+
+The deviations are both positive and negative, and the sum of the deviations is zero, so this statistic alone is not suitable for further analysis. If we square the deviations, the sum is no longer zero; in fact, the sum of the squared deviations is the \textbf{Variance}\marginnote{The \textbf{round(Variance,1)} is a measure of variability or spread $Var(X)$, often denoted by $\sigma^2$}. The variance of our dataset is 10.39158 square inches. To get back to our original unit of inches, we take the square root of the variance, 3.2, or \textbf{Standard Deviation}\marginnote{The \textbf{Standard Deviation} of X, $StdDev(X)$, often denoted $\sigma$, is the standard measure of spread used in statistical analysis.}
+
+$Dev_{\bar{x}}=(x_i-\bar{x})$
+
+$Dev_{\bar{x}}^2=(x_i-\bar{x})^2 $
+
+$Var(X)=(\sum_{i=1}^{N} Dev_{\bar{x}}^2)/N$
+$=(\sum_{i=1}^{N} (x_i-\bar{x})^2)/N$
+
+$StdDev(X)=\sqrt{Var(X)}$
+%$\sigma=\sqrt{\sigma}$
+
+% latex table generated in R 3.1.2 by xtable 1.7-4 package
+% Fri Jan 30 21:06:29 2015
+\begin{table}[ht]
+\centering
+\scalebox{0.95}{
+\begin{tabular}{rrr}
+  \hline
+Height & Deviation & DeviationSq \\ 
+  \hline
+ 64 & -4.54 & 20.57 \\ 
+   70 & 1.46 & 2.14 \\ 
+   72 & 3.46 & 12.00 \\ 
+   73 & 4.46 & 19.93 \\ 
+   69 & 0.46 & 0.22 \\ 
+   67 & -1.54 & 2.36 \\ 
+   68 & -0.54 & 0.29 \\ 
+   66 & -2.54 & 6.43 \\ 
+   62 & -6.54 & 42.72 \\ 
+   71 & 2.46 & 6.07 \\ 
+   66 & -2.54 & 6.43 \\ 
+   72 & 3.46 & 12.00 \\ 
+   67 & -1.54 & 2.36 \\ 
+   74 & 5.46 & 29.86 \\ 
+   71 & 2.46 & 6.07 \\ 
+   72 & 3.46 & 12.00 \\ 
+   67 & -1.54 & 2.36 \\ 
+   71 & 2.46 & 6.07 \\ 
+   65 & -3.54 & 12.50 \\ 
+   65 & -3.54 & 12.50 \\ 
+   69 & 0.46 & 0.22 \\ 
+   71 & 2.46 & 6.07 \\ 
+   69 & 0.46 & 0.22 \\ 
+   72 & 3.46 & 12.00 \\ 
+   71 & 2.46 & 6.07 \\ 
+   68 & -0.54 & 0.29 \\ 
+   63 & -5.54 & 30.64 \\ 
+   64 & -4.54 & 20.57 \\ 
+   \hline
+\end{tabular}
+}
+\caption{Deviations} 
+\end{table}
+
+
+
+The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-boxplot-1} 
+
+}
+
+\caption[Boxplot]{Boxplot}\label{fig:boxplot}
+\end{figure}
+
+
+\end{knitrout}
 
 \section{Distribution Shapes: Histograms, Frequency Polygons, and Ogives}
 
@@ -321,109 +440,6 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 
 
 \end{knitrout}
-
-\section{Measures of Spread}
-
-The ``spread'' of the distribution of a dataset can be quantified by range, first and third quartiles, variance and standard deviation.
-
-The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
-
-
-
-In our height dataset of 28, the first quartile is the 7th observation, 66, and the third quartile is the 21th observation, 71.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-54 62 63 64 65 65 66
-66 67 67 67 68 68 69
-69 69 70 71 71 71 71
-71 72 72 72 72 73 74
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-We would like to measure the \textbf{Deviation}\marginnote{The textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
-
-
-\begin{figure}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-mean-center-chart-1} 
-
-}
-
-
-
-\end{knitrout}
-\end{figure}
-
-The deviations are both positive and negative, and the sum of the deviations is zero, so this statistic alone is not suitable for further analysis. If we square the deviations, the sum is no longer zero; in fact, the sum of the squared deviations is the \textbf{Variance}\marginnote{The \textbf{Variance} is a measure of variability or spread}. The variance of our dataset is 478.10714 square inches. To get back to our original unit of inches, we take the square root of the variance, 21.86566, or \textbf{Standard Deviation}\marginnote{The \textbf{Standard Deviation}, denoted $s$, is the standard measure of spread used in statistical analysis.}, denoted $s$. Variance is often denoted $s^2$.
-
-$Var(x)=\sum_{i=1}^{N} (x_i-\bar{x})^2$
-
-$s(x)=\sqrt{Var(x)}$
-
-% latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Jan 30 11:37:13 2015
-\begin{table}[ht]
-\centering
-\scalebox{0.95}{
-\begin{tabular}{rrr}
-  \hline
-Height & Deviation & DeviationSq \\ 
-  \hline
- 64 & -4.18 & 17.46 \\ 
-   70 & 1.82 & 3.32 \\ 
-   72 & 3.82 & 14.60 \\ 
-   73 & 4.82 & 23.25 \\ 
-   69 & 0.82 & 0.67 \\ 
-   67 & -1.18 & 1.39 \\ 
-   68 & -0.18 & 0.03 \\ 
-   66 & -2.18 & 4.75 \\ 
-   62 & -6.18 & 38.17 \\ 
-   71 & 2.82 & 7.96 \\ 
-   66 & -2.18 & 4.75 \\ 
-   72 & 3.82 & 14.60 \\ 
-   67 & -1.18 & 1.39 \\ 
-   74 & 5.82 & 33.89 \\ 
-   71 & 2.82 & 7.96 \\ 
-   72 & 3.82 & 14.60 \\ 
-   67 & -1.18 & 1.39 \\ 
-   71 & 2.82 & 7.96 \\ 
-   65 & -3.18 & 10.10 \\ 
-   65 & -3.18 & 10.10 \\ 
-   69 & 0.82 & 0.67 \\ 
-   71 & 2.82 & 7.96 \\ 
-   69 & 0.82 & 0.67 \\ 
-   72 & 3.82 & 14.60 \\ 
-   71 & 2.82 & 7.96 \\ 
-   68 & -0.18 & 0.03 \\ 
-   63 & -5.18 & 26.82 \\ 
-   54 & -14.18 & 201.03 \\ 
-   \hline
-\end{tabular}
-}
-\caption{Deviations} 
-\end{table}
-
-
-
-The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-boxplot-1} 
-
-}
-
-\caption[Boxplot]{Boxplot}\label{fig:boxplot}
-\end{figure}
-
-
-\end{knitrout}
-
 
 
 \end{document}
