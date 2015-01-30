@@ -50,18 +50,118 @@
 \usepackage{alltt}
 \usepackage[T1]{fontenc}
 \usepackage{url}
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
- breaklinks=true,pdfborder={0 0 1},backref=false,colorlinks=false]
- {hyperref}
-\hypersetup{
- pdfstartview=FitH}
+\usepackage{amsmath}
+%\usepackage{geometry}
+%\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\usepackage{parskip}
+\usepackage{enumerate}
+
+%% mess with the fonts
+\ifxetex
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+%\setromanfont{Times Roman}
+\else
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%%\fontencoding {T1}
+%%\fontfamily {phv}
+%%\fontseries {m}
+%%\fontshape {n}
+%%\fontsize {11pt} {19pt}
+%%\linespread {1}
+%%\selectfont
+\usepackage{sectsty}
+\sectionfont{\fontfamily{phv}\fontseries{b}\fontsize{12pt}{20pt}\selectfont}
+\subsectionfont{\fontfamily{phv}\fontseries{b}\fontsize{11pt}{20pt}\selectfont}
+\subsubsectionfont{\fontfamily{phv}\fontseries{b}\fontsize{11pt}{20pt}\selectfont}
+\fi
+% For package xtable
+\usepackage{booktabs}  % Nice toprules and bottomrules
+\heavyrulewidth=1.5pt  % Change the default to heavier lines
+\usepackage{longtable} 
+\usepackage{tabularx}  % To control the width of the table
+%% not used \usepackage{rotating}
+%% Not used \usepackage{changepage} % Temporarily change margins -- helpful for wide xtables
+%\usepackage[titletoc]{appendix}
+%%\usepackage[draft]{pdfpages} % Just inserts a placeholder
+\usepackage{enumitem}  % Indents nicely
+
+% this should make caption font bold.
+%%\usepackage{caption}
+%%\usepackage[margin=.2in,labelfont={rm,bf},textfont={rm},labelsep=period]{caption}
+\usepackage{xstring}
+\usepackage{etoolbox}
+\usepackage{caption}
+
+%%\captionsetup{margin=.2in,labelfont={rm,bf},textfont={rm},font={bf},labelsep=period}
+
+\makeatletter
+%\newcommand\formatlabel[1]{%
+%    \noexpandarg
+%    \IfSubStr{#1}{.}{%
+%      \StrBefore{#1}{.}[\firstcaption]%
+%      \StrBehind{#1}{.}[\secondcaption]%
+%      \textbf{\firstcaption.} \secondcaption}{%
+%      #1}%
+%      }
+
+
+%\patchcmd{\@caption}{#3}{\formatlabel{#3}}
+\makeatother
+
+%% Url stuff.
+\usepackage{url}
+\usepackage[unicode=true,
+pdfusetitle,
+bookmarks=true,
+bookmarksnumbered=true,
+bookmarksopen=true,
+bookmarksopenlevel=2,
+breaklinks=true,
+pdfborder={0 0 1},
+backref=false,
+colorlinks=false]{hyperref}
+
+\hypersetup{        
+    colorlinks,       % Removing the red boxes
+    urlcolor=blue,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+}
+\hypersetup{pdfstartview=FitH}
+
+%% xetex only \usepackage{breakurl}
+\usepackage{float} % for fig.pos='H'
+\usepackage{subfig} % for subfigure
+\usepackage{wrapfig}
+%%\usepackage{tikz}
+
+
+% Watermark packages
+%\usepackage[firstpage]{draftwatermark}
+%\SetWatermarkText{Confidential}
+%\SetWatermarkScale{2}
+%\SetWatermarkColor[rgb]{0.7,0,0}      % Make text red
+%%\usepackage[printwatermark]{xwatermark}
+%%\usepackage{xcolor}
+%%\newwatermark*[allpages,color=red!50,angle=0,scale=3,xpos=0,ypos=0]{Confidential}
+
+% Both verbatim and comment packages define a comment environment
+%usepackage{comment}
+\usepackage{verbatim}
+% These packages apparently have incompatibilities with others that I use
+% You get funky latex error messages if these package refs are placed further up
+% Be warned: they may interfere with one or more of the following:
+%   url, hyperref, float, subfig, wrapfif, fancyhdr
+
 
 \makeatletter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
 
-\title{MA 2300 Section 2}
+\title{Introduction to Data Analysis}
 \author{Kate Davis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
@@ -84,12 +184,13 @@
 Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
 
 \section{Height in Whole Inches}
-Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
+Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points. Each data point within a data set is called an observation, denoted $x_i$. $n$ denotes the number of observations.} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-64 70 72 73 69 67 68 66 62 71 66 72 67 74 71 72 67 71 65 65 69 71 69 72 71 68 63 54
+64 70 72 73 69 67 68 66 62 71 66 72 67 74
+71 72 67 71 65 65 69 71 69 72 71 68 63 54
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -98,7 +199,8 @@ This set of data has 28 data points. To better evaluate this data, lets sort it.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-54 62 63 64 65 65 66 66 67 67 67 68 68 69 69 69 70 71 71 71 71 71 72 72 72 72 73 74
+54 62 63 64 65 65 66 66 67 67 67 68 68 69
+69 69 70 71 71 71 71 71 72 72 72 72 73 74
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -114,7 +216,7 @@ is used to estimate the accuracy of these predictions, estimates, inferences.
 We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Wed Jan 28 21:04:09 2015
+% Fri Jan 30 11:37:12 2015
 \begin{table}[ht]
 \centering
 \scalebox{0.95}{
@@ -150,28 +252,32 @@ To understand more about the distribution of the height in inches of our studens
 
 The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is 71 inches with frequency 5 students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \textit{unimodal}. A data set can have more than one mode, or be \textit{multi-modal}.
 
-The \textbf{median}\marginnote{The \textbf{median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order} of this dataset is 66 inches with frequency of 3 students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
+The \textbf{median}\marginnote{The \textbf{Median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order. The median is the 50th percentile} of this dataset is 69 inches with frequency of 1 students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
 
-The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values} height is 68.17857 inches. The mean is the center that we will use to further examine the ``spread'' of the values.
+The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values, denoted $\bar{x}$}. The mean is the center that we will use to further examine the ``spread'' of the values.
 
+$\bar{x}=\sum\limits_{i=0}^{n} x_i$
+
+In our data set, the mean height is 68.17857 inches, which we round to 68.2
+
+\begin{figure}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-center-chart-1} 
 
 }
 
-\caption[Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines]{Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines}\label{fig:center-chart}
-\end{figure}
 
 
 \end{knitrout}
-
+\caption{Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines}
+\end{figure}
 
 
 \section{Distribution Shapes: Histograms, Frequency Polygons, and Ogives}
 
-Once we have calculated the frequencies and centers of our datasets we can start to explore the shape and spread of the distribution of values. 
+Once we have calculated the frequencies and centers of our datasets we can start to explore the shape and spread of the distribution of values with charts. All charts can be drawn from the frequency table data.
 
 The \textbf{histogram}\marginnote{A \textbf{Histogram} is a visualization of a frequency table.} is a view of the overall pattern of the distribution. Histogram bars are evenly sized and each bar represents the same class levels of values, and is centered on the mean of the class. The height of the bar represents the number of observations in that class.
 
@@ -185,11 +291,19 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
 
 {\centering \includegraphics[width=.49\linewidth]{figure/graphics-histogram-1} 
-\includegraphics[width=.49\linewidth]{figure/graphics-histogram-2} 
 
 }
 
-\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram}
+\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram1}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=.49\linewidth]{figure/graphics-histogram-2} 
+
+}
+
+\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram2}
 \end{figure}
 
 
@@ -209,5 +323,107 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 \end{knitrout}
 
 \section{Measures of Spread}
+
+The ``spread'' of the distribution of a dataset can be quantified by range, first and third quartiles, variance and standard deviation.
+
+The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
+
+
+
+In our height dataset of 28, the first quartile is the 7th observation, 66, and the third quartile is the 21th observation, 71.
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+54 62 63 64 65 65 66
+66 67 67 67 68 68 69
+69 69 70 71 71 71 71
+71 72 72 72 72 73 74
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+We would like to measure the \textbf{Deviation}\marginnote{The textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
+
+
+\begin{figure}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-mean-center-chart-1} 
+
+}
+
+
+
+\end{knitrout}
+\end{figure}
+
+The deviations are both positive and negative, and the sum of the deviations is zero, so this statistic alone is not suitable for further analysis. If we square the deviations, the sum is no longer zero; in fact, the sum of the squared deviations is the \textbf{Variance}\marginnote{The \textbf{Variance} is a measure of variability or spread}. The variance of our dataset is 478.10714 square inches. To get back to our original unit of inches, we take the square root of the variance, 21.86566, or \textbf{Standard Deviation}\marginnote{The \textbf{Standard Deviation}, denoted $s$, is the standard measure of spread used in statistical analysis.}, denoted $s$. Variance is often denoted $s^2$.
+
+$Var(x)=\sum_{i=1}^{N} (x_i-\bar{x})^2$
+
+$s(x)=\sqrt{Var(x)}$
+
+% latex table generated in R 3.1.2 by xtable 1.7-4 package
+% Fri Jan 30 11:37:13 2015
+\begin{table}[ht]
+\centering
+\scalebox{0.95}{
+\begin{tabular}{rrr}
+  \hline
+Height & Deviation & DeviationSq \\ 
+  \hline
+ 64 & -4.18 & 17.46 \\ 
+   70 & 1.82 & 3.32 \\ 
+   72 & 3.82 & 14.60 \\ 
+   73 & 4.82 & 23.25 \\ 
+   69 & 0.82 & 0.67 \\ 
+   67 & -1.18 & 1.39 \\ 
+   68 & -0.18 & 0.03 \\ 
+   66 & -2.18 & 4.75 \\ 
+   62 & -6.18 & 38.17 \\ 
+   71 & 2.82 & 7.96 \\ 
+   66 & -2.18 & 4.75 \\ 
+   72 & 3.82 & 14.60 \\ 
+   67 & -1.18 & 1.39 \\ 
+   74 & 5.82 & 33.89 \\ 
+   71 & 2.82 & 7.96 \\ 
+   72 & 3.82 & 14.60 \\ 
+   67 & -1.18 & 1.39 \\ 
+   71 & 2.82 & 7.96 \\ 
+   65 & -3.18 & 10.10 \\ 
+   65 & -3.18 & 10.10 \\ 
+   69 & 0.82 & 0.67 \\ 
+   71 & 2.82 & 7.96 \\ 
+   69 & 0.82 & 0.67 \\ 
+   72 & 3.82 & 14.60 \\ 
+   71 & 2.82 & 7.96 \\ 
+   68 & -0.18 & 0.03 \\ 
+   63 & -5.18 & 26.82 \\ 
+   54 & -14.18 & 201.03 \\ 
+   \hline
+\end{tabular}
+}
+\caption{Deviations} 
+\end{table}
+
+
+
+The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-boxplot-1} 
+
+}
+
+\caption[Boxplot]{Boxplot}\label{fig:boxplot}
+\end{figure}
+
+
+\end{knitrout}
+
+
 
 \end{document}
