@@ -145,7 +145,7 @@ colorlinks=false]{hyperref}
 %\SetWatermarkScale{2}
 %\SetWatermarkColor[rgb]{0.7,0,0}      % Make text red
 %%\usepackage[printwatermark]{xwatermark}
-%%\usepackage{xcolor}
+\usepackage{colortbl,xcolor}
 %%\newwatermark*[allpages,color=red!50,angle=0,scale=3,xpos=0,ypos=0]{Confidential}
 
 % Both verbatim and comment packages define a comment environment
@@ -216,28 +216,28 @@ is used to estimate the accuracy of these predictions, estimates, inferences.
 We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Jan 30 21:06:29 2015
+% Mon Feb  2 00:22:55 2015
 \begin{table}[ht]
 \centering
 \scalebox{0.95}{
 \begin{tabular}{rrr}
-  \hline
+  \toprule
 Height & Frequency & CumulativeFrequency \\ 
-  \hline
+  \midrule
  62 &   1 &   1 \\ 
-   63 &   1 &   2 \\ 
+   \rowcolor[gray]{0.95} 63 &   1 &   2 \\ 
    64 &   2 &   4 \\ 
-   65 &   2 &   6 \\ 
+   \rowcolor[gray]{0.95} 65 &   2 &   6 \\ 
    66 &   2 &   8 \\ 
-   67 &   3 &  11 \\ 
+   \rowcolor[gray]{0.95} 67 &   3 &  11 \\ 
    68 &   2 &  13 \\ 
-   69 &   3 &  16 \\ 
+   \rowcolor[gray]{0.95} 69 &   3 &  16 \\ 
    70 &   1 &  17 \\ 
-   71 &   5 &  22 \\ 
+   \rowcolor[gray]{0.95} 71 &   5 &  22 \\ 
    72 &   4 &  26 \\ 
-   73 &   1 &  27 \\ 
+   \rowcolor[gray]{0.95} 73 &   1 &  27 \\ 
    74 &   1 &  28 \\ 
-   \hline
+   \bottomrule
 \end{tabular}
 }
 \caption{Frequency Table} 
@@ -335,43 +335,43 @@ $StdDev(X)=\sqrt{Var(X)}$
 %$\sigma=\sqrt{\sigma}$
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Jan 30 21:06:29 2015
+% Mon Feb  2 00:22:55 2015
 \begin{table}[ht]
 \centering
 \scalebox{0.95}{
-\begin{tabular}{rrr}
-  \hline
-Height & Deviation & DeviationSq \\ 
-  \hline
- 64 & -4.54 & 20.57 \\ 
-   70 & 1.46 & 2.14 \\ 
-   72 & 3.46 & 12.00 \\ 
-   73 & 4.46 & 19.93 \\ 
-   69 & 0.46 & 0.22 \\ 
-   67 & -1.54 & 2.36 \\ 
-   68 & -0.54 & 0.29 \\ 
-   66 & -2.54 & 6.43 \\ 
-   62 & -6.54 & 42.72 \\ 
-   71 & 2.46 & 6.07 \\ 
-   66 & -2.54 & 6.43 \\ 
-   72 & 3.46 & 12.00 \\ 
-   67 & -1.54 & 2.36 \\ 
-   74 & 5.46 & 29.86 \\ 
-   71 & 2.46 & 6.07 \\ 
-   72 & 3.46 & 12.00 \\ 
-   67 & -1.54 & 2.36 \\ 
-   71 & 2.46 & 6.07 \\ 
-   65 & -3.54 & 12.50 \\ 
-   65 & -3.54 & 12.50 \\ 
-   69 & 0.46 & 0.22 \\ 
-   71 & 2.46 & 6.07 \\ 
-   69 & 0.46 & 0.22 \\ 
-   72 & 3.46 & 12.00 \\ 
-   71 & 2.46 & 6.07 \\ 
-   68 & -0.54 & 0.29 \\ 
-   63 & -5.54 & 30.64 \\ 
-   64 & -4.54 & 20.57 \\ 
-   \hline
+\begin{tabular}{lrrr}
+  \toprule
+Obs & Height & Deviation & DeviationSq \\ 
+  \midrule
+$x_{1}$ &  64 & -4.54 & 20.57 \\ 
+   \rowcolor[gray]{0.95}$x_{2}$ &  70 & 1.46 & 2.14 \\ 
+  $x_{3}$ &  72 & 3.46 & 12.00 \\ 
+   \rowcolor[gray]{0.95}$x_{4}$ &  73 & 4.46 & 19.93 \\ 
+  $x_{5}$ &  69 & 0.46 & 0.22 \\ 
+   \rowcolor[gray]{0.95}$x_{6}$ &  67 & -1.54 & 2.36 \\ 
+  $x_{7}$ &  68 & -0.54 & 0.29 \\ 
+   \rowcolor[gray]{0.95}$x_{8}$ &  66 & -2.54 & 6.43 \\ 
+  $x_{9}$ &  62 & -6.54 & 42.72 \\ 
+   \rowcolor[gray]{0.95}$x_{10}$ &  71 & 2.46 & 6.07 \\ 
+  $x_{11}$ &  66 & -2.54 & 6.43 \\ 
+   \rowcolor[gray]{0.95}$x_{12}$ &  72 & 3.46 & 12.00 \\ 
+  $x_{13}$ &  67 & -1.54 & 2.36 \\ 
+   \rowcolor[gray]{0.95}$x_{14}$ &  74 & 5.46 & 29.86 \\ 
+  $x_{15}$ &  71 & 2.46 & 6.07 \\ 
+   \rowcolor[gray]{0.95}$x_{16}$ &  72 & 3.46 & 12.00 \\ 
+  $x_{17}$ &  67 & -1.54 & 2.36 \\ 
+   \rowcolor[gray]{0.95}$x_{18}$ &  71 & 2.46 & 6.07 \\ 
+  $x_{19}$ &  65 & -3.54 & 12.50 \\ 
+   \rowcolor[gray]{0.95}$x_{20}$ &  65 & -3.54 & 12.50 \\ 
+  $x_{21}$ &  69 & 0.46 & 0.22 \\ 
+   \rowcolor[gray]{0.95}$x_{22}$ &  71 & 2.46 & 6.07 \\ 
+  $x_{23}$ &  69 & 0.46 & 0.22 \\ 
+   \rowcolor[gray]{0.95}$x_{24}$ &  72 & 3.46 & 12.00 \\ 
+  $x_{25}$ &  71 & 2.46 & 6.07 \\ 
+   \rowcolor[gray]{0.95}$x_{26}$ &  68 & -0.54 & 0.29 \\ 
+  $x_{27}$ &  63 & -5.54 & 30.64 \\ 
+   \rowcolor[gray]{0.95}$x_{28}$ &  64 & -4.54 & 20.57 \\ 
+   \bottomrule
 \end{tabular}
 }
 \caption{Deviations} 
@@ -409,7 +409,7 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
 
-{\centering \includegraphics[width=.49\linewidth]{figure/graphics-histogram-1} 
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-histogram-1} 
 
 }
 
@@ -418,7 +418,7 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 
 \begin{figure}
 
-{\centering \includegraphics[width=.49\linewidth]{figure/graphics-histogram-2} 
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-histogram-2} 
 
 }
 
@@ -431,7 +431,7 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
 
-{\centering \includegraphics[width=.49\linewidth]{figure/graphics-ogive-1} 
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-ogive-1} 
 
 }
 

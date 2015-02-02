@@ -96,7 +96,7 @@ colorlinks=false]{hyperref}
 %\SetWatermarkScale{2}
 %\SetWatermarkColor[rgb]{0.7,0,0}      % Make text red
 %%\usepackage[printwatermark]{xwatermark}
-%%\usepackage{xcolor}
+\usepackage{colortbl,xcolor}
 %%\newwatermark*[allpages,color=red!50,angle=0,scale=3,xpos=0,ypos=0]{Confidential}
 
 % Both verbatim and comment packages define a comment environment
@@ -185,9 +185,12 @@ is used to estimate the accuracy of these predictions, estimates, inferences.
 We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
 
 <<Frequency-table,echo=FALSE,results='asis'>>=
-ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
+#ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
 otable=xtable(hiwifreq[,c(1,2,3)],caption = "Frequency Table")
-print(otable,include.rownames=F, scalebox=0.95)
+rws <- seq(1, (nrow(hiwifreq)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(otable,include.rownames=F, scalebox=0.95,booktabs = TRUE, 
+   add.to.row = list(pos = as.list(rws), command = col))
 @
 
 \section{Measures of Center}
@@ -282,17 +285,23 @@ HeightInWholeInches$DeviationSq=HeightInWholeInches$Deviation^2
 orgdata$mean=hmean
 orgdata$Deviation=(orgdata$Height-orgdata$mean)
 orgdata$DeviationSq=orgdata$Deviation^2
+orgdata$Obs=paste0("$x_{",orgdata$Observation,"}$")
+orgdata$NHeight=ifelse(orgdata$Deviation>=0,hmean,orgdata$Height)
+orgdata$PHeight=ifelse(orgdata$Deviation<0,hmean,orgdata$Height)
+#orgdata$DeviationSign[orgdata$Deviation<=0]="Negative"
 variancex=sum(orgdata$DeviationSq)/Nobs
 stddevx=variancex^0.5
 @
 \begin{figure}
 <<mean-center-chart,echo=FALSE,include=TRUE,fig.height=3>>=
 cbreaks=sort(c(hmin,hmax,round(hmean,1)))
-mcenterchart=ggplot(orgdata,aes(x=Observation,y=Height,ymin=Height,ymax=mean))+geom_point() + theme_tufte() + 
-  geom_hline(yintercept=hmean,color="red") +
+mcenterchart=ggplot(orgdata,aes(x=Observation,y=Height))+geom_point() + theme_tufte() + 
+  geom_hline(yintercept=hmean,color="blue") +
 scale_y_continuous(breaks=round(cbreaks),labels=cbreaks)+
-scale_x_discrete(breaks=NULL)+theme(axis.ticks = element_blank())+geom_linerange()+
-  ggtitle("Height in Whole Inches with Deviations")
+scale_x_discrete(breaks=NULL)+theme(axis.ticks = element_blank())+
+geom_linerange(color="red",ymin=orgdata$NHeight,ymax=orgdata$mean)+
+geom_linerange(color="green",ymin=orgdata$PHeight,ymax=orgdata$mean)+
+  ggtitle("Height in Whole Inches with Deviation from Average")
 print(mcenterchart)
 @
 \end{figure}
@@ -310,8 +319,11 @@ $StdDev(X)=\sqrt{Var(X)}$
 %$\sigma=\sqrt{\sigma}$
 
 <<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
-dtable=xtable(orgdata[,c(1,4,5)],caption = "Deviations")
-print(dtable,include.rownames=F, scalebox=0.95)
+dtable=xtable(orgdata[,c(6,1,4,5)],caption = "Deviations")
+rws <- seq(1, (nrow(orgdata)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(dtable,include.rownames=F, scalebox=0.95,booktabs = TRUE, 
+   add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x})
 
 @
 
@@ -335,7 +347,7 @@ A histogram's shape can be symmetric, skewed right with more of the observations
 
 A frequency polygon simply displays the frequency for a class, and an ogive, or cumulative frequency polygon displays the cumulative frequency for a class. 
 
-<<histogram,echo=FALSE,out.width='.49\\linewidth',fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
+<<histogram,echo=FALSE,fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
 hbase=ggplot(HeightInWholeInches,aes(x=Height))+theme_tufte(base_size = 12, base_family = "")
 hhist=hbase+geom_histogram(binwidth=1,fill="white",color="grey")
 hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
@@ -343,7 +355,7 @@ print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
 print(hfpoly+ggtitle("Frequency Polygram of Weights in Whole Inches"))
 @
 
-<<ogive,echo=FALSE,out.width='.49\\linewidth',fig.cap="Histograms with Ogive (Cumulative Frequency Polygon).">>=
+<<ogive,echo=FALSE,fig.cap="Histograms with Ogive (Cumulative Frequency Polygon).">>=
 hogive=hhist+geom_line(data=hiwifreq,aes(y = CumulativeFrequency,color="Ogive"))
 print(hogive+ggtitle("Histogram of Weights in Whole Inches"))
 
