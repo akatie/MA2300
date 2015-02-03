@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Frequency Tables}
+We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval}. To define a class, find the range of the observations, and divide it by the number of classes. This is the width of your class.
+
+Our rules for number of classes based for Frequency tables are :
+
+\begin{center}
+    \begin{tabular}{ | l | l | l |} \hline
+    From & To & Number of Classes \\ \hline
+    10 & 25 & 6  \\  \hline
+    26 & 35 & 7  \\  \hline
+        36 & 50 & 8  \\  \hline
+    51 & 65 & 9  \\  \hline
+    66 & 80 & 10  \\  \hline
+     80+ & 500  & 11  \\  \hline
+    \end{tabular}
+\end{center}
+
+If we have a data set with 42 observations, with maximum value $149.6$ units and minimum value of $12.4$ units, the range is \Sexpr{149.6-12.4} units. Per the table rules, we should use 7 classes. Because this is continuous data, the convention is to use whole number endpoints, so we round up to $140$. $140/7=20$ so each class is $20$ units wide. Similarly, we'll round down to $10$ for the first data point. 
+
+The classes would be:
+ 
+\begin{center}
+    \begin{tabular}{ | l | c | c |} \hline
+    Class & From & To  \\ \hline
+    10 & 29 & 1  \\  \hline
+    30 & 49 & 2  \\  \hline
+    50 & 69 & 3  \\  \hline
+    70 & 89 & 4  \\  \hline
+    90 & 109 & 5  \\  \hline
+    110 & 129 & 6  \\  \hline
+    130 & 150 & 7  \\  \hline
+    \end{tabular}
+\end{center}
+
+<<Frequency-table,echo=FALSE,results='asis',include=Answers>>=
+#ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
+otable=xtable(hiwifreq[,c("Class",obs,"Frequency")],caption = "Frequency Table")
+rws <- seq(1, (nrow(hiwifreq)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(otable,include.rownames=F, scalebox=0.95,booktabs = TRUE, 
+   add.to.row = list(pos = as.list(rws), command = col))
+@
+
+
+The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is \Sexpr{mode} inches with frequency \Sexpr{hiwifreq$Frequency[moden]} students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \textit{unimodal}. A data set can have more than one mode, or be \textit{multi-modal}.
+
+
+
+
+\end{document}
