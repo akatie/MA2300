@@ -142,23 +142,26 @@ require(xtable)
 require(ggplot2)
 require(ggthemes)
 require(scales)
-dsn <- read.delim("/extra/akd/MA2300/MM.txt", stringsAsFactors=FALSE)
-dsn$Candies=with(dsn,Red+Green+Blue+Orange+Yellow+Brown)
-obsname="Weight"
-dsn$Candies=with(dsn,Red+Green+Blue+Orange+Yellow+Brown)
+#dsn <- read.delim("/extra/akd/MA2300/MM.txt", stringsAsFactors=FALSE)
+dsn <- read.delim("/extra/akd/MA2300/cointoss.txt",header=T)
+#dsn=dsn[dsn$Group==1,]
+obsname="Heads"
+ofmt="%4.2f"
+ofmt="%d"
+
+#dsn$Candies=with(dsn,Red+Green+Blue+Orange+Yellow+Brown)
 Nobs=nrow(dsn)
 hsum=sum(dsn)
-orgdata=dsn[order(dsn[,obsname]),]
-orgdata$Observation=(1:Nobs)
+dsn$Observation=(1:Nobs)
 dsn$count=1
-hiwifreq=dcast(dsn,Weight~count)
+hiwifreq=dcast(dsn,Heads~count)
 names(hiwifreq)=c(obsname,"Frequency")
 hiwifreq$CumulativeFrequency=cumsum(hiwifreq$Frequency)
 hiwifreq$ecdf=(hiwifreq$CumulativeFrequency)/sum(hiwifreq$Frequency)
 hmax=max(dsn[,obsname])
 hmin=min(dsn[,obsname])
 hrange=hmax-hmin
-dsn[,obsname]=(sort(dsn[,obsname]))
+#dsn[,obsname]=(sort(dsn[,obsname]))
 n=nrow(hiwifreq)
 moden=which(hiwifreq$Frequency==max(hiwifreq$Frequency))
 mode=hiwifreq[moden[1],obsname]
@@ -166,8 +169,8 @@ mediann1=floor((Nobs)/2)
 mediann2=ceiling((Nobs)/2)
 median=(dsn[mediann1,obsname]+
           dsn[mediann2,obsname])/2
-hsum=sum(dsn[,obsname])
-hmean=hsum/Nobs
+htotal=sum(dsn[,obsname])
+hmean=round(htotal/Nobs,1)
 Q1n1=floor((Nobs)/4)
 Q1n2=ceiling((Nobs)/4)
 Q1=(dsn[Q1n2,obsname]+
@@ -176,38 +179,43 @@ Q3n1=floor((Nobs)*3/4)
 Q3n2=ceiling((Nobs)*3/4)
 Q3=(dsn[Q3n2,obsname]+
           dsn[Q3n1,obsname])/2
-dsn$Deviation=round(dsn[,obsname]-hmean,1)
+dsn$Deviation=dsn[,obsname]-hmean
 dsn$DeviationSq=dsn$Deviation^2
-orgdata$mean=hmean
-orgdata$Deviation=(orgdata[,obsname]-orgdata$mean)
-orgdata$DeviationSq=orgdata$Deviation^2
-orgdata$Obs=paste0("$x_{",orgdata$Observation,"}$")
-orgdata$NWeight=ifelse(orgdata$Deviation>=0,hmean,orgdata[,obsname])
-orgdata$PWeight=ifelse(orgdata$Deviation<0,hmean,orgdata[,obsname])
+dsn$mean=hmean
+dsn$Obs=paste0("$x_{",dsn$Observation,"}$")
+dsn$NWeight=ifelse(dsn$Deviation>=0,hmean,dsn[,obsname])
+dsn$PWeight=ifelse(dsn$Deviation<0,hmean,dsn[,obsname])
 #orgdata$DeviationSign[orgdata$Deviation<=0]="Negative"
-sumDevx=sum(orgdata$DeviationSq)
-variancex=sumDevx/Nobs
+sumDevSq=sum(dsn$DeviationSq)
+variancex=sumDevSq/Nobs
 stddevx=variancex^0.5
+orgdata=dsn #[order(dsn[,obsname]),]
 orgdata$CalcDeviations="            "
 orgdata$CalcDeviationsSq="             "
+orgdata=dsn #[order(dsn[,obsname]),]
 @
 \maketitle
-\section{\mms Data}
-
-\mms \marginnote{http://www.mms.com/} are the colorful candy coated chocolate candies, and are sold with an advertised net weight of $47.9$ grams.
-
-Some curious students acquired $30$ packages of \mms and counted the number of candies in each package, and the total weight of those \mms. After this strenuous exercise, they consumed the evidence.
-
-Using the columns method, compute the Average and Variance of the weight of the candies in the packages, in grams.
-
+\section{Coin Toss}
+A fair coin is tossed fifteen times, and the number of heads is records. This trial is repeated nine times. The resulting data should have nine observations of "Number of Head in Fifteen Tosses"
 
 The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values, denoted $\bar{x}$}. The mean is the center that we will use to further examine the ``spread'' of the values.
 
 The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
+<<summation, echo=F, include=Answers, results='asis'>>=
+xsum=sprintf(sprintf(" %s +",ofmt),orgdata[,obsname])
+xsum[Nobs]=sprintf(sprintf("%s \\\\= %s ",ofmt,ofmt),orgdata[Nobs,obsname],hsum)
+xsum=paste0(xsum,collapse="")
+xsum=paste0("= ",xsum,"\\\\")
+tsum="\\sum\\limits_{i=0}^{N} x_i = x_1+x_2+x_3+ \\dots "
+tsumx=sprintf("+x_{%d}",seq(Nobs-3,Nobs) )
+tsumx=paste0(tsumx,collapse="")
+tsum=paste(tsum,tsumx,"\\\\")
+cat("\\begin{multline*}")
+cat(tsum)
+cat(xsum)
+cat("\\end{multline*}")
+@
 
-\begin{equation*}
-\sum\limits_{i=0}^{n} x_i = x_1+x_2+x_3+ \dots +x_{27}+x_{28}+x_{29}+x_{30} 
-\end{equation*}
 
 \begin{equation*}
 \bar{x}=\frac{\sum\limits_{i=1}^{N} x_i }{N} 
@@ -228,61 +236,63 @@ Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x
 \begin{equation*}
 StdDev(X)=\sqrt{Var(X)} 
 \end{equation*}
-<<summation, echo=F, include=Answers, results='asis'>>=
-xsum=sprintf(" %4.2f +",orgdata[,obsname])
-xsum[Nobs]=sprintf("%4.2f $\r\n$= %4.2f $",orgdata[Nobs,obsname],hsum)
-xsum=paste0(xsum,collapse="")
-xsum=paste0("$= ",xsum)
-cat(xsum)
-@
 
 
 <<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
 cols=c("Obs",obsname,"Deviation","DeviationSq")
 if (!Answers) cols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
-ddata=orgdata[,cols]
-dtable=xtable(orgdata[,cols],caption = "Deviations")
+dtable=xtable(orgdata[,cols],caption = "Deviations",digits=c(0,0,0,1,1))
 rws <- seq(1, (nrow(orgdata)-1), by = 2)
 col <- rep("\\rowcolor[gray]{0.95}", length(rws))
 align(dtable) <- "|ccr|c|c|"
-tt=capture.output(print(dtable,include.rownames=F, scalebox=0.95,booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
-headrow=which(tt == "  \\toprule")
-#tt[headrow+1]=paste0("Obs & ",obsname," & $Dev_{\bar{x}}$ & $Dev_{\bar{x}}^2$ \\\\")
+tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
 endrow=which(tt=="\\end{tabular}")
 ltt=length(tt)
 saveend=tt[endrow:ltt]
-if (Answers)
-{
-  tt[endrow]=sprintf("Total & %4.2f & %4.2f & %4.2f\\\\ ",hsum,0,sumDevx)
- tt[endrow+1]=sprintf("\\rowcolor[gray]{0.95}Total/N & %4.2f & %4.2f& %4.2f \\\\ ",hmean,0,variancex)
+if (Answers){
+tt[endrow]=sprintf("Total & %d & %d & %5.1f \\\\ ",htotal,0,sumDevSq)
+ tt[endrow+1]=sprintf("\\rowcolor[gray]{0.95}Total over N & %5.1f & %d & %5.1f \\\\ ",hmean,0,variancex)
   
-} else
-{
-  tt[endrow]="Total & & & \\\\ "
+} else {
+tt[endrow]="Total & & & \\\\ "
  tt[endrow+1]="\\rowcolor[gray]{0.95}Total/N & & & \\\\ "
 }
-  tt[endrow+2]=" & Mean & Zero & Variance \\\\"
-tt[(endrow+3):(endrow+6)]=saveend
+tt[endrow+2]=" & Average & Zero & Variance \\\\"
+tt[(endrow+3):(endrow+(length(saveend)-1+3))]=saveend
 cat(tt, sep = "\n")
 @
 
-
-\begin{figure}
-<<center-chart,echo=FALSE,include=TRUE,fig.height=3>>=
-#cbreaks=sort(c(hmin,hmax,mode,median,round(hmean,1)))
-centerchart=ggplot(orgdata,aes(x=Observation,y=Weight))+geom_point() + theme_tufte() + 
-#  geom_hline(yintercept=mode,color="green") +
-#  geom_hline(yintercept=median,color="blue") +
-
-scale_x_discrete(breaks=NULL)+theme(axis.ticks = element_blank())+
-  ggtitle("Weight of candies in grams")
-if (Answers){
-  centerchart=centerchart+geom_hline(yintercept=hmean,color="red") 
-}
-print(centerchart)
+<<Frequency-table,echo=FALSE,results='asis',include=Answers>>=
+#ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
+otable=xtable(hiwifreq[,c(obsname,"Frequency","CumulativeFrequency","ecdf")],caption = "Frequency Table",digits=c(0,0,0,0,3))
+rws <- seq(1, (nrow(hiwifreq)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(otable,include.rownames=F, scalebox=0.95,booktabs = TRUE, 
+   add.to.row = list(pos = as.list(rws), command = col))
 @
-\caption{Draw a line at the Mean}
-\end{figure}
+
+<<histogram,echo=FALSE,fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
+hbase=ggplot(orgdata,aes(x=Heads))+theme_tufte(base_size = 12, base_family = "")
+hhist=hbase+geom_histogram(binwidth=1,fill="white",color="grey")
+hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
+print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
+print(hfpoly+ggtitle("Frequency Polygram of Weights in Whole Inches"))
+@
+
+<<histogram2bin,echo=FALSE,fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
+hbase=ggplot(orgdata,aes(x=Heads))+theme_tufte(base_size = 12, base_family = "")
+hhist=hbase+geom_histogram(binwidth=2,fill="white",color="grey")
+hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
+print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
+print(hfpoly+ggtitle("Frequency Polygram of Weights in Whole Inches"))
+@
+
+<<ogive,echo=FALSE,fig.cap="Histograms with Ogive (Cumulative Frequency Polygon).">>=
+hogive=hhist+geom_line(data=hiwifreq,aes(y = CumulativeFrequency,color="Ogive"))
+print(hogive+ggtitle("Histogram of Weights in Whole Inches"))
+
+@
+
 
 
 \end{document}
