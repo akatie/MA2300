@@ -126,7 +126,7 @@ colorlinks=false]{hyperref}
 \makeatother
 
 \newcommand{\mms}{M\&Ms\textcopyright}
-\begin{document}
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}\begin{document}
 <<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
 library(knitr)
 options(formatR.arrow=TRUE,width=50)
@@ -146,7 +146,7 @@ require(scales)
 dsn <- read.delim("/extra/akd/MA2300/cointoss.txt",header=T)
 #dsn=dsn[dsn$Group==1,]
 obsname="Heads"
-ofmt="%4.2f"
+ofmt="%4.1f"
 ofmt="%d"
 
 #dsn$Candies=with(dsn,Red+Green+Blue+Orange+Yellow+Brown)
@@ -161,24 +161,25 @@ hiwifreq$ecdf=(hiwifreq$CumulativeFrequency)/sum(hiwifreq$Frequency)
 hmax=max(dsn[,obsname])
 hmin=min(dsn[,obsname])
 hrange=hmax-hmin
-#dsn[,obsname]=(sort(dsn[,obsname]))
+
+xdsn=dsn[order(dsn[,obsname]),]
 n=nrow(hiwifreq)
 moden=which(hiwifreq$Frequency==max(hiwifreq$Frequency))
 mode=hiwifreq[moden[1],obsname]
 mediann1=floor((Nobs)/2)
 mediann2=ceiling((Nobs)/2)
-median=(dsn[mediann1,obsname]+
-          dsn[mediann2,obsname])/2
+median=(xdsn[mediann1,obsname]+
+          xdsn[mediann2,obsname])/2
 htotal=sum(dsn[,obsname])
 hmean=round(htotal/Nobs,1)
 Q1n1=floor((Nobs)/4)
 Q1n2=ceiling((Nobs)/4)
-Q1=(dsn[Q1n2,obsname]+
-          dsn[Q1n1,obsname])/2
+Q1=(xdsn[Q1n2,obsname]+
+          xdsn[Q1n1,obsname])/2
 Q3n1=floor((Nobs)*3/4)
 Q3n2=ceiling((Nobs)*3/4)
-Q3=(dsn[Q3n2,obsname]+
-          dsn[Q3n1,obsname])/2
+Q3=(xdsn[Q3n2,obsname]+
+          xdsn[Q3n1,obsname])/2
 dsn$Deviation=dsn[,obsname]-hmean
 dsn$DeviationSq=dsn$Deviation^2
 dsn$mean=hmean
@@ -222,15 +223,15 @@ cat("\\end{multline*}")
 \end{equation*}
 
 \begin{equation*}
-Dev_{\bar{x}}=(x_i-\bar{x}) 
+\dev{x}=(x_i-\bar{x}) 
 \end{equation*}
 
 \begin{equation*}
-Dev_{\bar{x}}^2=(x_i-\bar{x})^2 
+\dev{x}^2=(x_i-\bar{x})^2 
 \end{equation*}
 
 \begin{multline*}
-Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
+Var(X)=\frac{\sum_{i=1}^{N} \dev{x}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
 \end{multline*}
 
 \begin{equation*}
@@ -239,10 +240,13 @@ StdDev(X)=\sqrt{Var(X)}
 
 
 <<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
-cols=c("Obs",obsname,"Deviation","DeviationSq")
-if (!Answers) cols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
-dtable=xtable(orgdata[,cols],caption = "Deviations",digits=c(0,0,0,1,1))
-rws <- seq(1, (nrow(orgdata)-1), by = 2)
+dcols=c("Obs",obsname,"Deviation","DeviationSq")
+if (!Answers) dcols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
+dnames=c("Observation",obsname,"$\\dev{x}$","${\\dev{x}}^2$")
+tdata=orgdata[,dcols]
+names(tdata)=dnames
+dtable=xtable(tdata,caption = "Deviations",digits=c(0,0,0,1,1))
+rws <- seq(1, (nrow(tdata)-1), by = 2)
 col <- rep("\\rowcolor[gray]{0.95}", length(rws))
 align(dtable) <- "|ccr|c|c|"
 tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
@@ -279,20 +283,30 @@ print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
 print(hfpoly+ggtitle("Frequency Polygram of Weights in Whole Inches"))
 @
 
-<<histogram2bin,echo=FALSE,fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
-hbase=ggplot(orgdata,aes(x=Heads))+theme_tufte(base_size = 12, base_family = "")
-hhist=hbase+geom_histogram(binwidth=2,fill="white",color="grey")
-hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
-print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
-print(hfpoly+ggtitle("Frequency Polygram of Weights in Whole Inches"))
-@
 
-<<ogive,echo=FALSE,fig.cap="Histograms with Ogive (Cumulative Frequency Polygon).">>=
-hogive=hhist+geom_line(data=hiwifreq,aes(y = CumulativeFrequency,color="Ogive"))
+<<ogive,echo=FALSE,fig.cap="Histogram with Ogive (Cumulative Frequency Polygon).",fig.pos='h!'>>=
+cbreaks=sort(c(0,Q1n2,mediann2,Q3n2,max(hiwifreq$CumulativeFrequency)))
+require(scales)
+clabels=c(" 0%","25%","50%","75%","100%")
+hbase=ggplot(dsn,aes(x=Heads))+theme_igray()
+hhist=hbase+geom_histogram(binwidth=1,fill="grey",color="grey")
+hogive=hhist+geom_line(data=hiwifreq,aes(y = CumulativeFrequency,color="Ogive"))+theme_igray()+theme(legend.title=element_blank())+
+  scale_y_continuous(name="Proportion",breaks=cbreaks,labels=clabels)+
+#    geom_vline(xintercept=Q1-0.5,color="green") +
+#  geom_vline(xintercept=median-0.5,color="blue") +
+#  geom_vline(xintercept=Q3-0.5,color="red") +
+  geom_segment(aes(x = Q1-0.25, xend=Q1-0.25, y = 0, yend = Q1n2),color="green")+  
+  geom_segment(aes(x = Q3-0.25, xend=Q3-0.25, y = 0, yend = Q3n1),color="green")+  
+  geom_segment(aes(x = median-0.5,xend = median-0.5,  y = 0, yend = mediann2),color="green")+
+  geom_text(aes(x = Q1-0.5, y = Q1n2*1.3,label="1st Quartile"),color="grey")+  
+  geom_text(aes(x = Q3-0.25,  y =Q3n1*1.1,label="3rd Quartile"),color="grey")+  
+  geom_text(aes(x = median-0.5, y = mediann2*1.2, label="Median"),color="grey")
+
+
+
 print(hogive+ggtitle("Histogram of Weights in Whole Inches"))
 
 @
-
 
 
 \end{document}

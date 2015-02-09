@@ -175,6 +175,7 @@ colorlinks=false]{hyperref}
 \makeatother
 
 \newcommand{\mms}{M\&Ms\textcopyright}
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -217,55 +218,52 @@ Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x
 \begin{equation*}
 StdDev(X)=\sqrt{Var(X)} 
 \end{equation*}
-$=  46.22 + 46.72 + 46.94 + 47.61 + 47.67 + 47.70 + 47.98 + 48.28 + 48.33 + 48.45 + 48.49 + 48.72 + 48.74 + 48.95 + 48.98 + 49.16 + 49.40 + 49.69 + 49.79 + 49.80 + 49.80 + 50.01 + 50.23 + 50.40 + 50.43 + 50.97 + 51.53 + 51.68 + 51.71 +52.06 $
-$= 1476.44 $
+
 
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Feb  6 05:04:52 2015
+% Sun Feb  8 18:52:52 2015
 \begin{table}[ht]
 \centering
-\scalebox{0.95}{
-\begin{tabular}{cr|c|c|}
+\begin{tabular}{lrll}
   \toprule
-Obs & Weight & Deviation & DeviationSq \\ 
+Observation & Weight & $\dev{x}$ & ${\dev{x}}^2$ \\ 
   \midrule
-$x_{1}$ & 46.22 & -2.99 & 8.97 \\ 
-   \rowcolor[gray]{0.95}$x_{2}$ & 46.72 & -2.49 & 6.22 \\ 
-  $x_{3}$ & 46.94 & -2.27 & 5.17 \\ 
-   \rowcolor[gray]{0.95}$x_{4}$ & 47.61 & -1.60 & 2.57 \\ 
-  $x_{5}$ & 47.67 & -1.54 & 2.39 \\ 
-   \rowcolor[gray]{0.95}$x_{6}$ & 47.70 & -1.51 & 2.29 \\ 
-  $x_{7}$ & 47.98 & -1.23 & 1.52 \\ 
-   \rowcolor[gray]{0.95}$x_{8}$ & 48.28 & -0.93 & 0.87 \\ 
-  $x_{9}$ & 48.33 & -0.88 & 0.78 \\ 
-   \rowcolor[gray]{0.95}$x_{10}$ & 48.45 & -0.76 & 0.58 \\ 
-  $x_{11}$ & 48.49 & -0.72 & 0.53 \\ 
-   \rowcolor[gray]{0.95}$x_{12}$ & 48.72 & -0.49 & 0.24 \\ 
-  $x_{13}$ & 48.74 & -0.47 & 0.23 \\ 
-   \rowcolor[gray]{0.95}$x_{14}$ & 48.95 & -0.26 & 0.07 \\ 
-  $x_{15}$ & 48.98 & -0.23 & 0.06 \\ 
-   \rowcolor[gray]{0.95}$x_{16}$ & 49.16 & -0.05 & 0.00 \\ 
-  $x_{17}$ & 49.40 & 0.19 & 0.03 \\ 
-   \rowcolor[gray]{0.95}$x_{18}$ & 49.69 & 0.48 & 0.23 \\ 
-  $x_{19}$ & 49.79 & 0.58 & 0.33 \\ 
-   \rowcolor[gray]{0.95}$x_{20}$ & 49.80 & 0.59 & 0.34 \\ 
-  $x_{21}$ & 49.80 & 0.59 & 0.34 \\ 
-   \rowcolor[gray]{0.95}$x_{22}$ & 50.01 & 0.80 & 0.63 \\ 
-  $x_{23}$ & 50.23 & 1.02 & 1.03 \\ 
-   \rowcolor[gray]{0.95}$x_{24}$ & 50.40 & 1.19 & 1.41 \\ 
-  $x_{25}$ & 50.43 & 1.22 & 1.48 \\ 
-   \rowcolor[gray]{0.95}$x_{26}$ & 50.97 & 1.76 & 3.08 \\ 
-  $x_{27}$ & 51.53 & 2.32 & 5.36 \\ 
-   \rowcolor[gray]{0.95}$x_{28}$ & 51.68 & 2.47 & 6.08 \\ 
-  $x_{29}$ & 51.71 & 2.50 & 6.23 \\ 
-   \rowcolor[gray]{0.95}$x_{30}$ & 52.06 & 2.85 & 8.10 \\ 
+$x_{1}$ & 46.22 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{2}$ & 46.72 &              &               \\ 
+  $x_{3}$ & 46.94 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{4}$ & 47.61 &              &               \\ 
+  $x_{5}$ & 47.67 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{6}$ & 47.70 &              &               \\ 
+  $x_{7}$ & 47.98 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{8}$ & 48.28 &              &               \\ 
+  $x_{9}$ & 48.33 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{10}$ & 48.45 &              &               \\ 
+  $x_{11}$ & 48.49 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{12}$ & 48.72 &              &               \\ 
+  $x_{13}$ & 48.74 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{14}$ & 48.95 &              &               \\ 
+  $x_{15}$ & 48.98 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{16}$ & 49.16 &              &               \\ 
+  $x_{17}$ & 49.40 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{18}$ & 49.69 &              &               \\ 
+  $x_{19}$ & 49.79 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{20}$ & 49.80 &              &               \\ 
+  $x_{21}$ & 49.80 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{22}$ & 50.01 &              &               \\ 
+  $x_{23}$ & 50.23 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{24}$ & 50.40 &              &               \\ 
+  $x_{25}$ & 50.43 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{26}$ & 50.97 &              &               \\ 
+  $x_{27}$ & 51.53 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{28}$ & 51.68 &              &               \\ 
+  $x_{29}$ & 51.71 &              &               \\ 
+   \rowcolor[gray]{0.95}$x_{30}$ & 52.06 &              &               \\ 
    \bottomrule
-Total & 1476.44 & 0.00 & 67.17\\ 
-\rowcolor[gray]{0.95}Total/N & 49.21 & 0.00& 2.24 \\ 
+Total & & & \\ 
+\rowcolor[gray]{0.95}Total/N & & & \\ 
  & Mean & Zero & Variance \\
 \end{tabular}
-}
 \caption{Deviations} 
 \end{table}
 

@@ -126,12 +126,13 @@ colorlinks=false]{hyperref}
 \makeatother
 
 \newcommand{\mms}{M\&Ms\textcopyright}
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
 \begin{document}
 <<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
 library(knitr)
 options(formatR.arrow=TRUE,width=50)
 opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='pdf', fig.width=5, fig.height=5,  cache=FALSE,comment="",message=FALSE)
-Answers=TRUE
+Answers=FALSE
 knit_hooks$set(crop=hook_pdfcrop)
 @
 
@@ -229,7 +230,7 @@ Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x
 StdDev(X)=\sqrt{Var(X)} 
 \end{equation*}
 <<summation, echo=F, include=Answers, results='asis'>>=
-xsum=sprintf(" %4.2f +",orgdata[,obsname])
+xsum=sprintf(" %5.3f +",orgdata[,obsname])
 xsum[Nobs]=sprintf("%4.2f $\r\n$= %4.2f $",orgdata[Nobs,obsname],hsum)
 xsum=paste0(xsum,collapse="")
 xsum=paste0("$= ",xsum)
@@ -238,14 +239,17 @@ cat(xsum)
 
 
 <<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
-cols=c("Obs",obsname,"Deviation","DeviationSq")
-if (!Answers) cols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
-ddata=orgdata[,cols]
-dtable=xtable(orgdata[,cols],caption = "Deviations")
+dcols=c("Obs",obsname,"Deviation","DeviationSq")
+if (!Answers) dcols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
+dnames=c("Observation",obsname,"$\\dev{x}$","${\\dev{x}}^2$")
+tdata=orgdata[,dcols]
+names(tdata)=dnames
+dtable=xtable(tdata,caption = "Deviations",digits=c(0,0,2,3,3))
+
 rws <- seq(1, (nrow(orgdata)-1), by = 2)
 col <- rep("\\rowcolor[gray]{0.95}", length(rws))
-align(dtable) <- "|ccr|c|c|"
-tt=capture.output(print(dtable,include.rownames=F, scalebox=0.95,booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
+#align(dtable) <- "|ccr|c|c|"
+tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
 headrow=which(tt == "  \\toprule")
 #tt[headrow+1]=paste0("Obs & ",obsname," & $Dev_{\bar{x}}$ & $Dev_{\bar{x}}^2$ \\\\")
 endrow=which(tt=="\\end{tabular}")
@@ -253,8 +257,8 @@ ltt=length(tt)
 saveend=tt[endrow:ltt]
 if (Answers)
 {
-  tt[endrow]=sprintf("Total & %4.2f & %4.2f & %4.2f\\\\ ",hsum,0,sumDevx)
- tt[endrow+1]=sprintf("\\rowcolor[gray]{0.95}Total/N & %4.2f & %4.2f& %4.2f \\\\ ",hmean,0,variancex)
+  tt[endrow]=sprintf("Total & %4.2f & %5.3f & %5.3f\\\\ ",hsum,0,sumDevx)
+ tt[endrow+1]=sprintf("\\rowcolor[gray]{0.95}Total/N & %5.3f & %5.3f & %5.3f \\\\ ",hmean,0,variancex)
   
 } else
 {
@@ -262,7 +266,7 @@ if (Answers)
  tt[endrow+1]="\\rowcolor[gray]{0.95}Total/N & & & \\\\ "
 }
   tt[endrow+2]=" & Mean & Zero & Variance \\\\"
-tt[(endrow+3):(endrow+6)]=saveend
+tt[(endrow+3):(endrow+3+length(saveend)-1)]=saveend
 cat(tt, sep = "\n")
 @
 

@@ -29,7 +29,7 @@
 \usepackage{colortbl,xcolor}
 
 \makeatletter
-\title{Introduction to Data Analysis}
+\title{Associations}
 \author{Kate Davis}
 \makeatother
 
@@ -101,7 +101,7 @@ orgdata=dsn #[order(dsn[,obsname]),]
 @
 
 \maketitle
-\section{Introduction to Data Analysis}
+\section{Introduction to Associations}
 Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, zipcodes and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
 
 \section{Height in Whole Inches}
@@ -271,7 +271,7 @@ dcols=c("Obs",obsname,"Deviation","DeviationSq")
 dnames=c("Observation",obsname,"$\\dev{x}$","${\\dev{x}}^2$")
 tdata=orgdata[,dcols]
 names(tdata)=dnames
-dtable=xtable(tdata,caption = "Deviations",digits=c(0,0,0,1,1))
+dtable=xtable(tdata,caption = "Deviations")
 rws <- seq(1, (nrow(orgdata)-1), by = 2)
 col <- rep("\\rowcolor[gray]{0.95}", length(rws))
 #align(dtable) <- "|ccr|c|c|"

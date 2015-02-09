@@ -48,131 +48,41 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
-\usepackage[T1]{fontenc}
-\usepackage{url}
-\usepackage{amsmath}
-%\usepackage{geometry}
-%\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
-\usepackage{parskip}
+\usepackage{mathtools}
+%%\usepackage{marginnote}
+%%\usepackage[top=1in, bottom=1in, outer=5.5in, inner=1in, heightrounded, marginparwidth=1in, marginparsep=1in]{geometry}
 \usepackage{enumerate}
-
 %% mess with the fonts
-\ifxetex
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
-%\setromanfont{Times Roman}
-\else
+%%\usepackage{fontspec}
+%%\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%%\fontencoding {T1}
-%%\fontfamily {phv}
-%%\fontseries {m}
-%%\fontshape {n}
-%%\fontsize {11pt} {19pt}
-%%\linespread {1}
-%%\selectfont
-\usepackage{sectsty}
-\sectionfont{\fontfamily{phv}\fontseries{b}\fontsize{12pt}{20pt}\selectfont}
-\subsectionfont{\fontfamily{phv}\fontseries{b}\fontsize{11pt}{20pt}\selectfont}
-\subsubsectionfont{\fontfamily{phv}\fontseries{b}\fontsize{11pt}{20pt}\selectfont}
-\fi
 % For package xtable
 \usepackage{booktabs}  % Nice toprules and bottomrules
 \heavyrulewidth=1.5pt  % Change the default to heavier lines
-\usepackage{longtable} 
-\usepackage{tabularx}  % To control the width of the table
-%% not used \usepackage{rotating}
-%% Not used \usepackage{changepage} % Temporarily change margins -- helpful for wide xtables
-%\usepackage[titletoc]{appendix}
-%%\usepackage[draft]{pdfpages} % Just inserts a placeholder
-\usepackage{enumitem}  % Indents nicely
+%%\usepackage{longtable} 
+%%\usepackage{tabularx}  % To control the width of the table
 
 % this should make caption font bold.
-%%\usepackage{caption}
-%%\usepackage[margin=.2in,labelfont={rm,bf},textfont={rm},labelsep=period]{caption}
-\usepackage{xstring}
-\usepackage{etoolbox}
-\usepackage{caption}
+%%\usepackage{xstring}
+%%\usepackage{etoolbox}
 
-%%\captionsetup{margin=.2in,labelfont={rm,bf},textfont={rm},font={bf},labelsep=period}
-
-\makeatletter
-%\newcommand\formatlabel[1]{%
-%    \noexpandarg
-%    \IfSubStr{#1}{.}{%
-%      \StrBefore{#1}{.}[\firstcaption]%
-%      \StrBehind{#1}{.}[\secondcaption]%
-%      \textbf{\firstcaption.} \secondcaption}{%
-%      #1}%
-%      }
-
-
-%\patchcmd{\@caption}{#3}{\formatlabel{#3}}
-\makeatother
-
-%% Url stuff.
-\usepackage{url}
-\usepackage[unicode=true,
-pdfusetitle,
-bookmarks=true,
-bookmarksnumbered=true,
-bookmarksopen=true,
-bookmarksopenlevel=2,
-breaklinks=true,
-pdfborder={0 0 1},
-backref=false,
-colorlinks=false]{hyperref}
-
-\hypersetup{        
-    colorlinks,       % Removing the red boxes
-    urlcolor=blue,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-}
-\hypersetup{pdfstartview=FitH}
+%%\usepackage{url}
 
 %% xetex only \usepackage{breakurl}
 \usepackage{float} % for fig.pos='H'
-\usepackage{subfig} % for subfigure
-\usepackage{wrapfig}
+%%\usepackage{wrapfig}
 %%\usepackage{tikz}
 
 
-% Watermark packages
-%\usepackage[firstpage]{draftwatermark}
-%\SetWatermarkText{Confidential}
-%\SetWatermarkScale{2}
-%\SetWatermarkColor[rgb]{0.7,0,0}      % Make text red
-%%\usepackage[printwatermark]{xwatermark}
 \usepackage{colortbl,xcolor}
-%%\newwatermark*[allpages,color=red!50,angle=0,scale=3,xpos=0,ypos=0]{Confidential}
-
-% Both verbatim and comment packages define a comment environment
-%usepackage{comment}
-\usepackage{verbatim}
-% These packages apparently have incompatibilities with others that I use
-% You get funky latex error messages if these package refs are placed further up
-% Be warned: they may interfere with one or more of the following:
-%   url, hyperref, float, subfig, wrapfif, fancyhdr
-
 
 \makeatletter
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
-
 \title{Introduction to Data Analysis}
 \author{Kate Davis}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\renewcommand{\textfraction}{0.05}
-\renewcommand{\topfraction}{0.8}
-\renewcommand{\bottomfraction}{0.8}
-\renewcommand{\floatpagefraction}{0.75}
-
-\usepackage[buttonsize=1em]{animate}
-
 \makeatother
+
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -181,7 +91,7 @@ colorlinks=false]{hyperref}
 
 \maketitle
 \section{Introduction to Data Analysis}
-Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
+Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, zipcodes and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
 
 \section{Height in Whole Inches}
 Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points. Each data point within a data set is called an observation, denoted $x_i$, where $i$ is the number of the observation. For our data set, $x_3$ is 72. $N$ denotes the number of observations.} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
@@ -194,7 +104,7 @@ Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a colle
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
-This set of data has 28 data points. To better evaluate this data, lets sort it. We\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is 62 inches and the highest or maximum value is 74 inches. The \textbf{Range} is 12 inches.
+This set of data has 28 data points. To better evaluate this data, lets sort it. We can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is 62 inches and the highest or maximum value is 74 inches. The \textbf{Range}\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} is 12 inches.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
@@ -205,9 +115,9 @@ This set of data has 28 data points. To better evaluate this data, lets sort it.
 \end{kframe}
 \end{knitrout}
 
-This data set has 13 discrete values for height, fewer than the range of $20$ inches. There is a gap in observations between $54$ inches and $62$ inches, but all other height values in the range are represented.
+This data set has 13 discrete values for height, fewer than the range of 12 inches. There is a gap in observations between 62 inches and 74 inches, but all other height values in the range are represented.
 
-To gain more knowledge about this dataset, we must describe the \textbf{distribution}\marginnote{The Oxford English Dictionary defines \textbf{Distribution} as the \textit{way in which something is shared out among a group or spread over an area} } of values across the measurement range, with a goal of using that information for predictions, estimations and other inferences about the population when a complete \textbf{census}\marginnote{A \textbf{Census} is a complete enumeration of every unit, everyone or everything in a population.} 
+To gain more knowledge about this dataset, we must describe the \textbf{distribution}\marginnote{The Oxford English Dictionary defines \textbf{Distribution} as the \emph{way in which something is shared out among a group or spread over an area} } of values across the measurement range, with a goal of using that information for predictions, estimations and other inferences about the population when a complete \textbf{census}\marginnote{A \textbf{Census} is a complete enumeration of every unit, everyone or everything in a population.} 
 
 The \textbf{statistical distribution}\marginnote{A \textbf{Statistical Distribution} assigns probabilities to the possible values of a data set } can be estimated or inferred from a data set, and 
 is used to estimate the accuracy of these predictions, estimates, inferences.
@@ -215,33 +125,6 @@ is used to estimate the accuracy of these predictions, estimates, inferences.
 \section{Frequency Tables}
 We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
 
-% latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Mon Feb  2 00:22:55 2015
-\begin{table}[ht]
-\centering
-\scalebox{0.95}{
-\begin{tabular}{rrr}
-  \toprule
-Height & Frequency & CumulativeFrequency \\ 
-  \midrule
- 62 &   1 &   1 \\ 
-   \rowcolor[gray]{0.95} 63 &   1 &   2 \\ 
-   64 &   2 &   4 \\ 
-   \rowcolor[gray]{0.95} 65 &   2 &   6 \\ 
-   66 &   2 &   8 \\ 
-   \rowcolor[gray]{0.95} 67 &   3 &  11 \\ 
-   68 &   2 &  13 \\ 
-   \rowcolor[gray]{0.95} 69 &   3 &  16 \\ 
-   70 &   1 &  17 \\ 
-   \rowcolor[gray]{0.95} 71 &   5 &  22 \\ 
-   72 &   4 &  26 \\ 
-   \rowcolor[gray]{0.95} 73 &   1 &  27 \\ 
-   74 &   1 &  28 \\ 
-   \bottomrule
-\end{tabular}
-}
-\caption{Frequency Table} 
-\end{table}
 
 
 \section{Measures of Center}
@@ -249,7 +132,7 @@ Height & Frequency & CumulativeFrequency \\
 
 To understand more about the distribution of the height in inches of our studens, we first examine ``centers'' of the data: the mode, the median, and the mean.
 
-The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is 71 inches with frequency 5 students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \textit{unimodal}. A data set can have more than one mode, or be \textit{multi-modal}.
+The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is 71 inches with frequency 5 students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \emph{unimodal}. A data set can have more than one mode, or be \emph{multi-modal}.
 
 The \textbf{median}\marginnote{The \textbf{Median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order. The median is the 50th percentile} of this dataset is 69 inches with frequency of NA students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
 
@@ -257,32 +140,32 @@ The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arith
 
 The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
 
-$\bar{x}=\sum\limits_{i=0}^{n} x_i$
+\begin{equation*}
+\sum\limits_{i=0}^{n} x_i = x_1+x_2+x_3+ \dots +x_{27}+x_{28}+x_{29}+x_{30} 
+\end{equation*}
 
+\begin{equation*}
+\bar{x}=\frac{\sum\limits_{i=1}^{N} x_i }{N} 
+\end{equation*}
 
-$=x_1+x_2+x_3+ \dots +x_{25}+x_{26}+x_{27}+x_{28}$
-
-
-
-$=  64 + 70 + 72 + 73 + 69 + 67 + 68 + 66 + 62 + 71 + 66 + 72 + 67 + 74 + 71 + 72 + 67 + 71 + 65 + 65 + 69 + 71 + 69 + 72 + 71 + 68 + 63 +64 $
-$= 1919 $
+$=  64.00 + 70.00 + 72.00 + 73.00 + 69.00 + 67.00 + 68.00 + 66.00 + 62.00 + 71.00 + 66.00 + 72.00 + 67.00 + 74.00 + 71.00 + 72.00 + 67.00 + 71.00 + 65.00 + 65.00 + 69.00 + 71.00 + 69.00 + 72.00 + 71.00 + 68.00 + 63.00 +64.00 $
+$= 1919.00 $
 
 
 In our data set, the mean height is 1919 divided by 28, or 68.53571 inches, which we round to 68.5
 
-\begin{figure}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-center-chart-1} 
 
 }
 
+\caption[Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines]{Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines}\label{fig:center-chart}
+\end{figure}
 
 
 \end{knitrout}
-\caption{Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines}
-\end{figure}
 
 
 
@@ -307,9 +190,11 @@ In our height dataset of 28, the first quartile is the 7th observation, 66, and 
 \end{knitrout}
 
 We would like to measure the \textbf{Deviation}\marginnote{The \textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
+\begin{equation*}
+Dev_{\bar{x}}=(x_i-\bar{x}) 
+\end{equation*}
 
 
-\begin{figure}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
@@ -320,60 +205,61 @@ We would like to measure the \textbf{Deviation}\marginnote{The \textbf{Deviation
 
 
 \end{knitrout}
-\end{figure}
 
-The deviations are both positive and negative, and the sum of the deviations is zero, so this statistic alone is not suitable for further analysis. If we square the deviations, the sum is no longer zero; in fact, the sum of the squared deviations is the \textbf{Variance}\marginnote{The \textbf{round(Variance,1)} is a measure of variability or spread $Var(X)$, often denoted by $\sigma^2$}. The variance of our dataset is 10.39158 square inches. To get back to our original unit of inches, we take the square root of the variance, 3.2, or \textbf{Standard Deviation}\marginnote{The \textbf{Standard Deviation} of X, $StdDev(X)$, often denoted $\sigma$, is the standard measure of spread used in statistical analysis.}
+The deviations are both positive and negative, and the sum of the deviations is zero, so this statistic alone is not suitable for further analysis. If we square the deviations, the sum is no longer zero; in fact, the sum of the squared deviations is the \textbf{Variance}\marginnote{The \textbf{Variance} is a measure of variability or spread $Var(X)$, often denoted by $\sigma^2$}. The variance of our dataset is 10.39158 square inches. To get back to our original unit of inches, we take the square root of the variance, 3.2, or \textbf{Standard Deviation}\marginnote{The \textbf{Standard Deviation} of X, $StdDev(X)$, often denoted $\sigma$, is the standard measure of spread used in statistical analysis.}
+\begin{equation*}
+Dev_{\bar{x}}^2=(x_i-\bar{x})^2 
+\end{equation*}
 
-$Dev_{\bar{x}}=(x_i-\bar{x})$
+\begin{multline*}
+Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
+\end{multline*}
 
-$Dev_{\bar{x}}^2=(x_i-\bar{x})^2 $
-
-$Var(X)=(\sum_{i=1}^{N} Dev_{\bar{x}}^2)/N$
-$=(\sum_{i=1}^{N} (x_i-\bar{x})^2)/N$
-
-$StdDev(X)=\sqrt{Var(X)}$
-%$\sigma=\sqrt{\sigma}$
+\begin{equation*}
+StdDev(X)=\sqrt{Var(X)} 
+\end{equation*}
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Mon Feb  2 00:22:55 2015
+% Sun Feb  8 18:42:00 2015
 \begin{table}[ht]
 \centering
-\scalebox{0.95}{
 \begin{tabular}{lrrr}
   \toprule
-Obs & Height & Deviation & DeviationSq \\ 
+Observation & Height & $\dev{x}$ & ${\dev{x}}^2$ \\ 
   \midrule
-$x_{1}$ &  64 & -4.54 & 20.57 \\ 
-   \rowcolor[gray]{0.95}$x_{2}$ &  70 & 1.46 & 2.14 \\ 
-  $x_{3}$ &  72 & 3.46 & 12.00 \\ 
-   \rowcolor[gray]{0.95}$x_{4}$ &  73 & 4.46 & 19.93 \\ 
-  $x_{5}$ &  69 & 0.46 & 0.22 \\ 
-   \rowcolor[gray]{0.95}$x_{6}$ &  67 & -1.54 & 2.36 \\ 
-  $x_{7}$ &  68 & -0.54 & 0.29 \\ 
-   \rowcolor[gray]{0.95}$x_{8}$ &  66 & -2.54 & 6.43 \\ 
-  $x_{9}$ &  62 & -6.54 & 42.72 \\ 
-   \rowcolor[gray]{0.95}$x_{10}$ &  71 & 2.46 & 6.07 \\ 
-  $x_{11}$ &  66 & -2.54 & 6.43 \\ 
-   \rowcolor[gray]{0.95}$x_{12}$ &  72 & 3.46 & 12.00 \\ 
-  $x_{13}$ &  67 & -1.54 & 2.36 \\ 
-   \rowcolor[gray]{0.95}$x_{14}$ &  74 & 5.46 & 29.86 \\ 
-  $x_{15}$ &  71 & 2.46 & 6.07 \\ 
-   \rowcolor[gray]{0.95}$x_{16}$ &  72 & 3.46 & 12.00 \\ 
-  $x_{17}$ &  67 & -1.54 & 2.36 \\ 
-   \rowcolor[gray]{0.95}$x_{18}$ &  71 & 2.46 & 6.07 \\ 
-  $x_{19}$ &  65 & -3.54 & 12.50 \\ 
-   \rowcolor[gray]{0.95}$x_{20}$ &  65 & -3.54 & 12.50 \\ 
-  $x_{21}$ &  69 & 0.46 & 0.22 \\ 
-   \rowcolor[gray]{0.95}$x_{22}$ &  71 & 2.46 & 6.07 \\ 
-  $x_{23}$ &  69 & 0.46 & 0.22 \\ 
-   \rowcolor[gray]{0.95}$x_{24}$ &  72 & 3.46 & 12.00 \\ 
-  $x_{25}$ &  71 & 2.46 & 6.07 \\ 
-   \rowcolor[gray]{0.95}$x_{26}$ &  68 & -0.54 & 0.29 \\ 
-  $x_{27}$ &  63 & -5.54 & 30.64 \\ 
-   \rowcolor[gray]{0.95}$x_{28}$ &  64 & -4.54 & 20.57 \\ 
+$x_{1}$ & 64 & -4.5 & 20.6 \\ 
+   \rowcolor[gray]{0.95}$x_{2}$ & 70 & 1.5 & 2.1 \\ 
+  $x_{3}$ & 72 & 3.5 & 12.0 \\ 
+   \rowcolor[gray]{0.95}$x_{4}$ & 73 & 4.5 & 19.9 \\ 
+  $x_{5}$ & 69 & 0.5 & 0.2 \\ 
+   \rowcolor[gray]{0.95}$x_{6}$ & 67 & -1.5 & 2.4 \\ 
+  $x_{7}$ & 68 & -0.5 & 0.3 \\ 
+   \rowcolor[gray]{0.95}$x_{8}$ & 66 & -2.5 & 6.4 \\ 
+  $x_{9}$ & 62 & -6.5 & 42.7 \\ 
+   \rowcolor[gray]{0.95}$x_{10}$ & 71 & 2.5 & 6.1 \\ 
+  $x_{11}$ & 66 & -2.5 & 6.4 \\ 
+   \rowcolor[gray]{0.95}$x_{12}$ & 72 & 3.5 & 12.0 \\ 
+  $x_{13}$ & 67 & -1.5 & 2.4 \\ 
+   \rowcolor[gray]{0.95}$x_{14}$ & 74 & 5.5 & 29.9 \\ 
+  $x_{15}$ & 71 & 2.5 & 6.1 \\ 
+   \rowcolor[gray]{0.95}$x_{16}$ & 72 & 3.5 & 12.0 \\ 
+  $x_{17}$ & 67 & -1.5 & 2.4 \\ 
+   \rowcolor[gray]{0.95}$x_{18}$ & 71 & 2.5 & 6.1 \\ 
+  $x_{19}$ & 65 & -3.5 & 12.5 \\ 
+   \rowcolor[gray]{0.95}$x_{20}$ & 65 & -3.5 & 12.5 \\ 
+  $x_{21}$ & 69 & 0.5 & 0.2 \\ 
+   \rowcolor[gray]{0.95}$x_{22}$ & 71 & 2.5 & 6.1 \\ 
+  $x_{23}$ & 69 & 0.5 & 0.2 \\ 
+   \rowcolor[gray]{0.95}$x_{24}$ & 72 & 3.5 & 12.0 \\ 
+  $x_{25}$ & 71 & 2.5 & 6.1 \\ 
+   \rowcolor[gray]{0.95}$x_{26}$ & 68 & -0.5 & 0.3 \\ 
+  $x_{27}$ & 63 & -5.5 & 30.6 \\ 
+   \rowcolor[gray]{0.95}$x_{28}$ & 64 & -4.5 & 20.6 \\ 
    \bottomrule
+Total & 1919.0 &  0.0 & 291.0 \\ 
+\rowcolor[gray]{0.95}Total/N & 68.5 &  0.0 & 10.4 \\ 
+ & Mean & Zero & Variance \\
 \end{tabular}
-}
 \caption{Deviations} 
 \end{table}
 
@@ -382,7 +268,7 @@ $x_{1}$ &  64 & -4.54 & 20.57 \\
 The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-boxplot-1} 
 
@@ -407,35 +293,26 @@ A histogram's shape can be symmetric, skewed right with more of the observations
 A frequency polygon simply displays the frequency for a class, and an ogive, or cumulative frequency polygon displays the cumulative frequency for a class. 
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-histogram-1} 
 
 }
 
-\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram1}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-histogram-2} 
-
-}
-
-\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram2}
+\caption[Histogram with Frequency Polygon]{Histogram with Frequency Polygon. The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram}
 \end{figure}
 
 
 \end{knitrout}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-ogive-1} 
 
 }
 
-\caption[Histograms with Ogive (Cumulative Frequency Polygon)]{Histograms with Ogive (Cumulative Frequency Polygon).}\label{fig:ogive}
+\caption[Histogram with Ogive (Cumulative Frequency Polygon)]{Histogram with Ogive (Cumulative Frequency Polygon).}\label{fig:ogive}
 \end{figure}
 
 

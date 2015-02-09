@@ -175,6 +175,7 @@ colorlinks=false]{hyperref}
 \makeatother
 
 \newcommand{\mms}{M\&Ms\textcopyright}
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -195,15 +196,15 @@ The mean we use is the arithmetic average, which is calculated by first adding t
 \end{equation*}
 
 \begin{equation*}
-Dev_{\bar{x}}=(x_i-\bar{x}) 
+\dev{x}=(x_i-\bar{x}) 
 \end{equation*}
 
 \begin{equation*}
-Dev_{\bar{x}}^2=(x_i-\bar{x})^2 
+\dev{x}^2=(x_i-\bar{x})^2 
 \end{equation*}
 
 \begin{multline*}
-Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
+Var(X)=\frac{\sum_{i=1}^{N} \dev{x}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
 \end{multline*}
 
 \begin{equation*}
@@ -212,12 +213,12 @@ StdDev(X)=\sqrt{Var(X)}
 
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Feb  6 05:10:07 2015
+% Sun Feb  8 19:06:32 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{cr|c|c|}
   \toprule
-Obs & Heads & Deviation & DeviationSq \\ 
+Observation & Heads & $\dev{x}$ & ${\dev{x}}^2$ \\ 
   \midrule
 $x_{1}$ & 6 & -2.0 & 4.0 \\ 
    \rowcolor[gray]{0.95}$x_{2}$ & 7 & -1.0 & 1.0 \\ 
@@ -274,7 +275,7 @@ Total & 362 & 0 & 184.0 \\
 
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Feb  6 05:10:07 2015
+% Sun Feb  8 19:06:33 2015
 \begin{table}[ht]
 \centering
 \scalebox{0.95}{
@@ -320,41 +321,19 @@ Heads & Frequency & CumulativeFrequency & ecdf \\
 
 \end{knitrout}
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-histogram2bin-1} 
-
-}
-
-\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram2bin1}
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-histogram2bin-2} 
-
-}
-
-\caption[Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon)]{Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. }\label{fig:histogram2bin2}
-\end{figure}
-
-
-\end{knitrout}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-ogive-1} 
 
 }
 
-\caption[Histograms with Ogive (Cumulative Frequency Polygon)]{Histograms with Ogive (Cumulative Frequency Polygon).}\label{fig:ogive}
+\caption[Histogram with Ogive (Cumulative Frequency Polygon)]{Histogram with Ogive (Cumulative Frequency Polygon).}\label{fig:ogive}
 \end{figure}
 
 
 \end{knitrout}
-
 
 
 \end{document}

@@ -1,0 +1,29 @@
+---
+title: "process stork births"
+author: "Kate Davis"
+date: "02/08/2015"
+output: html_document
+---
+
+
+
+```{r read-data}
+require(reshape2)
+raw <- read.delim("/extra/akd/MA2300/storkbirths.txt", header=FALSE, stringsAsFactors=FALSE)
+raw$V2=(1:5)
+rawx=raw[6:nrow(raw),]
+```
+
+```{r reformat}
+storkbirths=data.frame(Country=rawx$V1[rawx$V2==1],
+                       Area=as.numeric(rawx$V1[rawx$V2==2]),
+                       Storks=as.numeric(rawx$V1[rawx$V2==3]),
+                      Humans=as.numeric(rawx$V1[rawx$V2==4]),
+                      BirthRate=as.numeric(rawx$V1[rawx$V2==5]),
+                      stringsAsFactors=F)
+
+
+head(storkbirths)
+
+```
+
