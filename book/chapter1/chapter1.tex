@@ -117,7 +117,7 @@ This data set contains statistics, in arrests per 100,000 residents for assault 
 
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Thu Feb 12 19:23:28 2015
+% Fri Feb 13 02:14:45 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -179,15 +179,14 @@ A \textbf{Scatterplot} of any two of the three variables shows the relationship 
 \end{knitrout}
 \section{Covariance}
 We would like to quantify the linear relationship between each of the variables. The \textbf{Covariance}, a measure of strength of the association between any two variables $X$ and $Y$, denoted $Cov(X,Y)$ is calculated by first multiplying the deviations from their means, $\dev{x}$ and $\dev{y}$, then summing over all observations and dividing by $N$, the number of observations. This is very similar to the population variance calculation, and the variance can be thought of as the covariance of a variable with itself ie. $Var(X)=Cov(X,X)$. 
-
 \begin{equation*}
-Cov(X,Y)=Dev_{\bar{x}}*Dev_{\bar{y}}=Dev_{\bar{y}}*Dev_{\bar{x}}=Cov(Y,X)
+Cov(X,Y)=\frac{\Sigma_{i=1}^{N} Dev_{\bar{x}}Dev_{\bar{y}}}{N}
 \end{equation*}
 The Covariance of Assault Arrests with Murder Arrests is 285.2416 "Assault Arrests x Murder Arrests". These units make very little sense. We cannot compare covariances among variables in a data set if the units are different.
 
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Thu Feb 12 19:23:28 2015
+% Fri Feb 13 02:14:45 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrrr}
@@ -232,7 +231,7 @@ Alabama & 236 & 13.20 &  58 & 351.65 & -487.50 & -40.57 \\
 
 \newpage
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Thu Feb 12 19:23:28 2015
+% Fri Feb 13 02:14:45 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrrr}
@@ -273,7 +272,7 @@ Total & 8538.0 & 389.4 & 3277.0 & 14262.1 & 15301.0 & 214.9 \\
 A standardized Covariance is the \textbf{Linear Correlation}, calculated by dividing each Covariance by the Standard Deviations of each of the variables:
 
 \begin{equation*}
-Corr(X,Y)=Cov(Y,X)/(StdDev(X)StdDev(Y))=
+Corr(X,Y)=\frac{Cov(Y,X)}{(StdDev(X)StdDev(Y))}
 \end{equation*}
 
 The Correlation of Assault Arrests with Murder Arrests is 0.80187 with no units, so the correlations of multiple pairs of variables can be compared.

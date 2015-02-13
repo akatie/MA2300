@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  12 FEB 2015 19:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  13 FEB 2015 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,9 +6,9 @@ entering extended mode
 (./chapter1.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
-(./tufte-handout.cls
+(/usr/share/texlive/texmf-dist/tex/latex/tufte-latex/tufte-handout.cls
 Document Class: tufte-handout 2009/12/11 v3.5.0 Tufte-handout class
-(./tufte-common.def
+(/usr/share/texlive/texmf-dist/tex/latex/tufte-latex/tufte-common.def
 File: tufte-common.def 2009/12/11 v3.5.0 Common code for the Tufte-LaTeX styles
 
 
@@ -1041,12 +1041,12 @@ e 171.
 (pdftex.def)             Requested size: 312.0pt x 312.00105pt.
  [2 <./figure/graphics-scatterplotsxz-1.pdf> <./figure/graphics-scatterplotsyz-
 1.pdf> <./figure/graphics-scatterplotsxy-1.pdf>]
-Overfull \hbox (58.40984pt too wide) in paragraph at lines 193--230
+Overfull \hbox (58.40984pt too wide) in paragraph at lines 192--229
  [][] 
  []
 
 [3]
-Overfull \hbox (86.07918pt too wide) in paragraph at lines 238--268
+Overfull \hbox (86.07918pt too wide) in paragraph at lines 237--267
  [][] 
  []
 
@@ -1055,49 +1055,49 @@ File: Correlation_types-Language-neutral.png Graphic file (type png)
 
 <use Correlation_types-Language-neutral.png>
 Package pdftex.def Info: Correlation_types-Language-neutral.png used on input l
-ine 288.
+ine 287.
 (pdftex.def)             Requested size: 312.0pt x 114.6313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--291
+Underfull \hbox (badness 10000) in paragraph at lines 287--290
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+pplj on input line 292
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 291
 .
-LaTeX Font Info:    No file OMSpplj.fd. on input line 292.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 291.
 
 LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 292.
+(Font)              using `OMS/cmsy/m/n' instead on input line 291.
 
 [5 <./Correlation_types-Language-neutral.png>]
-Overfull \hbox (6.13979pt too wide) in paragraph at lines 301--302
+Overfull \hbox (6.13979pt too wide) in paragraph at lines 300--301
 \T1/pplj/m/n/10 The co-vari-ance re-la-tion-ship be-tween mul-ti-ple vari-ables
  can be ex-pressed
  []
 
-LaTeX Font Info:    Try loading font information for TS1+pplj on input line 316
+LaTeX Font Info:    Try loading font information for TS1+pplj on input line 315
 .
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplj.fd
 File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
 )
-<figure/graphics-scatmat-1.pdf, id=46, 361.35pt x 361.35pt>
+<figure/graphics-scatmat-1.pdf, id=47, 361.35pt x 361.35pt>
 File: figure/graphics-scatmat-1.pdf Graphic file (type pdf)
 
 <use figure/graphics-scatmat-1.pdf>
-Package pdftex.def Info: figure/graphics-scatmat-1.pdf used on input line 341.
+Package pdftex.def Info: figure/graphics-scatmat-1.pdf used on input line 340.
 (pdftex.def)             Requested size: 312.0pt x 312.00105pt.
 
-Overfull \hbox (11.14977pt too wide) in paragraph at lines 351--352
+Overfull \hbox (11.14977pt too wide) in paragraph at lines 350--351
 []\T1/pplj/m/n/10 When two vari-ables have very dif-fer-ent dis-tri-bu-tions, t
 wo non-parametric
  []
 
 [6] [7 <./figure/graphics-scatmat-1.pdf>]
-<figure/graphics-ols-1.pdf, id=61, 361.35pt x 361.35pt>
+<figure/graphics-ols-1.pdf, id=62, 361.35pt x 361.35pt>
 File: figure/graphics-ols-1.pdf Graphic file (type pdf)
 
 <use figure/graphics-ols-1.pdf>
-Package pdftex.def Info: figure/graphics-ols-1.pdf used on input line 362.
+Package pdftex.def Info: figure/graphics-ols-1.pdf used on input line 361.
 (pdftex.def)             Requested size: 144.0pt x 143.99709pt.
 
 
@@ -1111,9 +1111,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7445 strings out of 495028
- 103264 string characters out of 6181496
- 215026 words of memory out of 5000000
+ 7446 strings out of 495028
+ 103520 string characters out of 6181496
+ 215048 words of memory out of 5000000
  10392 multiletter control sequences out of 15000+600000
  41973 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1128,7 +1128,7 @@ lrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on chapter1.pdf (8 pages, 189372 bytes).
+Output written on chapter1.pdf (8 pages, 189815 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
