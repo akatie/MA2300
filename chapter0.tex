@@ -173,22 +173,6 @@ In our data set, the mean height is 1919 divided by 28, or 68.53571 inches, whic
 
 The ``spread'' of the distribution of a dataset can be quantified by range, first and third quartiles, variance and standard deviation.
 
-The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
-
-
-
-In our height dataset of 28, the first quartile is the 7th observation, 66, and the third quartile is the 21th observation, 71.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-62 63 64 64 65 65 66
-66 67 67 67 68 68 69
-69 69 70 71 71 71 71
-71 72 72 72 72 73 74
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
 We would like to measure the \textbf{Deviation}\marginnote{The \textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
 \begin{equation*}
 Dev_{\bar{x}}=(x_i-\bar{x}) 
@@ -220,7 +204,7 @@ StdDev(X)=\sqrt{Var(X)}
 \end{equation*}
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Sun Feb  8 18:42:00 2015
+% Thu Feb 12 10:10:32 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrr}
@@ -264,21 +248,22 @@ Total & 1919.0 &  0.0 & 291.0 \\
 \end{table}
 
 
+The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
 
-The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
 
+
+In our height dataset of 28, the first quartile is the 7th observation, 66, and the third quartile is the 21th observation, 71.
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-boxplot-1} 
-
-}
-
-\caption[Boxplot]{Boxplot}\label{fig:boxplot}
-\end{figure}
-
-
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+62 63 64 64 65 65 66
+66 67 67 67 68 68 69
+69 69 70 71 71 71 71
+71 72 72 72 72 73 74
+\end{verbatim}
+\end{kframe}
 \end{knitrout}
+
 
 \section{Distribution Shapes: Histograms, Frequency Polygons, and Ogives}
 
@@ -305,6 +290,11 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 
 \end{knitrout}
 
+
+The Empirical Cumulative Distribution shows the possible values of the variable, ordered with frequency, with the cumulative frequency. The proportion of cumulative frequency, often expressed as a percentage, is the number of observations that are less than or equal to the value.
+
+The five number summary of a set of data are the 0th, 25th, 50th, 75th and 100the percentile.
+
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
 
@@ -318,5 +308,19 @@ A frequency polygon simply displays the frequency for a class, and an ogive, or 
 
 \end{knitrout}
 
+The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h!]
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-boxplot-1} 
+
+}
+
+\caption[Boxplot]{Boxplot}\label{fig:boxplot}
+\end{figure}
+
+
+\end{knitrout}
 
 \end{document}

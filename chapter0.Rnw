@@ -62,7 +62,7 @@ dsn$count=1
 hiwifreq=dcast(dsn,Height~count)
 names(hiwifreq)=c(obsname,"Frequency")
 hiwifreq$CumulativeFrequency=cumsum(hiwifreq$Frequency)
-hiwifreq$ecdf=(hiwifreq$CumulativeFrequency)/sum(hiwifreq$Frequency)
+hiwifreq$ECD=(hiwifreq$CumulativeFrequency)/sum(hiwifreq$Frequency)
 hmax=max(dsn[,obsname])
 hmin=min(dsn[,obsname])
 hrange=hmax-hmin
@@ -200,29 +200,6 @@ print(centerchart)
 
 The ``spread'' of the distribution of a dataset can be quantified by range, first and third quartiles, variance and standard deviation.
 
-The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
-
-<<quartiles,echo=FALSE,include=FALSE>>=
-Q1n1=floor((Nobs)/4)
-Q1n2=ceiling((Nobs)/4)
-Q1=(dsn$Height[Q1n2]+
-          dsn$Height[Q1n1])/2
-Q3n1=floor((Nobs)*3/4)
-Q3n2=ceiling((Nobs)*3/4)
-Q3=(dsn$Height[Q3n2]+
-          dsn$Height[Q3n1])/2
-
-@
-
-In our height dataset of \Sexpr{Nobs}, the first quartile is the \Sexpr{Q1n1}th observation, \Sexpr{Q1}, and the third quartile is the \Sexpr{Q3n1}th observation, \Sexpr{Q3}.
-<<dataset-quartiles,echo=FALSE>>=
-cat(dsn$Height[1:Q1n1])
-cat(dsn$Height[(Q1n1+1):mediann1])
-cat(dsn$Height[(mediann1+1):Q3n1])
-cat(dsn$Height[(Q3n1+1):Nobs])
-
-@
-
 We would like to measure the \textbf{Deviation}\marginnote{The \textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
 \begin{equation*}
 Dev_{\bar{x}}=(x_i-\bar{x}) 
@@ -290,13 +267,29 @@ cat(tt, sep = "\n")
 
 @
 
+The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
 
-The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
+<<quartiles,echo=FALSE,include=FALSE>>=
+Q1n1=floor((Nobs)/4)
+Q1n2=ceiling((Nobs)/4)
+Q1=(dsn$Height[Q1n2]+
+          dsn$Height[Q1n1])/2
+Q3n1=floor((Nobs)*3/4)
+Q3n2=ceiling((Nobs)*3/4)
+Q3=(dsn$Height[Q3n2]+
+          dsn$Height[Q3n1])/2
 
-<<boxplot,echo=FALSE,fig.cap="Boxplot",fig.pos="h!">>=
-boxplot=ggplot(dsn,aes(x=count,y=Height,fill=count))+geom_boxplot()+theme_igray()+guides(fill=FALSE)+theme(axis.title.x = element_blank())+scale_y_continuous(name="Height in Whole inches")+scale_x_continuous(name="",breaks=NULL)
-print(boxplot)
 @
+
+In our height dataset of \Sexpr{Nobs}, the first quartile is the \Sexpr{Q1n1}th observation, \Sexpr{Q1}, and the third quartile is the \Sexpr{Q3n1}th observation, \Sexpr{Q3}.
+<<dataset-quartiles,echo=FALSE>>=
+cat(dsn$Height[1:Q1n1])
+cat(dsn$Height[(Q1n1+1):mediann1])
+cat(dsn$Height[(mediann1+1):Q3n1])
+cat(dsn$Height[(Q3n1+1):Nobs])
+
+@
+
 
 \section{Distribution Shapes: Histograms, Frequency Polygons, and Ogives}
 
@@ -317,6 +310,11 @@ hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
 #print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
 print(hfpoly+ggtitle("Histogram with Frequency Polygram of\nWeights in Whole Inches"))
 @
+
+
+The Empirical Cumulative Distribution shows the possible values of the variable, ordered with frequency, with the cumulative frequency. The proportion of cumulative frequency, often expressed as a percentage, is the number of observations that are less than or equal to the value.
+
+The five number summary of a set of data are the 0th, 25th, 50th, 75th and 100the percentile.
 
 <<ogive,echo=FALSE,fig.cap="Histogram with Ogive (Cumulative Frequency Polygon).",fig.pos='h!'>>=
 cbreaks=sort(c(0,Q1n2,mediann2,Q3n2,max(hiwifreq$CumulativeFrequency)))
@@ -342,5 +340,11 @@ print(hogive+ggtitle("Histogram of Weights in Whole Inches"))
 
 @
 
+The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
+
+<<boxplot,echo=FALSE,fig.cap="Boxplot",fig.pos="h!">>=
+boxplot=ggplot(dsn,aes(x=count,y=Height,fill=count))+geom_boxplot()+theme_igray()+guides(fill=FALSE)+theme(axis.title.x = element_blank())+scale_y_continuous(name="Height in Whole inches")+scale_x_continuous(name="",breaks=NULL)
+print(boxplot)
+@
 
 \end{document}

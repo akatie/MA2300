@@ -2,8 +2,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{url}
 \usepackage{mathtools}
-%\usepackage{geometry}
-%\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\usepackage{geometry}
+\geometry{textwidth=.4\paperwidth}
+ %\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage{parskip}
 \usepackage{enumerate}
 
@@ -197,11 +198,40 @@ orgdata=dsn #[order(dsn[,obsname]),]
 @
 \maketitle
 \section{Coin Toss}
+<<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
+dcols=c("Obs",obsname,"Deviation","DeviationSq")
+if (!Answers) dcols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
+dnames=c("Observation",obsname,"$\\dev{x}$","${\\dev{x}}^2$")
+tdata=orgdata[,dcols]
+names(tdata)=dnames
+dtable=xtable(tdata,caption = "Number of Heads in Fifteen Tosses",digits=c(0,0,0,1,1))
+rws <- seq(1, (nrow(tdata)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+align(dtable) <- "|ccr|c|c|"
+tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x},floating.environment='margintable',
+      latex.environments = "",
+      table.placement = NULL))
+endrow=which(tt=="\\end{tabular}")
+ltt=length(tt)
+saveend=tt[endrow:ltt]
+if (Answers){
+tt[endrow]=sprintf("Total & %d & %d & %5.1f \\\\ ",htotal,0,sumDevSq)
+ tt[endrow+1]=sprintf("\\rowcolor[gray]{0.95}Total over N & %5.1f & %d & %5.1f \\\\ ",hmean,0,variancex)
+  
+} else {
+tt[endrow]="Total & & & \\\\ "
+ tt[endrow+1]="\\rowcolor[gray]{0.95}Total/N & & & \\\\ "
+}
+tt[endrow+2]=" & Average & Zero & Variance \\\\"
+tt[(endrow+3):(endrow+(length(saveend)-1+3))]=saveend
+cat(tt, sep = "\n")
+@
+
 A fair coin is tossed fifteen times, and the number of heads is records. This trial is repeated nine times. The resulting data should have nine observations of "Number of Head in Fifteen Tosses"
 
-The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values, denoted $\bar{x}$}. The mean is the center that we will use to further examine the ``spread'' of the values.
-
 The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
+
+
 <<summation, echo=F, include=Answers, results='asis'>>=
 xsum=sprintf(sprintf(" %s +",ofmt),orgdata[,obsname])
 xsum[Nobs]=sprintf(sprintf("%s \\\\= %s ",ofmt,ofmt),orgdata[Nobs,obsname],hsum)
@@ -213,7 +243,7 @@ tsumx=paste0(tsumx,collapse="")
 tsum=paste(tsum,tsumx,"\\\\")
 cat("\\begin{multline*}")
 cat(tsum)
-cat(xsum)
+#cat(xsum)
 cat("\\end{multline*}")
 @
 
@@ -239,41 +269,20 @@ StdDev(X)=\sqrt{Var(X)}
 \end{equation*}
 
 
-<<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
-dcols=c("Obs",obsname,"Deviation","DeviationSq")
-if (!Answers) dcols=c("Obs",obsname,"CalcDeviations","CalcDeviationsSq")
-dnames=c("Observation",obsname,"$\\dev{x}$","${\\dev{x}}^2$")
-tdata=orgdata[,dcols]
-names(tdata)=dnames
-dtable=xtable(tdata,caption = "Deviations",digits=c(0,0,0,1,1))
-rws <- seq(1, (nrow(tdata)-1), by = 2)
-col <- rep("\\rowcolor[gray]{0.95}", length(rws))
-align(dtable) <- "|ccr|c|c|"
-tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
-endrow=which(tt=="\\end{tabular}")
-ltt=length(tt)
-saveend=tt[endrow:ltt]
-if (Answers){
-tt[endrow]=sprintf("Total & %d & %d & %5.1f \\\\ ",htotal,0,sumDevSq)
- tt[endrow+1]=sprintf("\\rowcolor[gray]{0.95}Total over N & %5.1f & %d & %5.1f \\\\ ",hmean,0,variancex)
-  
-} else {
-tt[endrow]="Total & & & \\\\ "
- tt[endrow+1]="\\rowcolor[gray]{0.95}Total/N & & & \\\\ "
-}
-tt[endrow+2]=" & Average & Zero & Variance \\\\"
-tt[(endrow+3):(endrow+(length(saveend)-1+3))]=saveend
-cat(tt, sep = "\n")
-@
-
+\newpage
+A frequency table and histogram visualize the center and spread with the mean as a center.
 <<Frequency-table,echo=FALSE,results='asis',include=Answers>>=
 #ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
 otable=xtable(hiwifreq[,c(obsname,"Frequency","CumulativeFrequency","ecdf")],caption = "Frequency Table",digits=c(0,0,0,0,3))
 rws <- seq(1, (nrow(hiwifreq)-1), by = 2)
 col <- rep("\\rowcolor[gray]{0.95}", length(rws))
 print(otable,include.rownames=F, scalebox=0.95,booktabs = TRUE, 
-   add.to.row = list(pos = as.list(rws), command = col))
+   add.to.row = list(pos = as.list(rws), command = col),floating.environment='margintable',
+      latex.environments = "",
+      table.placement = NULL)
 @
+
+
 
 <<histogram,echo=FALSE,fig.cap="Histograms with Frequency Polygon and Ogive (Cumulative Frequency Polygon). The Height data set is unimodal, skewed right, with out outlier on the left. ">>=
 hbase=ggplot(orgdata,aes(x=Heads))+theme_tufte(base_size = 12, base_family = "")

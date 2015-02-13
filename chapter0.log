@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  8 FEB 2015 18:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  12 FEB 2015 10:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,72 +1072,72 @@ File: figure/graphics-mean-center-chart-1.pdf Graphic file (type pdf)
 
 <use figure/graphics-mean-center-chart-1.pdf>
 Package pdftex.def Info: figure/graphics-mean-center-chart-1.pdf used on input 
-line 201.
+line 185.
 (pdftex.def)             Requested size: 312.0pt x 187.20062pt.
- [3 <./figure/graphics-center-chart-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 209--209
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 \T1/pplj/m/n/8 The \T1/pplj/b/n/8 Stan-dard De-vi-a-tion \T1/pplj/m/n/8 of X,
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 209--209
+Underfull \hbox (badness 1902) in paragraph at lines 193--193
 \OML/zplm/m/it/8 StdDev\OT1/zplm/m/n/8 (\OML/zplm/m/it/8 X\OT1/zplm/m/n/8 )$\T1
 /pplj/m/n/8 , of-ten de-noted $\OML/zplm/m/it/8 ^^[$\T1/pplj/m/n/8 , is the
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 209--209
+Underfull \hbox (badness 1152) in paragraph at lines 193--193
 \T1/pplj/m/n/8 stan-dard mea-sure of spread used in
  []
 
 
-LaTeX Warning: Marginpar on page 4 moved.
+LaTeX Warning: Marginpar on page 3 moved.
 
 
-LaTeX Warning: Marginpar on page 4 moved.
+LaTeX Warning: Marginpar on page 3 moved.
 
-
-Underfull \hbox (badness 10000) detected at line 216
+[3 <./figure/graphics-center-chart-1.pdf> <./figure/graphics-mean-center-chart-
+1.pdf>]
+Underfull \hbox (badness 10000) detected at line 200
  []$[]  \OML/zplm/m/it/10 Var\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n
 /10 ) = [] = []  $ 
  []
 
-<figure/graphics-boxplot-1.pdf, id=28, 361.35pt x 361.35pt>
-File: figure/graphics-boxplot-1.pdf Graphic file (type pdf)
-
-<use figure/graphics-boxplot-1.pdf>
-Package pdftex.def Info: figure/graphics-boxplot-1.pdf used on input line 273.
-(pdftex.def)             Requested size: 312.0pt x 312.00105pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (11.53558pt too wide) in paragraph at lines 283--283
+[4]
+Overfull \hbox (11.53558pt too wide) in paragraph at lines 268--268
 |\T1/pplj/m/it/12 Distribution Shapes: His-tograms, Fre-quency Poly-gons, and O
 gives| 
  []
 
 
-LaTeX Warning: Marginpar on page 4 moved.
+LaTeX Warning: Marginpar on page 5 moved.
 
-[4 <./figure/graphics-mean-center-chart-1.pdf>]
-<figure/graphics-histogram-1.pdf, id=39, 361.35pt x 361.35pt>
+<figure/graphics-histogram-1.pdf, id=38, 361.35pt x 361.35pt>
 File: figure/graphics-histogram-1.pdf Graphic file (type pdf)
 
 <use figure/graphics-histogram-1.pdf>
-Package pdftex.def Info: figure/graphics-histogram-1.pdf used on input line 298
+Package pdftex.def Info: figure/graphics-histogram-1.pdf used on input line 283
 .
 (pdftex.def)             Requested size: 312.0pt x 312.00105pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figure/graphics-ogive-1.pdf, id=40, 361.35pt x 361.35pt>
+<figure/graphics-ogive-1.pdf, id=39, 361.35pt x 361.35pt>
 File: figure/graphics-ogive-1.pdf Graphic file (type pdf)
 
 <use figure/graphics-ogive-1.pdf>
-Package pdftex.def Info: figure/graphics-ogive-1.pdf used on input line 311.
+Package pdftex.def Info: figure/graphics-ogive-1.pdf used on input line 301.
+(pdftex.def)             Requested size: 312.0pt x 312.00105pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figure/graphics-boxplot-1.pdf, id=40, 361.35pt x 361.35pt>
+File: figure/graphics-boxplot-1.pdf Graphic file (type pdf)
+
+<use figure/graphics-boxplot-1.pdf>
+Package pdftex.def Info: figure/graphics-boxplot-1.pdf used on input line 316.
 (pdftex.def)             Requested size: 312.0pt x 312.00105pt.
 
 
@@ -1148,29 +1148,29 @@ Package bibentry Warning: You have used \nobibliography*
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-[5 <./figure/graphics-boxplot-1.pdf>] [6 <./figure/graphics-histogram-1.pdf>]
-[7] [8 <./figure/graphics-ogive-1.pdf>] (./chapter0.aux) ) 
+[5] [6 <./figure/graphics-histogram-1.pdf>] [7 <./figure/graphics-ogive-1.pdf>]
+[8 <./figure/graphics-boxplot-1.pdf>] (./chapter0.aux) ) 
 Here is how much of TeX's memory you used:
  7383 strings out of 495028
  102333 string characters out of 6181496
- 207277 words of memory out of 5000000
+ 205277 words of memory out of 5000000
  10320 multiletter control sequences out of 15000+600000
  56609 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,16n,49p,1216b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/t
-exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/f
-plmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/pal
-atino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8
-a.pfb>
-Output written on chapter0.pdf (8 pages, 132848 bytes).
+{/usr/share/texlive/tex
+mf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fpl
+mr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.
+pfb>
+Output written on chapter0.pdf (8 pages, 132675 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream

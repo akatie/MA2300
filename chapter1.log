@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  12 FEB 2015 19:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.20)  12 FEB 2015 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CoinToss.tex
-(./CoinToss.tex
+**chapter1.tex
+(./chapter1.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (./tufte-handout.cls
@@ -171,7 +171,7 @@ LaTeX Info: Redefining \cite on input line 694.
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/bibentry.sty
 Package: bibentry 2007/10/30 1.5 (PWD)
 )
-No file CoinToss.bbl.
+No file chapter1.bbl.
 \c@@tufte@num@bibkeys=\count98
 (/usr/share/texlive/texmf-dist/tex/latex/sauerj/optparams.sty
 Package: optparams 2004/08/14 v0.9 multiple optional parameters in macros
@@ -410,17 +410,6 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 (/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
 Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 
@@ -464,7 +453,7 @@ LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count114
 \c@MaxMatrixCols=\count115
-\dotsspace@=\muskip11
+\dotsspace@=\muskip10
 \c@parentequation=\count116
 \dspbrk@lvl=\count117
 \tag@help=\toks20
@@ -496,9 +485,6 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen147
 \l_MT_above_shortintertext_sep=\dimen148
 \l_MT_below_shortintertext_sep=\dimen149
-)
-(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
-Package: parskip 2001/04/09 non-zero parskip adjustments
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
@@ -803,10 +789,6 @@ File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/sectsty/sectsty.sty
-Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
-les
-)
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen150
@@ -845,317 +827,62 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count130
 \LT@p@ftn=\toks27
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count131
+\float@exts=\toks28
+\float@box=\box62
+\@float@everytoks=\toks29
+\@floatcapt=\box63
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen164
 \extrarowheight=\dimen165
-\NC@list=\toks28
+\NC@list=\toks30
 \extratabsurround=\skip94
 \backup@length=\skip95
 )
-\TX@col@width=\dimen166
-\TX@old@table=\dimen167
-\TX@old@col=\dimen168
-\TX@target=\dimen169
-\TX@delta=\dimen170
-\TX@cols=\count131
-\TX@ftn=\toks29
+\everycr=\toks31
+\minrowclearance=\skip96
 )
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\enitkv@toks@=\toks30
-\labelindent=\skip96
-\enit@outerparindent=\dimen171
-\enit@toks=\toks31
-\enit@inbox=\box62
-\enitdp@description=\count132
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write3
-\integerpart=\count133
-\decimalpart=\count134
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-\etb@tempcnta=\count135
-)
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen172
-\captionmargin@=\dimen173
-\captionwidth=\dimen174
-\caption@tempdima=\dimen175
-\caption@indent=\dimen176
-\caption@parindent=\dimen177
-\caption@hangindent=\dimen178
-)
-\c@ContinuedFloat=\count136
-Package caption Info: longtable package is loaded.
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
-
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
-)
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-)
-\@linkdim=\dimen179
-\Hy@linkcounter=\count137
-\Hy@pagecounter=\count138
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
-)
-\Hy@SavedSpaceFactor=\count139
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
-)
-Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4319.
-Package hyperref Info: Option `unicode' set `true' on input line 4319.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `pdfusetitle' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarks' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4319
-.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4319.
-Package hyperref Info: Option `breaklinks' set `true' on input line 4319.
-Package hyperref Info: Option `colorlinks' set `false' on input line 4319.
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count140
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen180
-\Fld@menulength=\count141
-\Field@Width=\dimen181
-\Fld@charsize=\dimen182
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring OFF on input line 6315.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count142
-\c@Item=\count143
-)
-
-Package hyperref Message: Driver (autodetected): hpdftex.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count144
-\c@bookmark@seq@number=\count145
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
-)
-\Hy@SectionHShift=\skip97
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 133.
-
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count146
-\float@exts=\toks32
-\float@box=\box63
-\@float@everytoks=\toks33
-\@floatcapt=\box64
-)
-(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count147
-\sf@farskip=\skip98
-\sf@captopadj=\dimen183
-\sf@capskip=\skip99
-\sf@nearskip=\skip100
-\c@subfigure=\count148
-\c@subfigure@save=\count149
-\c@lofdepth=\count150
-\c@subtable=\count151
-\c@subtable@save=\count152
-\c@lotdepth=\count153
-\sf@top=\skip101
-\sf@bottom=\skip102
-)
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen184
-\WF@size=\dimen185
-\c@WF@wrappedlines=\count154
-\WF@box=\box65
-\WF@everypar=\toks34
-Package: wrapfig 2003/01/31  v 3.6
-)
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks35
-\minrowclearance=\skip103
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks36
-\verbatim@line=\toks37
-\verbatim@in@stream=\read1
-)
-(/usr/share/texlive/texmf-dist/tex/latex/animate/animate.sty
-Package: animate 2014/02/11 PDF animations from files and inline graphics
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
-Package: ifdraft 2008/08/11 v1.3 Detect class options draft and final (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/animate/animfp.sty
-Package: animfp 2009/07/23 fixed point addition for animate.sty
-\afp@xs=\count155
-\afp@xia=\count156
-\afp@xib=\count157
-\afp@xfa=\count158
-\afp@xfb=\count159
-\afp@rega=\count160
-\afp@regb=\count161
-\afp@regs=\count162
-)
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count163
-\scratchdimen=\dimen186
-\scratchbox=\box66
-\nofMPsegments=\count164
-\nofMParguments=\count165
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count166
-\MPscratchDim=\dimen187
-\MPnumerator=\count167
-\makeMPintoPDFobject=\count168
-\everyMPtoPDFconversion=\toks39
-)
-\@anim@box=\box67
-\@anim@tmpdima=\dimen188
-\@anim@tmpdimb=\dimen189
-\@anim@num=\count169
-\@anim@curframe=\count170
-\@anim@curframe@zb=\count171
-\@anim@resize=\count172
-\@anim@skipfram=\count173
-\@anim@mulframecnt=\count174
-\@anim@@tmlnfile=\read2
-\@anim@tmpcnt=\count175
-\c@@anim@ltxcnt=\count176
-\@anim@curlayer=\count177
-\@anim@lineno=\count178
-\@anim@curfield=\count179
-\@anim@begin=\toks40
-\@anim@end=\toks41
-) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-)
-(./CoinToss.aux)
-\openout1 = `CoinToss.aux'.
+) (./chapter1.aux)
+\openout1 = `chapter1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 181.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 181.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 104.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 181.
-LaTeX Font Info:    ... okay on input line 181.
-LaTeX Font Info:    Try loading font information for T1+pplj on input line 181.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Try loading font information for T1+pplj on input line 104.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 181.
+LaTeX Info: Redefining \selectfont on input line 104.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1165,11 +892,11 @@ LaTeX Info: Redefining \selectfont on input line 181.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside asymmetric 
-* h-part:(L,W,R)=(72.26999pt, 245.71425pt, 296.31076pt)
+* h-part:(L,W,R)=(72.26999pt, 312.0pt, 230.02501pt)
 * v-part:(T,H,B)=(72.26999pt, 616.0pt, 106.7pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=245.71425pt
+* \textwidth=312.0pt
 * \textheight=616.0pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
@@ -1191,12 +918,54 @@ LaTeX Info: Redefining \selectfont on input line 181.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count132
+\scratchdimen=\dimen166
+\scratchbox=\box64
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen167
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks33
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -1206,179 +975,163 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-Package caption Info: wrapfig package is loaded.
-Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring ON on input line 181.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count180
-)
-LaTeX Info: Redefining \ref on input line 181.
-LaTeX Info: Redefining \pageref on input line 181.
-LaTeX Info: Redefining \nameref on input line 181.
-
-(./CoinToss.out) (./CoinToss.out)
-\@outlinefile=\write4
-\openout4 = `CoinToss.out'.
-
-LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <12> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 186.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 186.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 186.
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 190
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 190
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 190
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 190
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 190
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 244.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (26.80385pt too wide) in paragraph at lines 190--244
-[] 
- []
-
-
-LaTeX Warning: Marginpar on page 1 moved.
-
-
-Underfull \hbox (badness 10000) detected at line 270
- []$[]  \OML/zplm/m/it/10 Var\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n
-/10 ) = [] = []  $ 
- []
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 143.
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 299.
-See the caption package documentation for explanation.
+<figure/graphics-scatterplotsxz-1.pdf, id=10, 361.35pt x 361.35pt>
+File: figure/graphics-scatterplotsxz-1.pdf Graphic file (type pdf)
 
-
-Overfull \hbox (54.99767pt too wide) in paragraph at lines 282--299
-[] 
- []
+<use figure/graphics-scatterplotsxz-1.pdf>
+Package pdftex.def Info: figure/graphics-scatterplotsxz-1.pdf used on input lin
+e 147.
+(pdftex.def)             Requested size: 144.0pt x 143.99709pt.
 
 
 LaTeX Warning: Marginpar on page 2 moved.
 
-<figure/graphics-histogram-1.pdf, id=23, 361.35pt x 361.35pt>
-File: figure/graphics-histogram-1.pdf Graphic file (type pdf)
+<figure/graphics-scatterplotsyz-1.pdf, id=11, 361.35pt x 361.35pt>
+File: figure/graphics-scatterplotsyz-1.pdf Graphic file (type pdf)
 
-<use figure/graphics-histogram-1.pdf>
-Package pdftex.def Info: figure/graphics-histogram-1.pdf used on input line 308
+<use figure/graphics-scatterplotsyz-1.pdf>
+Package pdftex.def Info: figure/graphics-scatterplotsyz-1.pdf used on input lin
+e 159.
+(pdftex.def)             Requested size: 144.0pt x 143.99709pt.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+<figure/graphics-scatterplotsxy-1.pdf, id=12, 361.35pt x 361.35pt>
+File: figure/graphics-scatterplotsxy-1.pdf Graphic file (type pdf)
+
+<use figure/graphics-scatterplotsxy-1.pdf>
+Package pdftex.def Info: figure/graphics-scatterplotsxy-1.pdf used on input lin
+e 171.
+(pdftex.def)             Requested size: 312.0pt x 312.00105pt.
+ [2 <./figure/graphics-scatterplotsxz-1.pdf> <./figure/graphics-scatterplotsyz-
+1.pdf> <./figure/graphics-scatterplotsxy-1.pdf>]
+Overfull \hbox (58.40984pt too wide) in paragraph at lines 193--230
+ [][] 
+ []
+
+[3]
+Overfull \hbox (86.07918pt too wide) in paragraph at lines 238--268
+ [][] 
+ []
+
+[4] <Correlation_types-Language-neutral.png, id=40, 628.3475pt x 230.8625pt>
+File: Correlation_types-Language-neutral.png Graphic file (type png)
+
+<use Correlation_types-Language-neutral.png>
+Package pdftex.def Info: Correlation_types-Language-neutral.png used on input l
+ine 288.
+(pdftex.def)             Requested size: 312.0pt x 114.6313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--291
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 292
 .
-(pdftex.def)             Requested size: 245.71425pt x 245.71475pt.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 292.
 
-Underfull \hbox (badness 2644) in paragraph at lines 313--313
-\T1/pplj/m/n/10 mu-la-tive Fre-quency Poly-gon).
+LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead on input line 292.
+
+[5 <./Correlation_types-Language-neutral.png>]
+Overfull \hbox (6.13979pt too wide) in paragraph at lines 301--302
+\T1/pplj/m/n/10 The co-vari-ance re-la-tion-ship be-tween mul-ti-ple vari-ables
+ can be ex-pressed
  []
 
-<figure/graphics-histogram-2.pdf, id=24, 361.35pt x 361.35pt>
-File: figure/graphics-histogram-2.pdf Graphic file (type pdf)
-
-<use figure/graphics-histogram-2.pdf>
-Package pdftex.def Info: figure/graphics-histogram-2.pdf used on input line 317
+LaTeX Font Info:    Try loading font information for TS1+pplj on input line 316
 .
-(pdftex.def)             Requested size: 245.71425pt x 245.71475pt.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pplj.fd
+File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
+)
+<figure/graphics-scatmat-1.pdf, id=46, 361.35pt x 361.35pt>
+File: figure/graphics-scatmat-1.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 2644) in paragraph at lines 322--322
-\T1/pplj/m/n/10 mu-la-tive Fre-quency Poly-gon).
+<use figure/graphics-scatmat-1.pdf>
+Package pdftex.def Info: figure/graphics-scatmat-1.pdf used on input line 341.
+(pdftex.def)             Requested size: 312.0pt x 312.00105pt.
+
+Overfull \hbox (11.14977pt too wide) in paragraph at lines 351--352
+[]\T1/pplj/m/n/10 When two vari-ables have very dif-fer-ent dis-tri-bu-tions, t
+wo non-parametric
  []
 
-<figure/graphics-ogive-1.pdf, id=25, 361.35pt x 361.35pt>
-File: figure/graphics-ogive-1.pdf Graphic file (type pdf)
+[6] [7 <./figure/graphics-scatmat-1.pdf>]
+<figure/graphics-ols-1.pdf, id=61, 361.35pt x 361.35pt>
+File: figure/graphics-ols-1.pdf Graphic file (type pdf)
 
-<use figure/graphics-ogive-1.pdf>
-Package pdftex.def Info: figure/graphics-ogive-1.pdf used on input line 331.
-(pdftex.def)             Requested size: 245.71425pt x 245.71475pt.
-
-Underfull \hbox (badness 5091) in paragraph at lines 336--336
-\T1/pplj/m/n/10 (Cu-mu-la-tive Fre-quency Poly-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<use figure/graphics-ols-1.pdf>
+Package pdftex.def Info: figure/graphics-ols-1.pdf used on input line 362.
+(pdftex.def)             Requested size: 144.0pt x 143.99709pt.
 
 
 Package bibentry Warning: You have used \nobibliography* 
 (bibentry)                without a following \bibliography.
 (bibentry)                You may not be able to run BibTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
-[2 <./figure/graphics-histogram-1.pdf> <./figure/graphics-histogram-2.pdf>]
-[3 <./figure/graphics-ogive-1.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
- (./CoinToss.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
-Package rerunfilecheck Info: File `CoinToss.out' has not changed.
-(rerunfilecheck)             Checksum: 33D2C66E886A21916E4878555300BD14;91.
+[8 <./figure/graphics-ols-1.pdf>] (./chapter1.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 16648 strings out of 495028
- 239400 string characters out of 6181496
- 406291 words of memory out of 5000000
- 19501 multiletter control sequences out of 15000+600000
- 50740 words of font info for 87 fonts, out of 8000000 for 9000
+ 7445 strings out of 495028
+ 103264 string characters out of 6181496
+ 215026 words of memory out of 5000000
+ 10392 multiletter control sequences out of 15000+600000
+ 41973 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,14n,92p,793b,514s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,45p,575b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on CoinToss.pdf (3 pages, 92138 bytes).
+ic/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fp
+lrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on chapter1.pdf (8 pages, 189372 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 1048 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1055 words of extra memory for PDF output out of 10000 (max. 10000000)
 

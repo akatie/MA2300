@@ -11,7 +11,7 @@
 % For package xtable
 \usepackage{booktabs}  % Nice toprules and bottomrules
 \heavyrulewidth=1.5pt  % Change the default to heavier lines
-%%\usepackage{longtable} 
+\usepackage{longtable} 
 %%\usepackage{tabularx}  % To control the width of the table
 
 % this should make caption font bold.
@@ -27,9 +27,26 @@
 
 
 \usepackage{colortbl,xcolor}
-
 \makeatletter
-\title{Associations}
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{0pc}%
+  \setlength{\JustifyingParindent}{0pc}%
+  \setlength{\parindent}{0pc}%
+  \setlength{\parskip}{3pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pc}%
+  \setlength{\JustifyingParindent}{0pc}%
+  \setlength{\parindent}{0pc}%
+  \setlength{\parskip}{2pt}%
+}
+\makeatother
+\makeatletter
+\title{Descriptive Statistics -- Associations}
 \author{Kate Davis}
 \makeatother
 
@@ -38,8 +55,43 @@
 <<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
 library(knitr)
 options(formatR.arrow=TRUE,width=50)
-opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='pdf', fig.width=5, fig.height=5,  cache=FALSE,comment="",message=FALSE)
+opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='pdf', fig.width=5, fig.height=5,  cache=FALSE,comment="",message=FALSE,echo=FALSE,warnings=FALSE,errors=FALSE)
 knit_hooks$set(crop=hook_pdfcrop)
+## ---- latex-functions ---- 
+lcurrency<-function(incur) {
+  #  gsub("$","\\\\$",currfmt(incur))
+  currfmt(incur)
+}
+rpercent<-function(inval){
+  percent(ceil(inval*100)/100)
+}
+lpercent<-function(inval) {
+  gsub("%","\\\\%",percent(inval))
+  #  percent(inval)
+}
+ltext<-function(inval) {
+  xval=gsub("%","\\\\%",percent(inval))
+  xval=gsub("&","\\\\&",percent(inval))
+}
+ldate<-function(indate){
+  gsub(" 0"," ",format(indate,"%B %d, %Y"))
+}
+lmname<-function(indate){
+  format(indate,"%B %Y")
+}
+ltable<-function(t,...){
+  ltable=xtable(t,latex.environments='width=1.2\\textwidth,center',...)
+}
+ltableprint<-function(t,...){
+  print( t, floating=TRUE, booktabs=TRUE, table.placement='h!',...)
+}
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)}
+
+
 @
 
 <<data,include=FALSE,cache=FALSE,echo=FALSE>>=
@@ -49,230 +101,131 @@ require(xtable)
 require(ggplot2)
 require(ggthemes)
 require(scales)
-dsn <- read.table("/extra/akd/MA2300/HeightInWholeInches.txt", header=TRUE, quote="\"", stringsAsFactors=FALSE)
-obsname="Height"
+data(USArrests)
+dsn <- USArrests
+obsname="Assault"
+obsname=c("Assault","Murder","UrbanPop")
+obstext=c("Assault Arrests\nper 100,000 population","Murder Arrests\nper 100,000 population","Proportion Urban Population")
+cc=c("Observation","Assault","Murder","UrbanPoP")
 ofmt="%4.1f"
 #ofmt="%d"
 Answers=TRUE
 #dsn$Candies=with(dsn,Red+Green+Blue+Orange+Yellow+Brown)
 Nobs=nrow(dsn)
-hsum=sum(dsn)
 dsn$Observation=(1:Nobs)
-dsn$count=1
-hiwifreq=dcast(dsn,Height~count)
-names(hiwifreq)=c(obsname,"Frequency")
-hiwifreq$CumulativeFrequency=cumsum(hiwifreq$Frequency)
-hiwifreq$ecdf=(hiwifreq$CumulativeFrequency)/sum(hiwifreq$Frequency)
-hmax=max(dsn[,obsname])
-hmin=min(dsn[,obsname])
+hsum=as.matrix(sapply(dsn[,obsname],sum))
+fivestat=as.data.frame(sapply(dsn[obsname],summary))
+hmin=as.matrix(fivestat[1,])
+hmax=as.matrix(fivestat[6,])
 hrange=hmax-hmin
-#dsn[,obsname]=(sort(dsn[,obsname]))
-n=nrow(hiwifreq)
-moden=which(hiwifreq$Frequency==max(hiwifreq$Frequency))
-mode=hiwifreq[moden[1],obsname]
-mediann1=floor((Nobs)/2)
-mediann2=ceiling((Nobs)/2)
-median=(dsn[mediann1,obsname]+
-          dsn[mediann2,obsname])/2
-htotal=sum(dsn[,obsname])
-hmean=round(htotal/Nobs,1)
-Q1n1=floor((Nobs)/4)
-Q1n2=ceiling((Nobs)/4)
-Q1=(dsn[Q1n2,obsname]+
-          dsn[Q1n1,obsname])/2
-Q3n1=floor((Nobs)*3/4)
-Q3n2=ceiling((Nobs)*3/4)
-Q3=(dsn[Q3n2,obsname]+
-          dsn[Q3n1,obsname])/2
-dsn$Deviation=dsn[,obsname]-hmean
-dsn$DeviationSq=dsn$Deviation^2
-dsn$mean=hmean
-dsn$Obs=paste0("$x_{",dsn$Observation,"}$")
-dsn$NWeight=ifelse(dsn$Deviation>=0,hmean,dsn[,obsname])
-dsn$PWeight=ifelse(dsn$Deviation<0,hmean,dsn[,obsname])
+hmean=as.matrix(fivestat[4,])
+dsn$DeviationX=dsn[,obsname[1]]-hmean[1]
+dsn$DeviationY=dsn[,obsname[2]]-hmean[2]
+dsn$DeviationZ=dsn[,obsname[3]]-hmean[3]
+dsn$DeviationXSq=with(dsn,DeviationX^2)
+dsn$DeviationYSq=with(dsn,DeviationY^2)
+dsn$DeviationZSq=with(dsn,DeviationZ^2)
+dsn$DeviationXY=with(dsn,DeviationX*DeviationY)
+dsn$DeviationXZ=with(dsn,DeviationX*DeviationZ)
+dsn$DeviationYZ=with(dsn,DeviationZ*DeviationY)
+dsn$Obs=row.names(dsn)
 #orgdata$DeviationSign[orgdata$Deviation<=0]="Negative"
-sumDevx=sum(dsn$DeviationSq)
+sumDevxy=sum(dsn$DeviationXY)
+sumDevxz=sum(dsn$DeviationXZ)
+sumDevyz=sum(dsn$DeviationYZ)
+covxy=sumDevxy/Nobs
+covxz=sumDevxz/Nobs
+covyz=sumDevyz/Nobs
+
+sumDevx=sum(dsn$DeviationXSq)
 variancex=sumDevx/Nobs
 stddevx=variancex^0.5
-orgdata=dsn #[order(dsn[,obsname]),]
-orgdata$CalcDeviations="            "
-orgdata$CalcDeviationsSq="             "
+sumDevy=sum(dsn$DeviationYSq)
+variancey=sumDevy/Nobs
+stddevy=variancey^0.5
+sumDevz=sum(dsn$DeviationZSq)
+variancez=sumDevz/Nobs
+stddevz=variancez^0.5
+fivestat[7,]=c(sumDevx,sumDevy,sumDevz)
+fivestat[8,]=c(variancex,variancey,variancez)
+fivestat[9,]=c(stddevx,stddevy,stddevz)
+fsr=row.names(fivestat)
+fsr[7]="Sum Sq Deviation"
+fsr[8]="Variance"
+fsr[9]="Standard Deviation"
+row.names(fivestat)=fsr
 orgdata=dsn #[order(dsn[,obsname]),]
 @
 
 \maketitle
 \section{Introduction to Associations}
-Statistical Data Analysis is quantitative evaluation of \textbf{Numeric Data}\marginnote{\textbf{Numeric Data} points are numbers that represents value. Generally, each numeric data point  has a unit of measure} and multiple data points with the same unit can be combined using basic arithmetic operations to form a new data point. Height (in mm), weight (in kg), temperature (degrees F), proportions (percent), and monetary values are examples of  \textbf{continuous}\marginnote{\textbf{Continuous Data} has an infinite number of possible values within a given range, usually represented by real numbers, percentages or fractions} numeric data points. \textbf{Discrete}\marginnote{\textbf{Discrete Data} are data with a finite list of possible values within any given range, and are often integer or count data} numeric data are whole number data or count data, such as the number of sunspots per month, the number of apples in a bushel, or dice roll values.  House numbers, credit scores, zipcodes and jersey numbers are examples of numbers that are not numeric data points, as none have units nor can these numbers be combined arithmetically to form another numeric data point.
+We now consider the statistical associations between data. A data set can contain multiple data points per observation, and understaning how those data are associated within the observation is a key goal of descriptive and inferential statistical analysis. Examples of data sets are observations as patients, with data points as vital signs, or observations as states or counties and data points as crime statistics. 
 
-\section{Height in Whole Inches}
-Consider the numeric \textbf{Data Set}\marginnote{A \textbf{Data Set} is a collection of numeric data points. Each data point within a data set is called an observation, denoted $x_i$, where $i$ is the number of the observation. For our data set, $x_3$ is \Sexpr{orgdata$Height[3]}. $N$ denotes the number of observations.} of \textbf{Height in Whole Inches} of our \textbf{Population}\marginnote{A \textbf{Population} is any complete group or set of measure with at least one characteristic in common}: students in MA3200 Section 2. Heights would be continuous data, but we have ``discretized'' this data by rounding to the nearest whole inch. The data, in the original order presented, is:
+Some associations that are often examined are statistics including covariance, correlations, and contingencies, and visualizations such as scatterplots and mosaic plots.
 
-<<rawdata,echo=FALSE,comment=''>>=
-cat(dsn$Height[1:(Nobs/2)])
-cat(dsn$Height[((Nobs/2)+1):Nobs])
-hmax=max(dsn$Height)
-hmin=min(dsn$Height)
-hrange=hmax-hmin
+\section{US Arrest Statistics by Crime and State}
+This data set contains statistics, in arrests per 100,000 residents for assault ($X$) and murder ($Y$) in each of the 50 states in 1973, along with the percent of population living in urban areas ($Z$).
+
+
+<<basic-stats,comment="",results='asis'>>=
+print(xtable(fivestat,digits=c(0,1,2,1),caption="Summary Statistics for US Arrests in 1973 "))
 @
-This set of data has \Sexpr{Nobs} data points. To better evaluate this data, lets sort it. We can begin to see patterns of multiple values, and can quickly see that the lowest or minimum value is \Sexpr{hmin} inches and the highest or maximum value is \Sexpr{hmax} inches. The \textbf{Range}\marginnote{The \textbf{Range} is difference between the maximum and minimum values of a data set} is \Sexpr{hrange} inches.
-
-<<sorteddata,echo=FALSE,comment=''>>=
-dsn$Height=(sort(dsn$Height))
-cat(dsn$Height[1:(Nobs/2)])
-cat(dsn$Height[((Nobs/2)+1):Nobs])
+\newpage
+\section{Scatterplots}
+A \textbf{Scatterplot} of any two of the three variables shows the relationship on the same observation, in this case, State. 
+<<scatterplotsxz,echo=FALSE,comment='',fig.cap="A scatterplot of Assault Arrests vs. Proportion Urban Population does not show a relationship",fig.env="marginfigure">>=
+scp=ggplot(dsn,aes(y=Assault,x=UrbanPop))+geom_point()+
+  scale_x_continuous(name=obstext[3])+
+  scale_y_continuous(name=obstext[1])+
+  theme(axis.text = element_text(size=1))
+print(scp)
 @
-
-This data set has \Sexpr{nrow(hiwifreq)} discrete values for height, fewer than the range of \Sexpr{hrange} inches. There is a gap in observations between \Sexpr{hmin} inches and \Sexpr{hmax} inches, but all other height values in the range are represented.
-
-To gain more knowledge about this dataset, we must describe the \textbf{distribution}\marginnote{The Oxford English Dictionary defines \textbf{Distribution} as the \emph{way in which something is shared out among a group or spread over an area} } of values across the measurement range, with a goal of using that information for predictions, estimations and other inferences about the population when a complete \textbf{census}\marginnote{A \textbf{Census} is a complete enumeration of every unit, everyone or everything in a population.} 
-
-The \textbf{statistical distribution}\marginnote{A \textbf{Statistical Distribution} assigns probabilities to the possible values of a data set } can be estimated or inferred from a data set, and 
-is used to estimate the accuracy of these predictions, estimates, inferences.
-
-\section{Frequency Tables}
-We can create a \textbf{Frequency table}\marginnote{a \textbf{Frequency Table} is a summary of data point Frequency by class or interval} and \textbf{histogram}\marginnote{a \textbf{Histogram} is a chart that displays the distribution of a data set} of the data set values. The height data is in whole inches, so we will start with using the integer height value as the class in integer order. A cumulative frequency column is added for additional calculation.
-
-<<Frequency-table,echo=FALSE,results='asis'>>=
-#ftable=xtable(hiwifreq[,c(1,2)],caption = "Frequency Table")
-#otable=xtable(hiwifreq[,c(1,2,3)],caption = "Frequency Table")
-#rws <- seq(1, (nrow(hiwifreq)-1), by = 2)
-#col <- rep("\\rowcolor[gray]{0.95}", length(rws))
-#print(otable,include.rownames=F, scalebox=0.95,booktabs = TRUE, 
-#   add.to.row = list(pos = as.list(rws), command = col))
+<<scatterplotsyz,echo=FALSE,comment='',fig.cap="A scatterplot of Murder Arrests vs. Proportion Urban Population does not show a relationship",fig.env="marginfigure">>=
+scp=ggplot(dsn,aes(x=Murder,y=UrbanPop))+geom_point()+
+  scale_x_continuous(name=obstext[2])+
+  scale_y_continuous(name=obstext[3])+
+  theme(axis.text = element_text(size=1))
+print(scp)
 @
-
-\section{Measures of Center}
-<<centers,echo=FALSE,include=FALSE>>=
-n=nrow(hiwifreq)
-moden=which(hiwifreq$Frequency==max(hiwifreq$Frequency))
-mode=hiwifreq$Height[moden[1]]
-mediann1=floor((Nobs)/2)
-mediann2=ceiling((Nobs)/2)
-median=(dsn$Height[mediann1]+
-          dsn$Height[mediann2])/2
-hmean=mean(dsn$Height)
+<<scatterplotsxy,echo=FALSE,comment='',fig.cap="A scatterplot of Assault vs. Murder Arrests shows a possible linear relationship">>=
+scp=ggplot(dsn,aes(y=Assault,x=Murder))+geom_point()+
+  scale_x_continuous(name=obstext[2])+
+  scale_y_continuous(name=obstext[1])+
+  theme(axis.text = element_text(size=1))
+print(scp)
 @
-
-To understand more about the distribution of the height in inches of our studens, we first examine ``centers'' of the data: the mode, the median, and the mean.
-
-The \textbf{mode}\marginnote{The \textbf{Mode} of a data set is value that has the highest frequency} of this dataset is \Sexpr{mode} inches with frequency \Sexpr{hiwifreq$Frequency[moden]} students. The mode is easily found from the frequency table. If there is one clear mode in a distribution, the dataset is said to be \emph{unimodal}. A data set can have more than one mode, or be \emph{multi-modal}.
-
-The \textbf{median}\marginnote{The \textbf{Median} of a data set is the midpoint of the distribution, or the middle value of the data when sorted in ascending order. The median is the 50th percentile} of this dataset is \Sexpr{median} inches with frequency of \Sexpr{hiwifreq$Frequency[mediann1]} students. If the number $n$ of data points is odd, this is a simple observation of $(n+1)/2$. If the number of data points is even, the arithmetic average of the nearest two data point values is the median.
-
-The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values, denoted $\bar{x}$}. The mean is the center that we will use to further examine the ``spread'' of the values.
-
-The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
+\section{Covariance}
+We would like to quantify the linear relationship between each of the variables. The \textbf{Covariance}, a measure of strength of the association between any two variables $X$ and $Y$, denoted $Cov(X,Y)$ is calculated by first multiplying the deviations from their means, $\dev{x}$ and $\dev{y}$, then summing over all observations and dividing by $N$, the number of observations. This is very similar to the population variance calculation, and the variance can be thought of as the covariance of a variable with itself ie. $Var(X)=Cov(X,X)$. 
 
 \begin{equation*}
-\sum\limits_{i=0}^{n} x_i = x_1+x_2+x_3+ \dots +x_{27}+x_{28}+x_{29}+x_{30} 
+Cov(X,Y)=Dev_{\bar{x}}*Dev_{\bar{y}}=Dev_{\bar{y}}*Dev_{\bar{x}}=Cov(Y,X)
 \end{equation*}
-
-\begin{equation*}
-\bar{x}=\frac{\sum\limits_{i=1}^{N} x_i }{N} 
-\end{equation*}
-
-<<summation, echo=F, include=Answers, results='asis'>>=
-xsum=sprintf(" %4.2f +",orgdata[,obsname])
-xsum[Nobs]=sprintf("%4.2f $\r\n$= %4.2f $",orgdata[Nobs,obsname],hsum)
-xsum=paste0(xsum,collapse="")
-xsum=paste0("$= ",xsum)
-cat(xsum)
-@
+The Covariance of Assault Arrests with Murder Arrests is \Sexpr{covxy} "Assault Arrests x Murder Arrests". These units make very little sense. We cannot compare covariances among variables in a data set if the units are different.
 
 
-In our data set, the mean height is \Sexpr{sum(orgdata$Height)} divided by \Sexpr{Nobs}, or \Sexpr{sum(orgdata$Height)/Nobs} inches, which we round to \Sexpr{round(sum(orgdata$Height)/Nobs,1)}
-
-<<center-chart,echo=FALSE,include=TRUE,fig.height=3,fig.cap="Heights in Observation order with Mode (Green), Median (Blue) and Mean (Red) lines">>=
-cbreaks=sort(c(hmin,hmax,mode,median,round(hmean,1)))
-centerchart=ggplot(orgdata,aes(x=Observation,y=Height))+geom_point() + theme_igray() + 
-  geom_hline(yintercept=mode,color="green") +
-  geom_hline(yintercept=median,color="blue") +
-  geom_hline(yintercept=hmean,color="red") +
-scale_y_continuous(breaks=round(cbreaks),labels=cbreaks)+
-scale_x_discrete(breaks=NULL)+theme(axis.ticks = element_blank())+
-  ggtitle("Height in Whole Inches with Centers")
-print(centerchart)
-@
-
-
-
-\section{Measures of Spread}
-
-The ``spread'' of the distribution of a dataset can be quantified by range, first and third quartiles, variance and standard deviation.
-
-The first and third quantiles can be found by examining either the sorted values or the frequency table, and taking the value of the observation at the first quarter and last quarter. For $n$ observations, the first quartile is the value $(n+1)/4$th entry and the third quartile is the value at the $(n+1)*3/4$th entry, and similar to median, the second quartile, if the calculated entry value is not a whole number, the arithmetic mean of the nearest two observation values determines the mean.
-
-<<quartiles,echo=FALSE,include=FALSE>>=
-Q1n1=floor((Nobs)/4)
-Q1n2=ceiling((Nobs)/4)
-Q1=(dsn$Height[Q1n2]+
-          dsn$Height[Q1n1])/2
-Q3n1=floor((Nobs)*3/4)
-Q3n2=ceiling((Nobs)*3/4)
-Q3=(dsn$Height[Q3n2]+
-          dsn$Height[Q3n1])/2
-
-@
-
-In our height dataset of \Sexpr{Nobs}, the first quartile is the \Sexpr{Q1n1}th observation, \Sexpr{Q1}, and the third quartile is the \Sexpr{Q3n1}th observation, \Sexpr{Q3}.
-<<dataset-quartiles,echo=FALSE>>=
-cat(dsn$Height[1:Q1n1])
-cat(dsn$Height[(Q1n1+1):mediann1])
-cat(dsn$Height[(mediann1+1):Q3n1])
-cat(dsn$Height[(Q3n1+1):Nobs])
-
-@
-
-We would like to measure the \textbf{Deviation}\marginnote{The \textbf{Deviation} is the  amount by which a single measurement differs from a fixed value, such as the mean.} from the mean. The deviations from the mean are both positive and negative.
-\begin{equation*}
-Dev_{\bar{x}}=(x_i-\bar{x}) 
-\end{equation*}
-
-<<deviations,echo=FALSE,include=FALSE>>=
-dsn$Deviation=round(dsn$Height-hmean,1)
-dsn$DeviationSq=dsn$Deviation^2
-orgdata$mean=hmean
-orgdata$Deviation=(orgdata$Height-orgdata$mean)
-orgdata$DeviationSq=orgdata$Deviation^2
-orgdata$Obs=paste0("$x_{",orgdata$Observation,"}$")
-orgdata$NHeight=ifelse(orgdata$Deviation>=0,hmean,orgdata$Height)
-orgdata$PHeight=ifelse(orgdata$Deviation<0,hmean,orgdata$Height)
-#orgdata$DeviationSign[orgdata$Deviation<=0]="Negative"
-variancex=sum(orgdata$DeviationSq)/Nobs
-stddevx=variancex^0.5
-@
-<<mean-center-chart,echo=FALSE,include=TRUE,fig.height=3>>=
-cbreaks=sort(c(hmin,hmax,round(hmean,1)))
-mcenterchart=ggplot(orgdata,aes(x=Observation,y=Height))+geom_point() + theme_igray() + 
-  geom_hline(yintercept=hmean,color="blue") +
-scale_y_continuous(breaks=round(cbreaks),labels=cbreaks)+
-scale_x_discrete(breaks=NULL)+theme(axis.ticks = element_blank())+
-geom_linerange(color="red",ymin=orgdata$NHeight,ymax=orgdata$mean)+
-geom_linerange(color="green",ymin=orgdata$PHeight,ymax=orgdata$mean)+
-  ggtitle("Height in Whole Inches with Deviation from Average")
-print(mcenterchart)
-@
-
-The deviations are both positive and negative, and the sum of the deviations is zero, so this statistic alone is not suitable for further analysis. If we square the deviations, the sum is no longer zero; in fact, the sum of the squared deviations is the \textbf{Variance}\marginnote{The \textbf{Variance} is a measure of variability or spread $Var(X)$, often denoted by $\sigma^2$}. The variance of our dataset is \Sexpr{variancex} square inches. To get back to our original unit of inches, we take the square root of the variance, \Sexpr{round(stddevx,1)}, or \textbf{Standard Deviation}\marginnote{The \textbf{Standard Deviation} of X, $StdDev(X)$, often denoted $\sigma$, is the standard measure of spread used in statistical analysis.}
-\begin{equation*}
-Dev_{\bar{x}}^2=(x_i-\bar{x})^2 
-\end{equation*}
-
-\begin{multline*}
-Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
-\end{multline*}
-
-\begin{equation*}
-StdDev(X)=\sqrt{Var(X)} 
-\end{equation*}
-
-<<deviations-table,echo=FALSE,include=TRUE,results='asis'>>=
-dcols=c("Obs",obsname,"Deviation","DeviationSq")
-dnames=c("Observation",obsname,"$\\dev{x}$","${\\dev{x}}^2$")
-tdata=orgdata[,dcols]
+<<covariance-table-1,echo=FALSE,include=TRUE,results='asis'>>=
+maxlin=30
+dcols=c("Obs",obsname,"DeviationXY","DeviationXZ","DeviationYZ")
+dnames=c("Observation",obsname,"$\\dev{xy}$","${\\dev{xz}}$","${\\dev{xz}}$")
+tdata=orgdata[1:maxlin,dcols]
 names(tdata)=dnames
-dtable=xtable(tdata,caption = "Deviations")
-rws <- seq(1, (nrow(orgdata)-1), by = 2)
+dtable=xtable(tdata,caption = "Covariances, Part 1")
+rws <- seq(1, (nrow(tdata)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+#align(dtable) <- "|ccr|c|c|"
+tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
+cat(tt, sep = "\n")
+
+@
+
+\newpage
+<<covariance-table-2,echo=FALSE,include=TRUE,results='asis'>>=
+dcols=c("Obs",obsname,"DeviationXY","DeviationXZ","DeviationYZ")
+dnames=c("Observation",obsname,"$\\dev{xy}$","${\\dev{xz}}$","${\\dev{xz}}$")
+tdata=orgdata[(maxlin+1):nrow(orgdata),dcols]
+names(tdata)=dnames
+dtable=xtable(tdata[,],caption = "Covariances, Part 2")
+rws <- seq(1, (nrow(tdata)-1), by = 2)
 col <- rep("\\rowcolor[gray]{0.95}", length(rws))
 #align(dtable) <- "|ccr|c|c|"
 tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
@@ -280,67 +233,136 @@ tt=capture.output(print(dtable,include.rownames=F, booktabs = TRUE, add.to.row =
 endrow=which(tt=="\\end{tabular}")
 ltt=length(tt)
 saveend=tt[endrow:ltt]
-xfmt=sprintf("Total & %s & %s & %s \\\\ ",ofmt,ofmt,ofmt)
-  tt[endrow]=sprintf(xfmt,hsum,0,sumDevx)
-xfmt=sprintf("\\rowcolor[gray]{0.95}Total/N & %s & %s & %s \\\\ ",ofmt,ofmt,ofmt)
- tt[endrow+1]=sprintf(xfmt,hmean,0,variancex)
-  tt[endrow+2]=" & Mean & Zero & Variance \\\\"
+xfmt=sprintf("Total & %s & %s & %s & %s & %s & %s \\\\ ",ofmt,ofmt,ofmt,ofmt,ofmt,ofmt)
+  tt[endrow]=sprintf(xfmt,hsum[1],hsum[2],hsum[3],sumDevxy,sumDevxz,sumDevyz)
+xfmt=sprintf("\\rowcolor[gray]{0.95}Total/N & %s & %s & %s & %s & %s & %s \\\\ ",ofmt,ofmt,ofmt,ofmt,ofmt,ofmt)
+ tt[endrow+1]=sprintf(xfmt,hmean[1],hmean[2],hmean[3],sumDevxy/Nobs,sumDevxz/Nobs,sumDevyz/Nobs)
+  tt[endrow+2]=" & $\\bar{x}$ & $\\bar{y}$ & $\\bar{z}$ & $Cov(X,Y)$ & $Cov(X,Z)$ & $Cov(Y,Z)$   \\\\"
 tt[(endrow+3):(endrow+3+length(saveend)-1)]=saveend
 cat(tt, sep = "\n")
 
 @
+\newpage
+\section{Linear Correlation}
 
+A standardized Covariance is the \textbf{Linear Correlation}, calculated by dividing each Covariance by the Standard Deviations of each of the variables:
 
-The standard deviation, mean and quartiles are used to create a \textbf{boxplot}.
+\begin{equation*}
+Corr(X,Y)=Cov(Y,X)/(StdDev(X)StdDev(Y))=
+\end{equation*}
 
-<<boxplot,echo=FALSE,fig.cap="Boxplot",fig.pos="h!">>=
-boxplot=ggplot(dsn,aes(x=count,y=Height,fill=count))+geom_boxplot()+theme_igray()+guides(fill=FALSE)+theme(axis.title.x = element_blank())+scale_y_continuous(name="Height in Whole inches")+scale_x_continuous(name="",breaks=NULL)
-print(boxplot)
+The Correlation of Assault Arrests with Murder Arrests is \Sexpr{covxy/(stddevx*stddevy)} with no units, so the correlations of multiple pairs of variables can be compared.
+
+Correlations are always between $-1$ and $1$, and are a quantification of the linear relationship between two variables. A correlation of zero means that there is linear relationship between two variables, although there may be a non-linear relationship. A correlation of $1$ or $-1$ is indicates a perfect positive or negative linear relationship. $Corr(X,X)=1$ always.
+
+\textbf{Correlation does not imply Causation!} Even if two variables have a high or perfect correlation, there is not necessarily causation. Causation means X depends on Y or Y depends on X. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\begin{figure}
+{\centering \includegraphics[width=\maxwidth]{Correlation_types-Language-neutral.png} 
+}
+\caption[Correlation Types]{Examples of Correlation }\label{fig:correlationtypes}
+\end{figure}
+\textcircled{1} $Corr(X,Y)=0$ No Correlation \\
+\textcircled{2} $Corr(X,Y)=0$ No Linear Correlation \\
+\textcircled{3} $Corr(X,Y) approaching +1$ Positive Linear Correlation \\
+\textcircled{4} $Corr(X,Y) approaching -1$ Negative Linear Correlation\\
+\end{knitrout}
+
+The Squared value of the correlation, \Sexpr{lpercent((covxy/(stddevx*stddevy))^2)}  is a measure of the "shared variance" of two variable, and the complement \Sexpr{lpercent(1-((covxy/(stddevx*stddevy)))^2)} is the proportion of variance not explained by the association.
+\newpage
+\section{Covariance and Correlation Extras}
+The covariance relationship between multiple variables can be expressed in a variance-covariance matrix:
+
+\bordermatrix{   ~ & X & Y & Z\cr
+                  X & Var(X) & Cov(X,Y) & Cov(X,Z) \cr
+                  Y & Cov(Y,X)  & Var(Y) & Cov(Y,Z)  \cr
+                  Z & Cov(Z,X)  & Cov(Z,Y)  & Var(Z)}
+=
+\bordermatrix{   ~ & X & Y & Z\cr
+                  X & \Sexpr{variancex} & \Sexpr{covxy} & \Sexpr{covxz} \cr
+                  Y & \Sexpr{covxy}  & \Sexpr{variancey} & \Sexpr{covyz}  \cr
+                  Z & \Sexpr{covxz}  & \Sexpr{covyz}  & \Sexpr{variancez}
+}
+
+The Variance-Covariance Matrix (also referred to as the VCV or simply the Covariance matrix) is a key part of multivariate statistics and methods, including:
+\begin{itemize}
+  \item Principal Components Analysis (PCA)
+  \item Factor Analysis
+  \item Hierarchical Clustering
+\end{itemize}
+
+Similarly, the correlation matrix expresses all the correlations among variables.
+
+\bordermatrix{   ~ & X & Y & Z\cr
+                  X & Corr(X,X) & Corr(X,Y) & Corr(X,Z) \cr
+                  Y & Corr(Y,X)  & Corr(Y,Y) & Corr(Y,Z)  \cr
+                  Z & Corr(Z,X)  & Corr(Z,Y)  & Corr(Y,Y)}
+=
+\bordermatrix{   ~ & X & Y & Z\cr
+                  X & 1 & \Sexpr{covxy/(stddevx*stddevy)} & \Sexpr{covxz/(stddevx*stddevz)} \cr
+                  Y & \Sexpr{covxy/(stddevx*stddevy)}  & 1 & \Sexpr{covyz/(stddevz*stddevy)}  \cr
+                  Z & \Sexpr{covxz/(stddevx*stddevz)}  & \Sexpr{covyz/(stddevz*stddevy)}  & 1}
+
+The Correlation Matrix is a key part of multivariate statistics and methods, including:
+\begin{itemize}
+  \item Canonical Correlation Analysis
+  \item Portfolio Analysis and Optimization
+\end{itemize}
+<<scatmat,fig.cap="Scatterplot Matrix: Multiple scatterplots and correlations can be combined in one visualization ">>=
+require(GGally)
+ggscatmat(dsn[,obsname])
 @
 
-\section{Distribution Shapes: Histograms, Frequency Polygons, and Ogives}
+When two variables have very different distributions, two non-parametric methods can assess the association on the ranks of the variables: $\rho$, the Spearman Rank Correlation, and $\tau$, the Kendall Rank Correlation.
+\newpage
+\section{Simple Linear Regression}
 
-Once we have calculated the frequencies and centers of our datasets we can start to explore the shape and spread of the distribution of values with charts. All charts can be drawn from the frequency table data.
+When a linear correlation exists between two variables, we can explore causation using a \textbf{Simple Linear Regression}, also called Ordinary Least Squares (OLS), regressing a dependent variable, denoted $Y$, on an independent variable, denoted $X$ as a line with the form:
+\begin{equation*}
+Y=\alpha + \hat{\beta}X
+\end{equation*}
+<<ols,fig.cap="Green regression line with prediction error, as noted in red on the chart",fig.env="marginfigure">>=
+beta=covxy/variancex
+alpha=hmean[2]-beta*hmean[1]
+dsn$mint=alpha+beta*dsn$Assault
+scp=ggplot(dsn,aes(y=Murder,x=Assault))+geom_point()+
+  scale_x_continuous(name=obstext[1])+
+  scale_y_continuous(name=obstext[2])+
+ geom_abline(intercept = alpha, slope = beta,colour="green",size=1)+
+  geom_linerange(color="red",ymin=dsn$mint,ymax=dsn$Murder,xmin=dsn$Assault,xmax=dsn$Assault)+
+  theme(axis.text = element_text(size=1))
 
-The \textbf{histogram}\marginnote{A \textbf{Histogram} is a visualization of a frequency table.} is a view of the overall pattern of the distribution. Histogram bars are evenly sized and each bar represents the same class levels of values, and is centered on the mean of the class. The height of the bar represents the number of observations in that class.
-
-The mode can easily be seen on a histogram, and the median is the vertical line at which there is equal area to the left and to the right in the chart. 
-
-A histogram's shape can be symmetric, skewed right with more of the observations on the right or higher values, or skewed to the left with more of the observations on the left or lower values.
-
-A frequency polygon simply displays the frequency for a class, and an ogive, or cumulative frequency polygon displays the cumulative frequency for a class. 
-
-<<histogram,echo=FALSE,fig.cap="Histogram with Frequency Polygon. The Height data set is unimodal, skewed right, with out outlier on the left. ",fig.pos='h!'>>=
-hbase=ggplot(dsn,aes(x=Height))+theme_igray()
-hhist=hbase+geom_histogram(binwidth=1,fill="white",color="grey")
-hfpoly=hhist+geom_freqpoly(color="green",binwidth=1)
-#print(hhist+ggtitle("Histogram of Weights in Whole Inches"))
-print(hfpoly+ggtitle("Histogram with Frequency Polygram of\nWeights in Whole Inches"))
+print(scp)
 @
 
-<<ogive,echo=FALSE,fig.cap="Histogram with Ogive (Cumulative Frequency Polygon).",fig.pos='h!'>>=
-cbreaks=sort(c(0,Q1n2,mediann2,Q3n2,max(hiwifreq$CumulativeFrequency)))
-require(scales)
-clabels=c(" 0%","25%","50%","75%","100%")
-hbase=ggplot(dsn,aes(x=Height))+theme_igray()
-hhist=hbase+geom_histogram(binwidth=1,fill="grey",color="grey")
-hogive=hhist+geom_line(data=hiwifreq,aes(y = CumulativeFrequency,color="Ogive"))+theme_igray()+theme(legend.title=element_blank())+
-  scale_y_continuous(name="Proportion",breaks=cbreaks,labels=clabels)+
-#    geom_vline(xintercept=Q1-0.5,color="green") +
-#  geom_vline(xintercept=median-0.5,color="blue") +
-#  geom_vline(xintercept=Q3-0.5,color="red") +
-  geom_segment(aes(x = Q1-0.5, xend=Q1-0.5, y = 0, yend = Q1n2),color="green")+  
-  geom_segment(aes(x = Q3-0.25, xend=Q3-0.25, y = 0, yend = Q3n1),color="green")+  
-  geom_segment(aes(x = median-0.5,xend = median-0.5,  y = 0, yend = mediann2),color="green")+
-  geom_text(aes(x = Q1-0.5, y = Q1n2*1.3,label="1st Quartile"),color="grey")+  
-  geom_text(aes(x = Q3-0.25,  y =Q3n1*1.1,label="3rd Quartile"),color="grey")+  
-  geom_text(aes(x = median-0.5, y = mediann2*1.2, label="Median"),color="grey")
+This is very similar to the traditional algebra formula $y=mx+b$ with slope $m$ and y-intercept $b$. In this case, the slope is $\hat{\beta}$.
+\begin{equation*}
+\hat{\beta}=\frac{Cov(X,Y)}{Var(X)}=Corr(X,Y)\frac{StdDev(Y)}{StdDev(X)}
+\end{equation*}
+Note that $\hat{\beta}$ is very close to the correlation value of $\frac{Cov(X,Y)}{StDev(X)StDev(Y)}$, but with $StDev(X)$ replacing $StDev(Y)$, to indicate the dependency of $Y$ upon $X$.
 
+For the US Arrests data set, 
+\begin{equation*}
+\hat{\beta}=\frac{\Sexpr{covxy}}{\Sexpr{variancex}}=\Sexpr{covxy/variancex}
+\end{equation*}
 
+The linear regression always goes through the point $(\bar{x},\bar{y})$, so returning to algebra, any point plus the slope determines the line:
+\begin{equation*}
+\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}
+\end{equation*}
 
-print(hogive+ggtitle("Histogram of Weights in Whole Inches"))
+The predicted value for any $y_i$ is $\hat{y_i}$, and the prediction error is $\hat{\epsilon}=y_i - \hat{y_i}$.
 
-@
+Some properties of the Simple Linear Regression:
+\begin{itemize}
+  \item $\Sigma_{i=1}^{N} \hat{\epsilon}=0 $
+  \item $\Sigma_{i=1}^{N} x_i \hat{\epsilon}=0 $
+  \item The predicted values $\hat{y_i}$ minimize the sum of the squared prediction errors, $\Sigma_{i=1}^{N} \hat{\epsilon}^2$, often referred to as Sum Squared Errors, or SSE.
+  \item The regression equation is valid to predict $\hat{y}$ values in the range of X, that is, on the interval (min(X),max(X)), and any prediction will be in the range of (min(Y),max(Y))
+\end{itemize}
+
 
 
 \end{document}

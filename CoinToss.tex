@@ -51,8 +51,9 @@
 \usepackage[T1]{fontenc}
 \usepackage{url}
 \usepackage{mathtools}
-%\usepackage{geometry}
-%\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\usepackage{geometry}
+\geometry{textwidth=.4\paperwidth}
+ %\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage{parskip}
 \usepackage{enumerate}
 
@@ -183,39 +184,9 @@ colorlinks=false]{hyperref}
 
 \maketitle
 \section{Coin Toss}
-A fair coin is tossed fifteen times, and the number of heads is records. This trial is repeated nine times. The resulting data should have nine observations of "Number of Head in Fifteen Tosses"
-
-The \textbf{mean}\marginnote{The \textbf{Mean} of a data set refers to the arithmetic mean of the values, denoted $\bar{x}$}. The mean is the center that we will use to further examine the ``spread'' of the values.
-
-The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
-\begin{multline*}\sum\limits_{i=0}^{N} x_i = x_1+x_2+x_3+ \dots  +x_{42}+x_{43}+x_{44}+x_{45} \\=  6 + 7 + 10 + 5 + 9 + 6 + 6 + 9 + 11 + 8 + 5 + 9 + 10 + 7 + 8 + 10 + 6 + 7 + 8 + 6 + 7 + 8 + 6 + 11 + 7 + 9 + 8 + 7 + 9 + 8 + 8 + 6 + 5 + 9 + 7 + 7 + 10 + 9 + 5 + 12 + 13 + 10 + 8 + 13 +7 \\= 740 \\\end{multline*}
-
-
-\begin{equation*}
-\bar{x}=\frac{\sum\limits_{i=1}^{N} x_i }{N} 
-\end{equation*}
-
-\begin{equation*}
-\dev{x}=(x_i-\bar{x}) 
-\end{equation*}
-
-\begin{equation*}
-\dev{x}^2=(x_i-\bar{x})^2 
-\end{equation*}
-
-\begin{multline*}
-Var(X)=\frac{\sum_{i=1}^{N} \dev{x}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
-\end{multline*}
-
-\begin{equation*}
-StdDev(X)=\sqrt{Var(X)} 
-\end{equation*}
-
-
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Sun Feb  8 19:06:32 2015
-\begin{table}[ht]
-\centering
+% Thu Feb 12 19:33:21 2015
+\begin{margintable}
 \begin{tabular}{cr|c|c|}
   \toprule
 Observation & Heads & $\dev{x}$ & ${\dev{x}}^2$ \\ 
@@ -270,14 +241,44 @@ Total & 362 & 0 & 184.0 \\
 \rowcolor[gray]{0.95}Total over N &   8.0 & 0 &   4.1 \\ 
  & Average & Zero & Variance \\
 \end{tabular}
-\caption{Deviations} 
-\end{table}
+\caption{Number of Heads in Fifteen Tosses} 
+\end{margintable}
 
 
+A fair coin is tossed fifteen times, and the number of heads is records. This trial is repeated nine times. The resulting data should have nine observations of "Number of Head in Fifteen Tosses"
+
+The mean we use is the arithmetic average, which is calculated by first adding the values of all the observations, then dividing by the number of observations.
+
+
+\begin{multline*}\sum\limits_{i=0}^{N} x_i = x_1+x_2+x_3+ \dots  +x_{42}+x_{43}+x_{44}+x_{45} \\\end{multline*}
+
+
+\begin{equation*}
+\bar{x}=\frac{\sum\limits_{i=1}^{N} x_i }{N} 
+\end{equation*}
+
+\begin{equation*}
+\dev{x}=(x_i-\bar{x}) 
+\end{equation*}
+
+\begin{equation*}
+\dev{x}^2=(x_i-\bar{x})^2 
+\end{equation*}
+
+\begin{multline*}
+Var(X)=\frac{\sum_{i=1}^{N} \dev{x}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
+\end{multline*}
+
+\begin{equation*}
+StdDev(X)=\sqrt{Var(X)} 
+\end{equation*}
+
+
+\newpage
+A frequency table and histogram visualize the center and spread with the mean as a center.
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Sun Feb  8 19:06:33 2015
-\begin{table}[ht]
-\centering
+% Thu Feb 12 19:33:21 2015
+\begin{margintable}
 \scalebox{0.95}{
 \begin{tabular}{rrrr}
   \toprule
@@ -296,7 +297,9 @@ Heads & Frequency & CumulativeFrequency & ecdf \\
 \end{tabular}
 }
 \caption{Frequency Table} 
-\end{table}
+\end{margintable}
+
+
 
 
 \begin{knitrout}

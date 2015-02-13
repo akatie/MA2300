@@ -1,0 +1,2106 @@
+Rank  Building  City  Height  Floors  YearBuilt Material  Use
+26  One World Trade Center	New York City	541.3	94	2014	composite	office
+43	Willis Tower	Chicago	442.1	108	1974	steel	office
+47	Trump International Hotel & Tower	Chicago	423.2	98	2009	concrete	residential / hotel
+50	One World Trade Center	New York City	417	110	1972	steel	office
+51	Two World Trade Center	New York City	415.1	110	1973	steel	office
+64	Empire State Building	New York City	381	102	1931	steel	office
+68	Bank of America Tower	New York City	365.8	55	2009	composite	office
+71	Stratosphere Tower	Las Vegas	350.2	-	1996	concrete	telecommunications
+73	Aon Center	Chicago	346.3	83	1973	steel	office
+75	John Hancock Center	Chicago	343.7	100	1969	steel	residential / office
+85	WITI TV Tower	Shorewood	329	-	1962	steel	telecommunications
+99	Chrysler Building	New York City	318.9	77	1930	steel	office
+100	New York Times Tower	New York City	318.8	52	2007	steel	office
+108	Bank of America Plaza	Atlanta	311.8	55	1992	composite	office
+112	U.S. Bank Tower	Los Angeles	310.3	73	1990	steel	office
+116	The Franklin Center - North Tower	Chicago	306.9	60	1989	composite	office
+117	One57	New York City	306.4	75	2014	steel/concrete	residential / hotel
+119	JPMorgan Chase Tower	Houston	305.4	75	1982	composite	office
+125	Two Prudential Plaza	Chicago	303.3	64	1990	concrete	office
+126	Wells Fargo Plaza	Houston	302.4	71	1983	steel	office
+131	4 World Trade Center	New York City	297.7	65	2014	composite	office
+132	Comcast Center	Philadelphia	296.7	57	2008	composite	office
+139	311 South Wacker Drive	Chicago	292.9	65	1990	concrete	office
+143	70 Pine Street	New York City	290.2	67	1932	steel	residential / hotel
+150	Key Tower	Cleveland	288.6	57	1991	composite	office
+151	One Liberty Place	Philadelphia	288	61	1987	steel	office
+157	Columbia Center	Seattle	284.4	76	1984	composite	office
+158	The Trump Building	New York City	282.5	71	1930	steel	office
+162	Bank of America Plaza	Dallas	280.7	72	1985	composite	office
+163	Citigroup Center	New York City	278.9	59	1977	steel	office
+169	Williams Tower	Houston	274.6	64	1982	steel	office
+176	Renaissance Tower	Dallas	270.1	56	1974	steel	office
+179	Bank of America Corporate Center	Charlotte	265.5	60	1992	concrete	office
+180	Eight Spruce Street	New York City	265.2	76	2011	concrete	residential
+181	900 North Michigan Avenue	Chicago	265	66	1989	concrete/steel	residential / office / hotel / retail
+185	SunTrust Plaza	Atlanta	264.3	60	1992	concrete	office
+189	Trump World Tower	New York City	262.4	72	2001	concrete	residential
+191	Water Tower Place	Chicago	261.9	74	1976	concrete	residential / hotel / retail
+193	Aqua	Chicago	261.8	86	2009	concrete	residential / hotel
+194	Aon Center	Los Angeles	261.5	62	1974	steel	office
+198	Transamerica Pyramid	San Francisco	260	48	1972	composite	office
+201	GE Building	New York City	259.1	70	1933	steel	office
+202	Chase Tower	Chicago	259.1	60	1969	steel	office
+205	Two Liberty Place	Philadelphia	258.5	58	1990	steel	residential / office
+206	Park Tower	Chicago	257.4	68	2000	concrete	residential / hotel
+207	Devon Energy Center	Oklahoma City	257.2	52	2012	concrete	office
+210	U.S. Steel Tower	Pittsburgh	256.3	64	1970	steel	office
+228	One Atlantic Center	Atlanta	249.9	50	1987	composite	office
+229	The Legacy at Millennium Park	Chicago	249.3	73	2010	concrete	residential
+231	Cityspire	New York City	248.1	75	1987	concrete	residential / office
+233	One Chase Manhattan Plaza	New York City	247.8	60	1961	steel	office
+236	4 Times Square	New York City	246.5	48	1999	steel	office
+237	MetLife Building	New York City	246.3	59	1963	steel	office
+241	Bloomberg Tower	New York City	245.6	54	2004	concrete/steel	residential / office
+250	Mellon Bank Center	Philadelphia	241.4	54	1990	composite	office
+251	Woolworth Building	New York City	241.4	57	1913	steel	office
+252	IDS Tower	Minneapolis	241.4	55	1973	composite	office
+254	Hancock Place	Boston	240.8	62	1976	steel	office
+255	Four Seasons Hotel & Tower	Miami	240.4	64	2003	concrete	residential / hotel / office
+257	Comerica Bank Tower	Dallas	239.9	60	1987	composite	office
+258	Duke Energy Center	Charlotte	239.7	48	2010	concrete/steel	office
+259	300 North LaSalle	Chicago	239.1	60	2009	composite	office
+260	30 Hudson Street	Jersey City	238.1	42	2004	steel	office
+263	Bank of America Center	Houston	237.8	56	1983	steel	office
+264	555 California Street	San Francisco	237.4	52	1969	steel	office
+265	1 Worldwide Plaza	New York City	237.1	47	1989	steel	office
+269	Capella Tower	Minneapolis	236.5	56	1992	composite	office
+270	Wells Fargo Center	Minneapolis	236.3	56	1988	composite	office
+272	1201 Third Avenue Tower	Seattle	235.3	55	1988	steel	office
+275	191 Peachtree Tower	Atlanta	234.7	50	1992	composite	office
+277	Three First National Plaza	Chicago	233.6	57	1981	composite	office
+279	Southeast Financial Center	Miami	232.8	55	1983	composite	office
+280	Heritage Plaza	Houston	232.3	53	1987	steel	office
+283	Carnegie Hall Tower	New York City	230.7	60	1991	concrete	office
+285	Chicago Title & Trust Center	Chicago	230.5	50	1992	composite	office
+287	Enterprise Plaza	Houston	230.4	55	1980	composite	office
+288	383 Madison Avenue	New York City	230.3	47	2001	steel	office
+295	Courtyard & Residence Inn Manhattan/Central Park	New York City	229.6	67	2013	concrete	hotel
+296	AXA Center	New York City	229.2	51	1985	steel	office
+302	One Penn Plaza	New York City	228.6	57	1972	steel	office
+303	1251 Avenue of the Americas	New York City	228.6	54	1972	steel	office
+304	Prudential Tower	Boston	228.6	52	1964	steel	office
+304	Two California Plaza	Los Angeles	228.6	52	1992	steel	office
+308	Time Warner Center North Tower	New York City	228.3	55	2004	concrete/steel	residential / hotel / office
+308	Time Warner Center South Tower	New York City	228.3	55	2004	concrete/steel	residential / office
+310	Gas Company Tower	Los Angeles	228.3	52	1991	steel	office
+311	Goldman Sachs Headquarters	New York City	228.3	44	2010	steel	office
+312	60 Wall Street	New York City	227.1	55	1989	steel	office
+313	One Astor Plaza	New York City	227.1	54	1972	composite	office
+314	RSA Battle House Tower	Mobile	227.1	35	2007	steel/concrete	office
+319	Blue Cross-Blue Shield Tower	Chicago	226.7	54	2010	composite	office
+320	7 World Trade Center	New York City	226.5	49	2006	steel/concrete	office
+321	1 Liberty Plaza	New York City	226.5	54	1973	steel	office
+323	20 Exchange Place	New York City	225.9	57	1931	steel	office
+324	Centerpoint Energy Plaza	Houston	225.9	53	1974	steel	office
+325	Two Union Square	Seattle	225.6	56	1989	composite	office
+327	Three Logan	Philadelphia	225.3	55	1991	steel	office
+328	Three World Financial Center	New York City	225.2	51	1986	steel	office
+331	JPMorgan Chase Tower	Dallas	224.9	55	1987	""	office
+334	Bank Of America Plaza	Los Angeles	224	55	1975	steel	office
+336	Bertelsmann Building	New York City	223.3	42	1990	""	office
+337	Continental Center I	Houston	223.1	55	1984	steel	office
+340	Olympia Centre	Chicago	222.9	63	1986	concrete	residential / office
+345	Detroit Marriott at the Renaissance Center	Detroit	221.5	70	1977	concrete	hotel
+346	One Museum Park	Chicago	221.3	62	2009	concrete	residential
+347	Times Square Tower	New York City	221.3	47	2004	steel	office
+348	One Mellon Center	Pittsburgh	221	54	1983	steel	office
+349	777 Tower	Los Angeles	221	53	1991	steel	office
+350	Fulbright Tower	Houston	221	52	1982	composite	office
+351	Westin Peachtree Plaza	Atlanta	220.4	73	1976	concrete	hotel
+352	Wells Fargo Tower	Los Angeles	220.4	54	1983	steel	office
+353	Seattle Municipal Tower	Seattle	220.1	57	1990	steel	office
+356	Fountain Place	Dallas	219.5	62	1986	steel	office
+363	Revel Resort and Casino	Atlantic City	218.9	53	2012	concrete	hotel / casino
+364	Figueroa at Wilshire	Los Angeles	218.5	52	1989	steel	office
+365	Metropolitan Tower	New York City	218.2	68	1985	concrete	residential / office
+368	Republic Plaza	Denver	217.6	56	1984	steel	office
+369	One Shell Plaza	Houston	217.6	50	1970	concrete	office
+371	900 Biscayne Bay	Miami	217	65	2008	concrete	residential
+373	1801 California Plaza	Denver	216.1	52	1982	steel	office
+378	Terminal Tower	Cleveland	215.8	52	1928	steel	office
+379	JPMorgan Chase Tower	New York City	215.5	52	1960	steel	office
+384	General Motors Building	New York City	214.9	50	1968	steel	office
+389	Chase Tower	Indianapolis	213.7	49	1990	steel	office
+392	Metropolitan Life Tower	New York City	213.4	50	1909	steel	office
+393	City National Tower	Los Angeles	213.1	52	1971	steel	office
+393	Paul Hastings Tower	Los Angeles	213.1	52	1971	steel	office
+398	Wells Fargo Center	Denver	212.8	50	1983	composite	office
+399	500 Fifth Avenue	New York City	212.4	60	1931	steel	office
+400	Georgia Pacific Tower	Atlanta	212.4	51	1981	""	office
+400	One Shell Square	New Orleans	212.4	51	1972	composite	office
+406	AMA Plaza	Chicago	211.8	52	1972	steel	office / hotel
+407	345 California Center	San Francisco	211.8	48	1986	steel	hotel / office
+409	Americas Tower	New York City	210.9	48	1992	steel	office
+411	Promenade II	Atlanta	210.6	40	1989	""	office
+412	1400 Smith Street	Houston	210.5	50	1983	steel	office
+416	Solow Building	New York City	210	49	1974	steel	office
+417	HSBC Bank Building	New York City	209.7	52	1967	steel	office
+418	55 Water Street	New York City	209.4	53	1972	steel	office
+419	277 Park Avenue	New York City	209.4	50	1963	steel	office
+421	Trammel Crow Center	Dallas	209.1	50	1984	""	office
+422	Waldorf Astoria Chicago	Chicago	209	60	2009	concrete	residential / hotel
+423	Three Allen Center	Houston	208.8	50	1980	steel	office
+424	1585 Broadway	New York City	208.8	42	1989	""	office
+425	Random House Tower	New York City	208.5	52	2003	steel	residential / office
+426	The Austonian	Austin	208.1	56	2010	concrete	residential
+427	Four Seasons Hotel	New York City	207.9	52	1993	concrete	hotel
+428	111 South Wacker	Chicago	207.6	51	2005	composite	office
+430	181 West Madison	Chicago	207.3	50	1990	composite	office
+431	Hyatt Center	Chicago	207.1	48	2005	composite	office
+433	Marquis	Miami	207	63	2009	concrete	residential / hotel
+435	LyondellBassell Tower	Houston	206.8	47	1978	composite	office
+436	AT&T Building	Atlanta	206.4	47	1980	concrete	office
+439	McGraw-Hill Building	New York City	205.4	51	1972	steel	office
+440	One Magnificent Mile	Chicago	205.1	57	1983	concrete	residential / office
+441	One Grand Central Place	New York City	205.1	53	1930	steel	office
+442	Citigroup Building	New York City	205.1	50	1990	steel	office
+443	Barclay Tower	New York City	205.1	56	2007	concrete	residential
+445	340 on the Park	Chicago	204.9	64	2007	concrete	residential
+446	Paramount Plaza	New York City	204.2	48	1970	steel	office
+448	United Building	Chicago	203.6	49	1992	composite	office
+449	33 South 6th Street	Minneapolis	203.6	52	1983	concrete	office
+450	BOK Tower	Tulsa	203.3	52	1975	composite	office
+451	LA Live Hotel & Condominiums	Los Angeles	203.3	54	2010	steel	residential / hotel
+453	Sovereign	Atlanta	202.7	48	2008	concrete	residential / office
+454	Great American Tower at Queen City Square	Cincinnati	202.7	40	2011	composite	office
+456	Trump Tower	New York City	202.4	58	1982	concrete	residential / office
+458	First City Tower	Houston	201.8	47	1984	""	office
+463	Hearst Tower	Charlotte	200.8	47	2002	steel/concrete	office
+464	200 Public Square	Cleveland	200.6	46	1985	steel	office
+465	1180 Peachtree	Atlanta	200.2	41	2006	concrete	office
+470	1700 Pacific	Dallas	199.6	50	1983	""	office
+471	Wells Fargo Tower	Miami	199.5	47	2010	composite	office
+472	One Wall Street	New York City	199.3	50	1932	steel	office
+473	Silver Towers East	New York City	199.2	58	2009	concrete	residential
+473	Silver Towers West	New York City	199.2	58	2009	concrete	residential
+475	599 Lexington Avenue	New York City	199	51	1986	steel	office
+478	UBS Tower	Chicago	198.6	50	2001	composite	office
+481	712 5th Avenue	New York City	198.1	53	1990	steel	office
+497	Chanin Building	New York City	197.8	56	1929	steel	office
+498	Capital One Tower	New Orleans	197.6	53	1985	""	office
+499	Cityplex Central Tower	Tulsa	197.5	60	1979	""	office
+500	245 Park Avenue	New York City	197.5	47	1967	steel	office
+501	Richard J. Daley Center	Chicago	197.5	32	1965	steel	government
+502	550 Madison Avenue	New York City	197.3	37	1983	steel	office
+505	55 East Erie	Chicago	197.1	56	2004	concrete	residential
+509	Millennium Tower	San Francisco	196.6	58	2009	concrete	residential
+510	Two World Financial Center	New York City	196.6	44	1986	steel	office
+511	Thanksgiving Tower	Dallas	196.5	50	1982	""	office
+512	Lake Point Tower	Chicago	196.4	70	1968	concrete	residential
+513	NYNEX Building	New York City	196.4	43	1974	steel	office
+515	River East Center	Chicago	196.3	58	2001	concrete	residential
+518	570 Lexington Avenue	New York City	196	50	1931	steel	office
+521	The Palazzo	Las Vegas	195.7	53	2007	composite	hotel
+522	Grand Plaza Apartments	Chicago	195.4	57	2003	concrete	residential
+525	1 New York Plaza	New York City	195.1	50	1969	steel	office
+529	Four Seasons Hotel & Private Residences	Denver	194.8	45	2010	concrete	residential / hotel
+530	155 North Wacker	Chicago	194.6	45	2009	composite	office
+531	1 MiMA Tower	New York City	194.6	63	2011	concrete	residential / hotel
+533	1 Dag Hammarskjold Plaza	New York City	194.2	48	1972	""	office
+538	Leo Burnett Building	Chicago	193.6	46	1989	composite	office
+539	One PPG Place	Pittsburgh	193.6	40	1984	steel	office
+540	One First National Center	Omaha	193.3	45	2002	composite	office
+541	345 Park Avenue	New York City	193.3	44	1969	steel	office
+545	BG Group Place	Houston	192.7	46	2011	concrete	office
+547	Mercantile Building	New York City	192.6	48	1929	steel	office
+548	The Setai Fifth Avenue	New York City	192.6	59	2010	concrete	residential / hotel
+549	The Heritage at Millennium Park	Chicago	192.4	57	2005	concrete	residential
+551	Encore	Las Vegas	192.3	52	2008	concrete	hotel
+552	Mint at Riverfront	Miami	192.3	55	2009	concrete	residential
+553	W New York Downtown Hotel & Residences	New York City	192.1	57	2010	concrete	residential / hotel
+554	Grace Plaza	New York City	192	50	1972	steel	office
+554	Safeco Plaza	Seattle	192	50	1969	steel	office
+556	801 Grand	Des Moines	192	44	1991	""	office
+556	Home Insurance Plaza	New York City	192	44	1966	steel	office
+560	Infinity at Brickell	Miami	192	52	2008	concrete	residential / office
+561	101 Park Avenue	New York City	191.7	49	1982	concrete	office
+561	Energy Plaza	Dallas	191.7	49	1983	""	office
+563	Central Park Place	New York City	191.4	56	1988	""	residential
+564	Elm Place	Dallas	191.4	52	1965	steel	office
+565	888 7th Avenue	New York City	191.4	45	1971	steel	office
+566	NBC Tower	Chicago	191.1	37	1989	""	office
+571	1345 Avenue of the Americas	New York City	190.5	50	1969	steel	office
+572	Citigroup Center	Los Angeles	190.5	48	1979	steel	office
+573	Miami Tower	Miami	190.5	47	1987	concrete	office
+573	Waldorf Astoria New York	New York City	190.5	47	1931	steel	hotel
+575	G. Fred DiBona Jr. Building	Philadelphia	190.5	45	1990	""	office
+575	San Felipe Plaza	Houston	190.5	45	1984	""	office
+577	Rhodes State Office Tower	Columbus	190.2	41	1973	""	office
+580	353 North Clark	Chicago	190	44	2009	composite	office
+581	Trump Palace	New York City	189.9	54	1991	concrete	residential
+582	One Kansas City Place	Kansas City	189.9	42	1988	concrete	office
+583	Trump International Hotel & Tower 1	Las Vegas	189.6	64	2008	concrete	residential / hotel
+584	Tower of the Americas	San Antonio	189.6	-	1968	concrete	observation
+585	One Madison Park	New York City	189.3	50	2010	concrete	residential
+587	Olympic Tower	New York City	189	51	1976	concrete/steel	residential / office
+588	611 Place	Los Angeles	189	42	1967	steel	office
+592	One Detroit Center	Detroit	188.7	43	1991	""	office
+593	425 5th Avenue	New York City	188.3	55	2003	concrete	residential
+594	Bank of America Tower	Jacksonville	188.1	42	1990	""	office
+595	AT&T Building	Nashville	188.1	33	1994	""	office
+597	OneEleven	Chicago	187.8	58	2014	concrete	residential
+598	Fifth Avenue Place	Pittsburgh	187.8	32	1987	""	office
+599	919 3rd Avenue	New York City	187.6	47	1970	""	office
+600	New York Life Building	New York City	187.5	33	1928	steel	office
+601	Marina Blue	Miami	187.4	57	2007	concrete	residential
+602	One Oxford Centre	Pittsburgh	187.4	45	1983	""	office
+603	750 Seventh Avenue	New York City	187.4	35	1989	""	office
+604	The Epic	New York City	187.4	58	2007	concrete	residential
+605	Tower 49®	New York City	187.4	44	1985	steel/concrete	office
+606	Eventi	New York City	187.1	46	2010	concrete	residential / hotel
+607	Wynn Las Vegas	Las Vegas	187.1	45	2005	concrete	hotel / casino
+611	Singer Building	New York City	186.6	47	1908	steel	office
+614	Plaza on Brickell Tower I	Miami	185.9	56	2007	concrete	residential
+615	Millennium Centre	Chicago	185.9	58	2003	concrete	residential
+616	GLG Grand-Four Seasons	Atlanta	185.6	53	1992	""	residential / hotel
+617	Credit Lyonnais Building	New York City	185.6	46	1964	steel	office
+618	Chicago Place	Chicago	185.3	49	1991	concrete	residential / retail
+621	City Centre	Seattle	184.8	44	1989	steel	office
+622	Baccarat Hotel & Residences	New York City	184.8	50	2014	concrete	residential / hotel
+623	KPMG Tower	Los Angeles	184.8	45	1984	steel	office
+624	ExxonMobil Building	Houston	184.7	44	1963	steel	office
+625	One Rincon Hill South Tower	San Francisco	184.4	54	2008	concrete	residential
+626	Chicago Board of Trade	Chicago	184.4	44	1930	steel	office
+627	Space Needle	Seattle	184.4	-	1962	steel	observation
+630	The Orion	New York City	184.1	60	2006	concrete	residential
+634	Federal Reserve Building	Boston	184	32	1978	""	office
+635	George Washington Bridge	New York City	184	-	1931	steel	bridge
+636	Cosmopolitan Casino Spa Tower	Las Vegas	183.9	52	2010	concrete/steel	hotel
+637	Cosmopolitan Casino Beach Club Tower	Las Vegas	183.9	50	2010	concrete/steel	residential
+638	590 Madison Avenue	New York City	183.8	41	1983	steel	office
+639	Gables Republic Tower	Dallas	183.5	36	1954	steel	residential
+640	250 West 55th Street	New York City	183.4	40	2013	steel	office
+642	Epic Residences & Hotel	Miami	183.2	54	2009	concrete	residential / hotel
+644	CNA Plaza	Chicago	183.2	44	1972	steel	office
+645	U.S. Bank Center	Milwaukee	183.2	42	1973	steel	office
+646	BNY Mellon Center at One Boston Place	Boston	183.2	41	1970	steel	office
+646	One Prudential Plaza	Chicago	183.2	41	1955	steel	office
+648	Eleven Times Square	New York City	183.1	40	2011	composite	office
+654	101 California Street	San Francisco	183	48	1982	steel	office
+655	50 Fremont Center	San Francisco	183	43	1985	steel	office
+659	1166 Avenue of the Americas	New York City	182.9	44	1974	steel	office
+662	Aria Resort & Casino	Las Vegas	182.9	60	2009	concrete	hotel / casino
+663	One International Place	Boston	182.9	46	1987	steel	office
+664	1500 Louisiana Street	Houston	182.9	40	2002	steel	office
+666	Heller International Tower	Chicago	182.9	45	1992	concrete	office
+668	Madison Plaza	Chicago	182.5	44	1982	steel	office
+670	Republic Center Tower II	Dallas	182.3	50	1964	steel	office
+671	Hawthorn Park	New York City	182.3	54	2014	concrete	residential
+672	Russell Investments Center	Seattle	182.2	42	2006	steel	office / commercial
+673	Planet Hollywood Towers	Las Vegas	182	50	2009	concrete	residential / hotel
+674	Hearst Tower	New York City	182	46	2006	steel	office
+679	3 Lincoln Center	New York City	181.4	60	1993	""	residential / office
+681	One Museum Park West	Chicago	181.3	54	2010	concrete	residential
+683	One Metropolitan Square	St. Louis	180.8	42	1988	composite	office
+684	Celanese Building	New York City	180.4	45	1973	steel	office
+685	Town Pavilion	Kansas City	180.1	38	1986	""	office
+686	100 Federal Street	Boston	180.1	37	1971	""	office
+687	1000 Lake Shore Plaza	Chicago	179.8	55	1964	concrete	residential
+688	The London NYC	New York City	179.8	54	1990	""	hotel
+689	388 Bridge Street	New York City	179.8	51	2014	concrete	residential
+690	One Financial Center	Boston	179.8	46	1984	steel	office
+691	American General Center	Houston	179.8	42	1983	""	office
+692	Thurgood Marshall U.S. Court House	New York City	179.8	37	1936	steel	government
+694	Erastus Corning II Tower	Albany	179.5	44	1973	""	office
+695	The Clare at Water Tower	Chicago	179.5	53	2009	concrete	residential / education
+696	Museum Tower	New York City	179.5	52	1985	""	residential
+697	Sky House	New York City	179.3	54	2008	concrete	residential
+698	The Millenium Hilton	New York City	179.2	58	1992	concrete	hotel
+699	AT&T Center	St. Louis	179.2	44	1984	""	office
+700	Citigroup Center	Chicago	179.2	42	1987	""	office
+700	One Wells Fargo Center	Charlotte	179.2	42	1988	steel	office
+706	Time-Life Building	New York City	178.9	48	1959	steel	office
+707	Jacob K. Javits Federal Building	New York City	178.9	41	1967	steel	government
+708	Icon Brickell North Tower	Miami	178.6	58	2008	concrete	residential
+708	Icon Brickell South Tower	Miami	178.6	58	2008	concrete	residential
+710	Ten Museum Park	Miami	178.3	50	2007	concrete	residential
+717	W Times Square	New York City	177.9	53	2002	concrete	hotel
+718	Mid Continental Plaza	Chicago	177.6	49	1972	concrete	residential / office
+719	Trump International Hotel & Tower	New York City	177.6	44	1970	steel	residential / hotel
+721	Gulf Tower	Pittsburgh	177.4	44	1932	steel	office
+722	Crain Communications Building	Chicago	177.4	41	1983	concrete	office
+723	Campbell Mithun Tower	Minneapolis	177.2	42	1985	steel/concrete	office
+724	360 Condominiums	Austin	177.1	45	2008	concrete	residential
+725	North Pier Apartments	Chicago	177.1	61	1990	concrete	residential
+727	Citadel Center	Chicago	176.8	39	2003	steel	office
+729	Stevens Tower	New York City	176.8	42	1971	steel	office
+729	The Mansion on Peachtree	Atlanta	176.8	42	2008	concrete	residential
+731	One AT&T Plaza	Dallas	176.8	37	1984	steel	office
+732	Municipal Building	New York City	176.8	34	1914	steel	government
+733	Ross Tower	Dallas	176.5	45	1984	concrete	office
+734	Regions Building	Tampa	176.5	42	1992	steel	office
+735	Two Houston Center	Houston	176.5	40	1974	steel	office
+736	One California Plaza	Los Angeles	176.2	42	1985	steel	office
+739	The Atlantic	Atlanta	175.9	46	2009	concrete	residential
+740	520 Madison Avenue	New York City	175.9	43	1982	concrete	office
+741	Bank of America Plaza	Tampa	175.9	42	1986	""	office
+742	One World Financial Center	New York City	175.9	37	1985	steel	office
+743	Merchandise Mart	New York City	175.6	42	1973	steel	office
+744	The Vue	Charlotte	175.5	50	2010	concrete	residential
+746	5 Times Square	New York City	175.3	40	2002	steel	office
+747	300 Madison Avenue	New York City	175.3	38	2003	steel	office
+747	Lehman Building	New York City	175.3	38	2001	steel	office
+749	One Financial Square	New York City	175.3	37	1987	""	office
+751	Park Avenue Plaza	New York City	175	44	1981	""	office
+755	Jade on the Beach	Sunny Isles Beach	175	51	2008	concrete	residential
+756	Carew Tower	Cincinnati	175	49	1931	steel	office
+762	New York Marriott Marquis Hotel	New York City	175	56	1985	steel	hotel
+763	Wells Fargo Center	Seattle	175	47	1983	steel	office
+764	299 Park Avenue	New York City	175	42	1967	steel	office
+765	The Fordham	Chicago	174.8	52	2003	concrete	residential
+766	190 South LaSalle	Chicago	174.6	40	1987	steel	office
+766	Chevron Tower	San Francisco	174.6	40	1975	steel	office
+768	Socony Mobil Building	New York City	174.4	42	1956	steel	office
+769	Commerce Square #1	Philadelphia	174.4	41	1990	""	office
+769	Commerce Square #2	Philadelphia	174.4	41	1992	""	office
+771	Century Plaza Tower I	Los Angeles	174	44	1975	""	office
+771	Century Plaza Tower II	Los Angeles	174	44	1975	""	office
+773	1290 Avenue of the Americas	New York City	174	43	1963	steel	office
+776	One South Dearborn	Chicago	173.9	39	2005	composite	office
+778	Onterie Center	Chicago	173.7	58	1986	concrete	residential / office
+779	780 3rd Avenue	New York City	173.7	49	1983	concrete	office
+780	Seven World Trade Center	New York City	173.7	47	1987	steel	office
+781	Four Embarcadero Center	San Francisco	173.7	45	1984	steel	office
+782	600 3rd Avenue	New York City	173.7	42	1971	steel	office
+783	Concourse Corporate Center V	Sandy Springs	173.7	34	1988	""	office
+785	One Embarcadero Center	San Francisco	173.4	45	1970	steel	office
+786	Penobscot Building	Detroit	173.3	47	1928	steel	office
+787	450 Lexington Avenue	New York City	173.1	38	1991	steel	office
+788	Chicago Temple Building	Chicago	173.1	23	1924	steel	office / religious
+791	Burnett Plaza	Fort Worth	172.9	40	1983	""	office
+792	Paramount Tower	New York City	172.8	51	1998	concrete	residential
+794	44 Montgomery	San Francisco	172.3	43	1967	steel	office
+796	Palmolive Building	Chicago	172.2	37	1929	steel	residential
+797	230 Park Avenue	New York City	172.2	35	1928	steel	office
+800	Spear Tower	San Francisco	172	42	1976	steel	office
+801	111 Huntington Avenue	Boston	172	36	2002	steel	office
+804	New York Palace Hotel	New York City	171.6	51	1981	""	hotel
+805	Marina City I	Chicago	171.4	61	1964	concrete	residential
+805	Marina City II	Chicago	171.4	61	1964	concrete	residential
+807	Marathon Oil Tower	Houston	171.3	41	1983	""	office
+810	30 Broad Street	New York City	171	48	1932	steel	office
+813	US Bank Plaza I	Minneapolis	171	40	1981	concrete	office
+815	623 Fifth Avenue	New York City	171	36	1990	""	office
+815	Park Avenue Tower	New York City	171	36	1986	""	office
+818	Huron Plaza	Chicago	170.7	56	1983	concrete	residential
+819	Nelson Tower	New York City	170.7	46	1931	steel	office
+820	Tower at Cityplace	Dallas	170.7	42	1989	""	office
+821	Hotel Sherry-Netherland	New York City	170.7	40	1927	steel	hotel
+822	Boeing International Headquarters	Chicago	170.7	36	1990	steel	office
+824	Reunion Tower	Dallas	170.7	-	1978	concrete	observation
+825	Museum Tower	Dallas	170.7	42	2013	concrete	residential
+826	Blue Diamond Tower	Miami Beach	170.4	44	2000	concrete	residential
+826	Green Diamond Tower	Miami Beach	170.4	44	2000	concrete	residential
+830	South Park Tower	New York City	170	51	1986	concrete	residential
+833	Thomas Eagleton Federal Courthouse	St. Louis	169.8	29	2000	""	government
+834	100 United Nations Plaza	New York City	169.8	52	1986	concrete	residential
+835	Continental Can Building	New York City	169.8	39	1962	steel	office
+837	The Parkshore	Chicago	169.5	56	1991	concrete	residential
+838	North Harbor Tower	Chicago	169.5	55	1988	concrete	residential
+838	VDARA	Las Vegas	169.5	55	2009	concrete	hotel
+840	State of Georgia Building	Atlanta	169.5	44	1967	steel	office
+841	3 Park Avenue	New York City	169.5	42	1975	""	office
+842	Leveque Tower	Columbus	169.3	47	1927	composite	office
+843	Reuters Building	New York City	169.2	30	2001	steel	office
+844	Civic Opera Building	Chicago	169.2	45	1929	steel	office / other
+845	330 Madison Avenue	New York City	169.2	41	1964	steel	office
+846	Washington Monument	Washington D.C.	169.2	-	1884	masonry	observation
+847	Paramount at Edgewater Square	Miami	169.1	47	2009	concrete	residential
+848	Harbor Point	Chicago	169	54	1975	concrete	residential
+849	Tower 111	New York City	169	48	2011	concrete	residential
+850	Continental Center	New York City	169	41	1983	""	office
+851	50 Biscayne	Miami	168.9	55	2007	concrete	residential / hotel
+852	Marriott Marquis Hotel	Atlanta	168.9	52	1985	concrete	hotel
+853	Quantum on the Bay South Tower	Miami	168.9	51	2008	concrete	residential / office
+854	The Belvedere	New York City	168.9	48	1999	concrete	residential
+855	Streeter Place	Chicago	168.8	55	2009	concrete	residential
+856	Newberry Plaza	Chicago	168.6	53	1974	concrete	residential
+857	Michigan Plaza South	Chicago	168.6	46	1985	concrete	office
+858	30 North LaSalle	Chicago	168.6	44	1975	""	office
+859	Concourse Corporate Center VI	Sandy Springs	168.6	34	1991	""	office
+860	1133 Avenue of the Americas	New York City	168.3	45	1970	steel	office
+869	2 Grand Central Tower	New York City	168	43	1982	""	office
+869	One Sansome Street	San Francisco	168	43	1984	steel	office
+873	Pittsfield Building	Chicago	168	38	1927	steel	office
+875	Unysys Building	New York City	167.9	44	1963	steel	office
+876	Trump Palace	Sunny Isles Beach	167.9	43	2005	concrete	residential
+877	Downtown by Philippe Starck	New York City	167.9	42	1927	steel	residential
+878	AT&T Long Lines Building	New York City	167.9	29	1974	steel	office / telecommunications
+882	Hyatt Times Square	New York City	167.6	53	2013	concrete	residential / hotel
+883	Acqualina Ocean Residences	Sunny Isles Beach	167.6	51	2004	concrete	residential
+883	The Biltmore	New York City	167.6	51	2003	concrete	residential
+887	WEDGE International Tower	Houston	167.6	44	1983	steel	office
+888	Trump Royale	Sunny Isles Beach	167.6	43	2008	concrete	residential
+889	Sheraton Dallas Hotel Central Tower	Dallas	167.6	42	1959	steel	hotel
+890	KBR Tower	Houston	167.6	40	1973	steel	office
+890	One South Wacker	Chicago	167.6	40	1982	""	office
+893	The Tower at 15 Central Park West	New York City	167.6	35	2008	concrete	residential
+896	100 East Wisconsin	Milwaukee	167.3	37	1989	""	office
+897	AEGON Center	Louisville	167.3	35	1992	composite	office
+900	101 Hudson Street	Jersey City	167	42	1992	""	office
+901	Bankers Trust West Annex	New York City	167	41	1971	steel	office
+906	D.R. Horton Tower	Fort Worth	166.6	38	1984	""	office
+907	The Corinthian	New York City	166.4	55	1988	concrete	residential
+908	Metropolitan Tower	Little Rock	166.4	40	1986	""	office
+908	Wells Fargo Center	Portland	166.4	40	1973	steel	office
+910	Marriott River Center	San Antonio	166.4	38	1988	concrete	hotel
+912	Millennium Tower	New York City	166.1	54	1994	""	residential
+913	Kluczynski Federal Building	Chicago	166.1	45	1975	steel	office
+914	Transportation Building	New York City	166.1	44	1928	steel	office
+917	Jade Ocean	Sunny Isles Beach	166	51	2009	concrete	residential
+921	Equitable Building	New York City	166	36	1915	steel	office
+923	Park Millennium	Chicago	165.9	57	2002	concrete	residential
+924	1999 Broadway	Denver	165.8	43	1985	""	office
+925	The Galleria	New York City	165.8	55	1975	concrete	residential / office
+926	Bank of America Fifth Avenue Plaza	Seattle	165.5	42	1981	steel	office
+927	Opera Tower	Miami	165.5	56	2007	concrete	residential
+928	2 Gold Street	New York City	165.5	51	2005	concrete	residential
+929	AMLI River North	Chicago	165.5	49	2013	concrete	residential
+930	220 Riverside Boulevard At Trump Place	New York City	165.3	49	2003	concrete	residential
+931	17 State Street	New York City	165.3	41	1988	steel	office
+932	Grand Central Plaza	New York City	165.2	38	1973	steel	office
+934	One Rincon Hill North Tower	San Francisco	165	45	2014	steel	residential
+935	1 Brooklyn Bridge Plaza	New York City	164.9	42	1976	""	office
+936	Ritz Hotel Tower	New York City	164.9	41	1926	steel	hotel
+939	1285 Avenue of the Americas	New York City	164.6	42	1960	steel	office
+940	Eiffel Tower, Paris Las Vegas	Las Vegas	164.6	-	1998	steel	observation
+941	14 Wall	New York City	164.6	29	1912	steel	office
+942	Mandarin Oriental Hotel Las Vegas	Las Vegas	164.3	47	2009	steel/concrete	residential / hotel
+943	RBC Plaza	Minneapolis	164.1	40	1992	concrete	office
+944	Everglades on the Bay North Tower	Miami	164	49	2008	concrete	residential
+944	Everglades on the Bay South Tower	Miami	164	49	2008	concrete	residential
+946	Two International Place	Boston	164	35	1993	steel	office
+947	Lefcourt Colonial Building	New York City	164	45	1929	steel	office
+948	Shaklee Terrace Building	San Francisco	164	38	1982	steel	office
+949	RBC Plaza	Raleigh	164	32	2008	concrete	office
+950	The Franklin Center - South Tower	Chicago	163.9	35	1992	""	office
+951	Tribeca Tower	New York City	163.7	53	1990	concrete	residential
+952	One Tampa City Center	Tampa	163.7	39	1981	""	office
+953	Quantum on the Bay North Tower	Miami	163.4	44	2008	concrete	residential / office
+954	U.S. Bancorp Tower	Portland	163.4	42	1983	steel	office
+955	901 Fifth Avenue	Seattle	163.4	41	1973	steel	office
+956	The Pinnacle	Chicago	163.1	48	2004	concrete	residential
+957	LaSalle National Bank	Chicago	163.1	45	1934	steel	office
+958	Cathedral of Learning	Pittsburgh	163.1	42	1936	steel	education
+959	City Place I	Hartford	163.1	38	1980	""	office
+960	Modis Tower	Jacksonville	163.1	37	1975	steel	office
+963	Ernst & Young Plaza	Los Angeles	162.8	41	1986	steel	office
+966	1700 Broadway	New York City	162.5	41	1969	steel	office
+967	AIG Sun-America Center	Los Angeles	162.5	39	1989	""	office
+968	One America Tower	Indianapolis	162.5	38	1982	steel	office
+969	Trump Plaza Residences	Jersey City	162.2	55	2008	concrete	residential
+970	Westin New York at Times Square	New York City	162.2	45	2002	concrete	hotel
+971	DuMont Building	New York City	162.2	42	1931	steel	office
+972	The Brooklyner	New York City	162	52	2010	concrete	residential
+974	515 Park Avenue	New York City	162	43	1999	concrete	residential
+978	Park Place Tower	Chicago	161.9	56	1971	concrete	residential
+979	Plaza Tower	New Orleans	161.9	45	1968	steel	abandoned
+980	Newport Tower	Jersey City	161.9	37	1990	""	office
+981	One North LaSalle Street	Chicago	161.6	48	1930	steel	office
+982	Energy Centre	New Orleans	161.6	39	1984	""	office
+983	William Green Building	Columbus	161.6	33	1990	steel	office
+984	One East River Place	New York City	161.5	49	1989	""	residential
+985	Elysees Condominiums	Chicago	161.2	56	1973	concrete	residential / retail
+986	New York New York Hotel & Casino	Las Vegas	161.2	49	1997	""	hotel / casino
+987	Legg Mason Building	Baltimore	161.2	40	1973	concrete	office
+987	Tower at Erieview	Cleveland	161.2	40	1964	steel	office
+989	First Market Tower	San Francisco	161.2	38	1972	steel	office
+989	McKesson Plaza	San Francisco	161.2	38	1969	steel	office
+989	One Seneca Tower	Buffalo	161.2	38	1974	""	office
+997	Jade at Brickell Bay	Miami	160.9	49	2004	concrete	residential
+998	The Metropolis	New York City	160.9	48	2001	concrete	residential
+999	William Beaver House	New York City	160.8	47	2010	concrete	residential
+1000	Travelers Tower	Hartford	160.6	24	1919	steel	office
+1001	Morrison Hotel	Chicago	160.3	45	1925	steel	hotel
+1002	North American Plywood Building	New York City	160.3	41	1972	steel	office
+1003	Vehicle Assembly Building	Cape Canaveral	160.3	40	1965	steel	industrial
+1004	Harrah`s Waterfront Tower	Atlantic City	160	44	2008	concrete	hotel / casino
+1005	Carter+Burgess Plaza	Fort Worth	160	40	1982	""	office
+1005	One Post Office Square	Boston	160	40	1981	""	office
+1007	Suntrust Financial Center	Tampa	160	36	1992	""	office
+1008	Plaza on Brickell Tower II	Miami	160	48	2007	concrete	residential
+1009	Hotel Pierre	New York City	160	44	1928	steel	hotel
+1010	767 3rd Avenue	New York City	160	39	1980	steel	office
+1012	River Plaza	Chicago	159.7	56	1977	concrete	residential
+1013	Citibank Building	New York City	159.7	41	1961	steel	office
+1015	BrickellHouse	Miami	159.7	46	2014	concrete	residential
+1016	425 Market Street	San Francisco	159.7	38	1973	steel	office
+1018	35 East Wacker Drive	Chicago	159.4	40	1927	steel	office
+1019	Pennzoil Place I	Houston	159.4	36	1976	composite	office
+1019	Pennzoil Place II	Houston	159.4	36	1976	composite	office
+1021	Mercantile Building	Dallas	159.4	31	1943	steel	residential
+1022	707 17th Street	Denver	159.1	42	1981	""	hotel / office
+1023	Kemper Building	Chicago	159.1	41	1962	steel	office
+1024	825 Third Avenue	New York City	159.1	40	1969	steel	office
+1026	Goodwin Square	Hartford	159.1	30	1990	""	office
+1030	Mather Tower	Chicago	158.9	38	1928	steel	hotel / office
+1031	Atelier	New York City	158.8	46	2007	concrete	residential
+1033	Devon Energy Center	Houston	158.8	36	1978	""	office
+1034	Santa Maria	Miami	158.5	51	1997	concrete	residential
+1038	Three Mellon Center	Pittsburgh	158.5	41	1951	steel	office
+1039	10 South Wacker	Chicago	158.5	40	1987	concrete	office
+1039	30 South Wacker	Chicago	158.5	40	1983	concrete	office
+1042	One Federal Street	Boston	158.5	38	1976	steel	office
+1045	26 Broadway	New York City	158.5	31	1924	steel	office
+1048	Newsweek Building	New York City	158	42	1931	steel	office
+1049	RRI Energy Plaza	Houston	158	36	2003	concrete	office
+1052	The Residences at the Ritz-Carlton	Philadelphia	157.9	46	2009	concrete	residential
+1053	Architect`s and Designer`s Building	New York City	157.9	39	1969	""	office
+1053	The Downtown Club	New York City	157.9	39	1930	steel	residential / other
+1055	Total Plaza	Houston	157.9	35	1971	""	office
+1056	Palms Place	Las Vegas	157.8	50	2008	concrete	residential / hotel
+1057	The Columbian	Chicago	157.7	47	2008	concrete	residential
+1058	Deutsche Bank	New York City	157.6	39	1974	steel	office
+1059	TCW Tower	Los Angeles	157.6	37	1990	steel	office
+1060	785 8th Avenue	New York City	157.4	42	2009	concrete	residential
+1061	191 North Wacker Drive	Chicago	157.4	37	2002	composite	office
+1062	Highpoint Condominiums	New York City	157.3	49	1988	concrete	residential
+1064	First Place Tower	Tulsa	157.3	40	1975	""	office
+1064	Union Bank Plaza	Los Angeles	157.3	40	1968	steel	office
+1068	Frost Bank Tower	Austin	157.2	33	2004	concrete	office
+1069	Exchange Place Center	Jersey City	157.1	32	1990	""	office
+1075	401 East Ontario Street	Chicago	157	51	1990	concrete	residential
+1076	Sterling Drug Company Building	New York City	157	41	1964	steel	office
+1077	One Financial Place	Chicago	157	39	1985	""	office
+1078	Seagram Building	New York City	157	38	1958	steel	office
+1080	The Streeter	Chicago	156.7	50	2007	concrete	residential
+1082	Rainier Tower	Seattle	156.7	31	1977	steel	office
+1083	1214 Fifth Avenue	New York City	156.4	43	2012	concrete	residential / office
+1084	600 North Lake Shore Drive - South Tower	Chicago	156.4	47	2009	concrete	residential
+1085	Mid-Continent Tower	Tulsa	156.4	36	1984	steel	office
+1086	Bank of New York Building	New York City	156.4	31	1927	steel	office
+1087	Park Tower Condominiums	Chicago	156.3	54	1973	concrete	residential
+1088	The Ivy	Miami	156.2	45	2008	concrete	residential
+1089	The Belaire	New York City	156.1	50	1988	""	residential / hospital
+1090	Millennium Towers North	New York City	156.1	44	1930	steel	office
+1091	One Hanson Place	New York City	156.1	42	1929	steel	residential
+1092	1407 Broadway	New York City	156.1	41	1950	steel	office
+1092	International Building	New York City	156.1	41	1935	steel	office
+1092	LaSalle-Wacker Building	Chicago	156.1	41	1930	steel	office
+1095	437 Madison Avenue	New York City	156.1	40	1967	steel	office
+1095	Bryan Tower	Dallas	156.1	40	1973	steel	office
+1095	Fourth and Madison Building	Seattle	156.1	40	2003	composite	office
+1095	PNC Tower	Louisville	156.1	40	1972	steel	office
+1099	Huntington Center	Columbus	156.1	37	1983	""	office
+1103	Bellagio Resort & Casino	Las Vegas	155.8	36	1998	""	hotel / casino
+1104	Continental Building	New York City	155.8	42	1931	steel	office
+1105	1155 Avenue of the Americas	New York City	155.8	40	1984	steel	office
+1106	K & L Gates Center	Pittsburgh	155.8	39	1968	steel	office
+1107	Exchange Place	Boston	155.4	39	1984	""	office
+1108	321 North Clark Street	Chicago	155.4	38	1987	""	office
+1109	Harris Bank III	Chicago	155.4	35	1974	steel	office
+1110	Stephen P. Clark Center	Miami	155.4	28	1985	""	office
+1111	Liberty Plaza	New York City	155.4	45	2004	concrete	residential
+1112	Sixty State Street	Boston	155.1	38	1977	""	office
+1113	Bank of America Building	Baltimore	155.1	37	1924	steel	office
+1114	KOIN Center	Portland	155.1	31	1984	concrete	multiple
+1116	Hudson Greene East Tower	Jersey City	155.1	48	2010	concrete	residential
+1117	215 West	Chicago	155.1	50	2010	concrete	residential
+1122	Renaissance Center 100 Tower	Detroit	155	39	1976	concrete	office
+1122	Renaissance Center 200 Tower	Detroit	155	39	1976	concrete	office
+1122	Renaissance Center 300 Tower	Detroit	155	39	1976	concrete	office
+1122	Renaissance Center 400 Tower	Detroit	155	39	1976	concrete	office
+1128	The Westin Virginia Beach Town Center & Residences	Virginia Beach	154.8	38	2007	concrete	residential / hotel
+1129	555 17th Street	Denver	154.5	40	1978	""	office
+1131	One Beacon Street	Boston	154.5	36	1972	steel	office
+1132	United Nations Secretariat Building	New York City	154.3	39	1953	steel	office
+1133	810 7th Avenue	New York City	154.2	41	1970	steel	office
+1134	10 Universal City Plaza	Los Angeles	154.2	36	1984	steel	office
+1135	400 East Ohio Street	Chicago	154	50	1982	concrete	residential
+1138	The Beach Club Tower 2	Hallandale Beach	153.9	50	2006	concrete	residential
+1138	The Sheffield	New York City	153.9	50	1978	""	residential
+1140	One United Nations Plaza	New York City	153.9	39	1975	steel	hotel / office
+1140	Two United Nations Plaza	New York City	153.9	39	1981	steel	hotel / office
+1144	2 New York Plaza	New York City	153.6	40	1970	""	office
+1145	One Indiana Square	Indianapolis	153.6	37	1969	steel	office
+1146	Fifth Street Towers II	Minneapolis	153.5	36	1988	composite	office
+1147	Vern Riffe Center for Govermnment and the Arts	Columbus	153.5	33	1989	steel	office
+1148	Johns-Manville Building	New York City	153.3	43	1931	steel	office
+1149	Bank of America Plaza	Charlotte	153.3	40	1974	steel	office
+1150	60 Broad Street	New York City	153.3	39	1962	steel	office
+1151	Carbide & Carbon Building	Chicago	153.3	37	1929	steel	hotel
+1151	Lefcourt National Building	New York City	153.3	37	1928	steel	office
+1153	State Street Financial Center	Boston	153.3	36	2003	steel	office
+1154	The Huntington	Houston	153.3	34	1982	""	residential
+1156	Met 2 Marriott Marquis	Miami	153.1	41	2010	concrete	hotel
+1159	1325 Ave. of Americas	New York City	153	35	1989	""	office
+1160	El Paso Energy Building	Houston	153	33	1962	steel	office
+1161	One Superior Place	Chicago	152.9	52	1999	concrete	residential
+1162	Hudson Greene West Tower	Jersey City	152.8	48	2010	concrete	residential
+1163	Sheraton New York	New York City	152.7	51	1962	concrete	hotel
+1164	Wind	Miami	152.7	41	2008	concrete	residential
+1165	120 North LaSalle	Chicago	152.7	39	1992	concrete	office
+1165	World Apparel Center	New York City	152.7	39	1968	steel	office
+1167	10 South LaSalle	Chicago	152.7	37	1986	composite	office
+1167	One Park Place	Houston	152.7	37	2009	concrete	residential
+1169	Viewpoint	Atlanta	152.7	36	2008	concrete	residential
+1170	International Gem Tower	New York City	152.7	34	2013	steel	office
+1171	1450 BRICKELL	Miami	152.5	34	2010	concrete	office
+1172	Bristol Plaza	New York City	152.4	50	1987	""	residential
+1173	One Columbus Place Tower I	New York City	152.4	49	1999	concrete	residential
+1173	One Columbus Place Tower II	New York City	152.4	49	1999	concrete	residential
+1175	Sky Las Vegas	Las Vegas	152.4	45	2007	concrete	residential
+1177	1818 Market Street	Philadelphia	152.4	40	1974	steel	office
+1177	28 State Street	Boston	152.4	40	1970	steel	office
+1179	Telesis Tower	San Francisco	152.4	38	1982	steel	office
+1180	1918 8th Avenue	Seattle	152.4	36	2009	""	office
+1180	Chase Tower	Oklahoma City	152.4	36	1971	""	office
+1182	Memorial Hermann Tower	Houston	152.4	35	2009	concrete	office / hospital
+1183	Four World Financial Center	New York City	152.4	34	1986	steel	office
+1183	One America Plaza	San Diego	152.4	34	1991	steel	office
+1185	The Tides	Chicago	152.4	51	2008	concrete	residential
+1186	200 South Wacker	Chicago	152.3	41	1981	concrete	office
+1196	650 Fifth Avenue	New York City	152	36	1978	""	office
+1199	Symphony Towers	San Diego	152	34	1989	""	office
+1204	The St. James	Philadelphia	151.8	45	2004	concrete	residential
+1205	The Modern Tower A	Fort Lee	151.8	47	2014	concrete	residential
+1210	Barclay-Vesey Building	New York City	151.8	32	1926	steel	office
+1211	Parkview West	Chicago	151.6	49	2008	concrete	residential
+1212	Ameriprise Financial Center	Minneapolis	151.6	31	2000	steel/concrete	office
+1213	80 Pine Street	New York City	151.5	40	1960	steel	office
+1214	500 North Lake Shore Drive	Chicago	151.5	47	2013	concrete	residential
+1215	Manchester Grand Hyatt Hotel	San Diego	151.5	40	1992	concrete	hotel
+1216	The Platinum	New York City	151.2	43	2008	concrete	residential
+1217	Financial Times Building	New York City	151.2	41	1965	steel	office
+1218	Shearson Lehman Plaza	New York City	151.2	39	1988	""	office
+1219	1100 Wilshire	Los Angeles	151.2	36	1987	""	residential
+1220	Marriott's Custom House	Boston	151.2	32	1915	steel	hotel
+1221	Guardian Building	Detroit	151	40	1929	steel	office
+1222	20 Pine	New York City	151	38	1928	steel	residential
+1223	1 Battery Park Plaza	New York City	151	35	1971	""	office
+1224	55 West Monroe	Chicago	150.9	41	1980	concrete	office
+1225	Ontario Place	Chicago	150.9	49	1983	concrete	residential
+1226	Avenue Brickell Tower	Miami	150.9	47	2007	concrete	residential
+1227	333 Bush Street	San Francisco	150.9	43	1986	steel	residential / office
+1229	PNC Tower	Cincinnati	150.9	31	1913	steel	office
+1230	John Hancock Building	Boston	150.9	26	1949	steel	office
+1231	The Ritz-Carlton Residences	Chicago	150.9	40	2012	concrete	residential
+1232	1675 Broadway	New York City	150.8	35	1990	""	office
+1233	50 East Chestnut Street	Chicago	150.7	40	2008	concrete	residential
+1234	Tower 67 Apartments	New York City	150.6	49	1986	""	residential
+1238	PNC Center	Chicago	150.5	36	1992	""	office
+1240	The Colonnade	New York City	150.3	45	1982	""	residential
+1241	Hilton San Francisco Union Square	San Francisco	150.3	46	1971	steel	hotel
+1242	1000 Second Avenue	Seattle	150.3	40	1986	steel	office
+1244	First National Center	Oklahoma City	150.3	33	1931	steel	office
+1245	William Donald Schaefer Tower	Baltimore	150.3	29	1992	""	office
+1246	The Waterford	New York City	150	48	1987	""	residential
+1247	Fuller Building	New York City	150	42	1929	steel	office
+1248	One Meridian Plaza	Philadelphia	150	38	1972	steel	office
+1249	Federal Office Building at Foley Square	New York City	150	32	1994	""	government
+1250	Akoya Condominiums	Miami Beach	150	47	2004	concrete	residential
+1251	One Biscayne Tower	Miami	150	39	1973	""	office
+1252	Loews Philadelphia Hotel	Philadelphia	150	36	1932	steel	hotel
+1253	Fox Plaza	Los Angeles	150	34	1987	""	office
+1253	Pacific Gas & Electric Building	San Francisco	150	34	1971	steel	office
+1255	Target Plaza South	Minneapolis	149.9	33	2001	composite	office
+1256	200 Riverside Boulevard At Trump Place	New York City	149.8	46	1999	concrete	residential
+1258	Sovereign Apartments	New York City	149.7	47	1973	""	residential
+1260	Chelsea Stratus	New York City	149.7	40	2008	concrete	residential
+1260	PNC Bank Building	Philadelphia	149.7	40	1983	""	office
+1262	Twelve Centennial Park Tower I	Atlanta	149.7	39	2007	concrete	residential
+1263	CBS Building	New York City	149.7	38	1965	concrete	office
+1264	Constellation Place	Los Angeles	149.5	35	2003	steel	office
+1265	235 West Van Buren	Chicago	149.4	46	2010	concrete	residential
+1266	One Lincoln Plaza	New York City	149.4	46	1972	""	residential
+1267	Centre Square II	Philadelphia	149.4	40	1973	""	office
+1268	Five Penn Center	Philadelphia	149.4	36	1970	""	office
+1269	Fifth Third Center	Nashville	149.4	30	1986	concrete	office
+1270	Hess Tower	Houston	149.4	29	2010	concrete	office
+1271	33 Arch Street	Boston	149.1	33	2004	steel	office
+1272	Hyatt Regency Denver at the Colorado Convention Center	Denver	149	37	2005	concrete	hotel
+1273	One Rockefeller Plaza	New York City	149	34	1937	steel	office
+1274	99 Washington Street	New York City	148.7	50	2014	concrete	hotel
+1275	The Bristol	Chicago	148.7	42	2000	concrete	residential
+1276	1075 Peachtree Office Tower	Atlanta	148.7	38	2010	concrete	office
+1277	The Tower	Fort Worth	148.7	36	1974	""	""
+1278	333 Wacker Drive	Chicago	148.6	36	1983	steel	office
+1279	New York Hilton	New York City	148.4	46	1963	""	hotel
+1280	Tower 45	New York City	148.4	40	1989	""	office
+1281	50 California Street	San Francisco	148.4	37	1972	steel	office
+1281	Henry M. Jackson Federal Building	Seattle	148.4	37	1974	composite	office
+1283	Mohegan Sun Sky Tower	Montville	148.4	34	2002	steel	hotel
+1284	555 Mission Street	San Francisco	148.4	33	2009	steel	office
+1286	Espirito Santo Plaza	Miami	148.4	36	2004	concrete	residential / hotel / office
+1287	City Investing Building	New York City	148.3	33	1908	steel	office
+1288	Park Avenue Condominiums	Atlanta	148.1	44	2000	concrete	residential
+1289	THEHotel	Las Vegas	147.9	43	2003	concrete	hotel
+1290	Terminus 100	Atlanta	147.9	26	2007	concrete	office
+1291	The Regalia	Sunny Isles Beach	147.8	43	2014	concrete	residential
+1293	Grant Building	Pittsburgh	147.8	40	1930	steel	office
+1294	McGraw-Hill Building	New York City	147.8	33	1931	steel	office
+1295	AT&T South Canal	Chicago	147.8	28	1971	""	office / telecommunications
+1296	One Nationwide Plaza	Columbus	147.8	40	1978	""	office
+1298	575 5th Avenue	New York City	147.6	35	1983	""	office
+1298	One US Bank Plaza	St. Louis	147.6	35	1976	steel	office
+1300	St. Regis San Francisco	San Francisco	147.5	42	2005	concrete	residential / hotel
+1301	Brickell World Plaza at 600 Brickell	Miami	147.5	40	2011	steel/concrete	office
+1302	The Residences at the Ritz Carlton, Westchester - North Tower	White Plains	147.5	44	2009	concrete	residential
+1302	The Residences at the Ritz Carlton, Westchester - South Tower	White Plains	147.5	44	2008	concrete	residential / hotel
+1304	Miami Center	Miami	147.5	34	1983	steel	office
+1305	1 Bank of America Center	Charlotte	147.5	32	2010	composite	office
+1306	Portofino Tower	Miami Beach	147.5	44	1997	concrete	residential
+1307	Panorama Tower III	Las Vegas	147.3	42	2009	concrete	residential
+1308	Spire	Denver	147.2	41	2009	concrete	residential
+1309	Chase Tower	Phoenix	147.2	40	1972	steel	office
+1310	666 5th Avenue	New York City	147.2	39	1957	steel	office
+1311	Asia	Miami	147.2	36	2007	concrete	residential
+1311	Harwood Center	Dallas	147.2	36	1982	""	office
+1313	Excelsior House	New York City	147	47	1967	concrete	residential
+1315	Brickell on the River North Tower	Miami	146.9	42	2005	concrete	residential
+1316	Millennium Broadway	New York City	146.6	47	1990	""	hotel
+1317	First Bank & Trust Tower	New Orleans	146.6	36	1987	""	office
+1318	Kansas City Power & Light Building	Kansas City	146.6	34	1931	steel	office
+1318	KPMG Centre	Dallas	146.6	34	1980	steel	office
+1320	The Regatta	Chicago	146.4	45	2007	concrete	residential
+1321	Crowne Plaza New York	New York City	146.3	46	1989	""	hotel
+1322	Mandalay Bay Hotel & Casino	Las Vegas	146.3	43	1999	""	hotel / casino
+1324	Three Tequesta Point	Miami	146.3	46	2001	concrete	residential
+1326	Harborside Plaza 5	Jersey City	146.3	34	2002	""	office
+1328	Sheraton New Orleans	New Orleans	146	47	1985	""	hotel
+1332	33 North LaSalle	Chicago	146	38	1930	steel	office
+1333	The Century	Los Angeles	145.7	42	2009	concrete	residential
+1334	Paramount at Buckhead	Atlanta	145.7	40	2004	concrete	residential
+1335	Woodmen Tower	Omaha	145.7	30	1969	""	office
+1336	Consolidated Gas Building	New York City	145.7	24	1928	steel	office
+1338	CassaNY	New York City	145.6	45	2010	concrete	residential / hotel
+1339	Summit on Lake	Chicago	145.5	42	2014	concrete	residential
+1340	Lincoln Park 2550	Chicago	145.5	39	2012	concrete	residential
+1341	225 Franklin Street	Boston	145.4	33	1966	steel	office
+1341	Wells Fargo Tower	Fort Worth	145.4	33	1982	""	office
+1344	The O'Quinn Medical Tower at St. Luke's	Houston	145.3	29	1990	concrete	office / hospital
+1345	W Austin Hotel & Residences	Austin	145.3	36	2010	concrete	residential / hotel
+1346	Turnberry Place I	Las Vegas	145.2	38	2001	concrete	residential
+1346	Turnberry Place II	Las Vegas	145.2	38	2002	concrete	residential
+1346	Turnberry Place III	Las Vegas	145.2	38	2004	concrete	residential
+1346	Turnberry Place IV	Las Vegas	145.2	38	2006	concrete	residential
+1350	Latitude on the River	Miami	145.2	44	2007	concrete	residential
+1351	100 Pine Center	San Francisco	145.1	34	1972	steel	office
+1352	Bankers Building	Chicago	145.1	41	1927	steel	hotel / office
+1353	The Pinnacle	Sunny Isles Beach	145.1	40	1998	concrete	residential
+1354	Daily News Building	New York City	145.1	36	1930	steel	office
+1355	Mutual of America Building	New York City	145.1	34	1960	steel	office
+1357	Riverbank West Apartments	New York City	145	45	1987	""	office
+1358	45 Fremont Center	San Francisco	145	34	1979	steel	office
+1359	Millennium Place Tower 1	Boston	144.8	38	2001	""	residential / hotel
+1360	135 West 52nd Street	New York City	144.8	46	1992	concrete	residential
+1361	Electra	San Diego	144.8	43	2008	steel/concrete	residential
+1362	The Murano	Philadelphia	144.8	42	2008	concrete	residential
+1363	Hilton Times Square	New York City	144.8	39	2000	""	hotel
+1364	Book Tower	Detroit	144.8	38	1926	steel	abandoned
+1364	The Signature at MGM Grand Tower I	Las Vegas	144.8	38	2006	concrete	residential
+1364	The Signature at MGM Grand Tower II	Las Vegas	144.8	38	2006	concrete	residential
+1364	The Signature at MGM Grand Tower III	Las Vegas	144.8	38	2007	concrete	residential
+1368	Metropolitan Tower	Chicago	144.8	37	1924	steel	office
+1369	Cook County Administration Building	Chicago	144.8	35	1964	concrete	office
+1369	Venetian Resort-Hotel-Casino	Las Vegas	144.8	35	1999	""	hotel / casino
+1371	Koppers Building	Pittsburgh	144.8	34	1929	steel	office
+1372	Plaza VII	Minneapolis	144.6	36	1987	steel	hotel / office
+1373	Plaza 440	Chicago	144.5	49	1991	concrete	residential / hotel
+1374	American Furniture Mart	Chicago	144.5	29	1926	concrete/steel	residential / office
+1375	One South Broad	Philadelphia	144.4	28	1932	steel	office
+1376	Marymount University Dormitory	New York City	144.2	48	2001	concrete	residential
+1378	Harper & Row Building	New York City	144.2	38	1972	""	office
+1379	12 Metrotech Center	New York City	144.2	32	2005	steel	office / government
+1380	International Plaza	New York City	144.2	30	1988	""	office
+1381	333 Market Building	San Francisco	144	33	1979	steel	office
+1382	Solow Tower Apartments	New York City	143.9	46	1971	""	residential
+1383	505 West 37th Street East Tower	New York City	143.9	43	2010	concrete	residential
+1384	Park Avenue Place	New York City	143.9	38	2004	concrete	residential
+1384	United States Plywood Building	New York City	143.9	38	1961	steel	office
+1386	Wells Fargo Place	St. Paul	143.6	37	1987	concrete	office
+1387	The Link	New York City	143.6	43	2007	concrete	residential
+1388	325 5th Avenue	New York City	143.6	42	2006	concrete	residential
+1388	Hotel InterContinental	Chicago	143.6	42	1929	steel	hotel
+1390	Continuum on South Beach, South Tower	Miami Beach	143.5	40	2002	concrete	residential
+1393	Embassy Suites Times Square	New York City	143.3	44	1990	composite	hotel
+1394	Aire	New York City	143.3	42	2010	concrete	residential
+1395	New Yorker Hotel	New York City	143.3	41	1930	steel	hotel
+1396	City Place	Chicago	143.3	40	1990	concrete	office / hotel
+1397	Hampshire House	New York City	143.3	37	1931	steel	hotel
+1398	75 Wall	New York City	143.3	36	1987	""	residential / hotel
+1399	Capitol-EMI Building	New York City	143.3	34	1971	""	office
+1401	Trump Taj Mahal - Chairman Tower	Atlantic City	143.2	41	2008	concrete	hotel
+1403	Roosevelt University Academic, Student Life Residence Center	Chicago	143	32	2012	steel/concrete	residential / education / office
+1404	3630 Peachtree Road	Atlanta	142.9	40	2009	concrete	residential
+1405	900 3rd Avenue	New York City	142.9	32	1983	""	office
+1406	The Carlyle	Minneapolis	142.9	41	2007	concrete	residential
+1408	Columbus Plaza	Chicago	142.6	47	1980	concrete	residential
+1409	Scripps Center	Cincinnati	142.6	36	1990	steel	office
+1410	U.S. Bancorp Center	Minneapolis	142.5	32	2000	steel	office
+1412	AT&T Tower	Minneapolis	142.3	34	1991	steel	office
+1415	Coast at Lakeshore East	Chicago	142.2	47	2013	concrete	residential
+1416	The Sterling	Chicago	142	49	2001	concrete	residential / retail
+1417	500 Park Tower	New York City	142	40	1984	""	residential / office
+1418	650 California Street	San Francisco	142	33	1964	steel	office
+1418	Qwest Plaza	Seattle	142	33	1976	steel	office
+1421	Allure Las Vegas Tower I	Las Vegas	142	41	2007	concrete	residential
+1423	National Newark Building	Newark	141.7	34	1931	steel	office
+1424	5 Greenway Plaza	Houston	141.7	31	1973	""	office
+1425	Viceroy	Miami	141.6	46	2009	concrete	residential / hotel
+1426	The Marc	New York City	141.6	42	2004	concrete	residential
+1427	The Oxford on 72nd	New York City	141.5	43	1990	""	residential
+1428	Dillon, Read & Company Building	New York City	141.4	36	1982	""	office
+1429	Franklin County Courthouse	Columbus	141.4	27	1991	steel	government
+1430	The Atlas	New York City	141.1	46	2002	""	residential
+1431	22 Cortlandt Street	New York City	141.1	34	1971	""	office
+1431	Tribune Tower	Chicago	141.1	34	1925	steel	office
+1433	200 North Dearborn Apartments	Chicago	141.1	47	1989	concrete	residential
+1434	Randolph Tower	Chicago	141	45	1929	steel	residential
+1435	Victory Apartments	New York City	140.9	45	2002	concrete	residential
+1436	Smith Tower	Seattle	140.8	38	1914	steel	residential / office
+1437	Montague-Court Building	New York City	140.8	35	1927	steel	office
+1438	121 West Trade	Charlotte	140.8	32	1990	""	office
+1439	Monarch Condominiums	New York City	140.8	44	1986	""	residential
+1440	Arco Tower	Los Angeles	140.8	33	1989	""	office
+1441	Presidential Towers I	Chicago	140.6	49	1985	concrete	residential
+1441	Presidential Towers II	Chicago	140.6	49	1985	concrete	residential
+1441	Presidential Towers III	Chicago	140.6	49	1985	concrete	residential
+1441	Presidential Towers IV	Chicago	140.6	49	1985	concrete	residential
+1445	Jumeirah Essex House	New York City	140.5	42	1931	steel	residential / hotel
+1446	Trump Towers I	Sunny Isles Beach	140.5	45	2008	concrete	residential
+1446	Trump Towers II	Sunny Isles Beach	140.5	45	2008	concrete	residential
+1446	Trump Towers III	Sunny Isles Beach	140.5	45	2008	concrete	residential
+1449	480 Washington Boulevard	Jersey City	140.5	32	2004	steel	office
+1450	The New York	Chicago	140.5	49	1986	concrete	residential
+1451	Leighton House Residence Tower	New York City	140.2	46	1990	""	residential
+1452	One Miami East Tower	Miami	140.2	44	2005	concrete	residential
+1453	Symphony House Apartments	New York City	140.2	43	1986	""	residential
+1454	747 3rd Avenue	New York City	140.2	37	1972	""	office
+1455	100 North Main Street	Winston-Salem	140.2	34	1995	steel	office
+1455	Element	Tampa	140.2	34	2009	concrete	residential
+1455	Louisiana State Capitol	Baton Rouge	140.2	34	1932	steel	government
+1458	Chicago Marriott	Chicago	140.2	45	1978	""	hotel
+1459	The Tower	Burbank	140.2	32	1988	concrete	office
+1460	Ruan Center	Des Moines	140.1	36	1975	steel	office
+1461	Centennial Tower	Atlanta	140	36	1976	""	office
+1462	One State Street Plaza	New York City	139.9	33	1969	""	office
+1463	8 Stone Street	New York City	139.7	43	2010	concrete	hotel
+1464	Palms Fantasy Tower	Las Vegas	139.6	40	2006	concrete	hotel / casino
+1465	The Residences at Grand Plaza	Chicago	139.6	39	2003	concrete	residential
+1466	Park Tower	Tampa	139.6	36	1972	steel	office
+1467	600 Fairbanks Court	Chicago	139.5	41	2008	concrete	residential
+1468	66 Rockwell Place	New York City	139.3	42	2014	concrete	residential
+1469	Swissotel Chicago	Chicago	139.3	43	1989	concrete	hotel
+1470	The Water Club at Borgata	Atlantic City	139.3	39	2008	concrete	hotel / casino
+1471	Equitable Building	Chicago	139.3	35	1965	steel	office
+1472	One Union Square	Seattle	139	36	1981	steel	office
+1472	Trump Parc Condominiums	New York City	139	36	1930	steel	residential / hotel
+1475	AEP Building	Columbus	139	31	1983	""	office
+1475	Atlantic Wharf	Boston	139	31	2011	composite	residential / office
+1477	2100 Ross	Dallas	139	33	1982	""	office
+1478	Kingsbury Plaza	Chicago	138.8	47	2007	concrete	residential
+1479	The Monaco North Tower	Jersey City	138.7	47	2011	concrete	residential
+1479	The Monaco South Tower	Jersey City	138.7	47	2011	concrete	residential
+1481	The Ritz Plaza	New York City	138.7	40	1990	""	residential
+1483	Olive 8	Seattle	138.7	39	2009	concrete	residential / hotel
+1484	150 West Jefferson	Detroit	138.7	26	1989	""	office
+1485	The Pinnacle Museum Tower	San Diego	138.7	36	2005	concrete	residential
+1486	Paramount Building	New York City	138.7	31	1927	steel	office
+1487	Accenture Tower	Minneapolis	138.5	33	1987	concrete	office
+1488	400 North LaSalle	Chicago	138.4	45	2005	concrete	residential
+1489	Equitable Life Building	Los Angeles	138.4	34	1969	steel	office
+1490	Trump SoHo Hotel Condominium	New York City	138.4	42	2010	concrete	hotel
+1491	Eleven-Eleven Third Avenue	Seattle	138.4	34	1980	steel	office
+1491	Wells Fargo Tower	Birmingham	138.4	34	1986	""	office
+1493	Rivergate Tower	Tampa	138.4	32	1988	""	office
+1494	Commerce Place	Baltimore	138.4	31	1992	""	office
+1495	Regions Center	Little Rock	138.4	30	1975	""	office
+1496	City Hall	Los Angeles	138.4	27	1928	steel	government
+1497	909 Walnut Street	Kansas City	138.3	35	1931	steel	residential / office
+1498	717 Texas Avenue	Houston	138.2	34	2003	concrete	office
+1499	ABN AMRO Plaza	Chicago	138.1	29	2003	composite	office
+1500	Turnberry Towers - East Tower	Las Vegas	138.1	45	2007	concrete	hotel
+1500	Turnberry Towers - West Tower	Las Vegas	138.1	45	2008	concrete	residential
+1502	600 North Lake Shore Drive - North Tower	Chicago	138.1	41	2008	concrete	residential
+1503	53rd at Third	New York City	138.1	34	1986	steel	office
+1503	Equitable Building	Atlanta	138.1	34	1967	""	office
+1505	Spire	Atlanta	138	28	2005	concrete	residential
+1507	510 Madison	New York City	137.9	31	2010	steel	office
+1508	AT&T Center	Los Angeles	137.8	32	1965	steel	office
+1509	Las Olas River House I	Fort Lauderdale	137.8	42	2004	concrete	residential
+1510	Roanoke Building	Chicago	137.8	37	1927	steel	office
+1512	One Allen Center	Houston	137.8	34	1972	""	office
+1512	The Dylan	New York City	137.8	34	2013	concrete	residential
+1514	William R. Snodgrass Tennessee Tower	Nashville	137.8	31	1970	concrete	office
+1515	125 High Street	Boston	137.8	30	1991	steel	office
+1517	1065 Avenue of the Americas	New York City	137.5	38	1957	steel	office
+1517	Buckhead Grand	Atlanta	137.5	38	2004	concrete	residential
+1519	Metropolitan Life North Building	New York City	137.5	31	1950	steel	office
+1520	Renaissance Hotel	Dallas	137.5	29	1983	""	hotel
+1521	Riverbend Condominiums	Chicago	137.4	38	2002	concrete	residential
+1523	The Strand	New York City	137.2	42	1989	""	residential
+1526	The Shoreham	Chicago	137.2	47	2005	concrete	residential
+1527	Park Lane Hotel	New York City	137.2	46	1971	""	hotel
+1528	Eugenie Terrace on the Park	Chicago	137.2	44	1987	concrete	residential
+1529	Bellevue Towers Two	Bellevue	137.2	43	2008	concrete	residential
+1529	Dag Hammarskjold Tower	New York City	137.2	43	1984	""	residential
+1529	The Strathmore	New York City	137.2	43	1996	""	residential
+1532	One Lincoln Tower	Bellevue	137.2	42	2005	composite	residential / hotel
+1533	Tower 31	New York City	137.2	41	2006	concrete	residential
+1534	47 East 34th Street	New York City	137.2	36	2009	concrete	residential
+1535	Gateway Center III	Chicago	137.2	35	1971	composite	office
+1536	100 Summer Street	Boston	137.2	32	1974	steel	office
+1536	Three Wells Fargo Center	Charlotte	137.2	32	2000	concrete	office
+1538	One Cleveland Center	Cleveland	137.2	31	1983	steel	office
+1540	Emerald Plaza	San Diego	137.2	30	1990	""	office
+1541	701 Brickell Avenue	Miami	137.1	33	1986	""	office
+1542	Westin Seattle North Tower	Seattle	137	47	1982	steel	religious
+1543	New Orleans Marriott	New Orleans	137	42	1972	""	hotel
+1544	Veer Towers East	Las Vegas	137	36	2010	composite	residential
+1544	Veer Towers West	Las Vegas	137	36	2010	composite	residential
+1547	Hubbard Place	Chicago	137	44	2013	concrete	residential
+1548	One Miami West Tower	Miami	136.9	45	2005	concrete	residential
+1549	200 Squared	Chicago	136.9	42	2010	concrete	residential
+1550	Millennium Point	New York City	136.9	38	2001	concrete	residential / hotel
+1551	James Monroe Building	Richmond	136.9	29	1981	""	office
+1552	The America	New York City	136.9	43	1987	""	residential
+1553	Eleven80	Newark	136.6	35	1930	steel	residential
+1554	1670 Broadway	Denver	136.6	34	1980	""	office
+1555	50 Broadway	New York City	136.6	37	1927	steel	office
+1556	Adams Express Building	New York City	136.6	33	1916	steel	office
+1556	Wall Street Plaza	New York City	136.6	33	1973	""	office
+1558	W Minneapolis - The Foshay	Minneapolis	136.6	32	1929	steel	hotel
+1559	Sheraton Dallas Hotel North Tower	Dallas	136.6	31	1980	""	hotel
+1560	One Dallas Center	Dallas	136.6	30	1979	""	residential / office
+1561	AT&T Switching Center	Los Angeles	136.6	17	1961	""	office
+1562	1250 Broadway	New York City	136.3	30	1970	steel	office
+1563	La Perla Ocean Residences	Sunny Isles Beach	136.3	42	2006	concrete	residential
+1564	Ivy Tower	New York City	136.3	41	2003	concrete	residential
+1565	Omni Fort Worth Hotel	Fort Worth	136.3	33	2009	concrete	residential / hotel
+1566	Fifth Third Center	Charlotte	136.3	30	1997	""	office
+1567	100 First Plaza	San Francisco	136.2	27	1988	""	office
+1568	Ann & Robert H. Lurie Children's Hospital of Chicago	Chicago	136.2	22	2012	composite	hospital
+1569	University Club Tower	Milwaukee	136	36	2007	concrete	residential
+1570	Greenwich Club Residences	New York City	135.9	37	1931	steel	residential
+1571	Manchester Grand Hyatt Seaport	San Diego	135.9	34	2003	steel	hotel
+1572	Savoy-Plaza Hotel	New York City	135.9	33	1930	steel	hotel
+1573	Fifth Third Center	Cleveland	135.9	27	1991	""	office
+1574	Millennium Place Tower 2	Boston	135.8	36	2001	""	residential / hotel
+1575	Liberty Court	New York City	135.6	44	1987	""	residential
+1576	Club M at Turtle Bay	New York City	135.6	39	1988	""	residential
+1577	300 South Wacker	Chicago	135.6	36	1971	concrete	office
+1577	444 North Michigan	Chicago	135.6	36	1976	""	office
+1579	1400 Broadway	New York City	135.6	35	1931	steel	office
+1580	One Main Place	Dallas	135.6	34	1968	""	office
+1580	Two PNC Plaza	Pittsburgh	135.6	34	1975	""	office
+1582	120 Wall Street	New York City	135.6	33	1930	steel	office
+1583	Fisher Building	Detroit	135.5	30	1928	steel	office
+1584	Four Leaf Towers 1	Houston	135.3	40	1982	""	residential
+1584	Four Leaf Towers 2	Houston	135.3	40	1982	""	residential
+1586	The Westin Diplomat Resort	Hollywood	135.3	39	2002	concrete	hotel
+1588	Weston Centre	San Antonio	135.3	32	1989	""	office
+1589	Trump Hollywood	Hollywood	135	40	2009	concrete	residential
+1590	Bridge Tower Place	New York City	135	38	2001	concrete	hotel
+1591	100 Park Avenue	New York City	135	36	1949	steel	office
+1592	85 Broad Street	New York City	135	32	1983	""	office
+1593	Xerox Tower	Rochester	135	30	1968	steel	office
+1594	Jackson Tower	St. Paul	135	46	1986	concrete	residential
+1595	Element New York Times Square West	New York City	135	39	2010	concrete	hotel
+1596	Daily Commerce Building	New York City	135	38	1931	steel	office
+1597	City Hall	Kansas City	135	30	1937	steel	government
+1598	Optima Chicago Center	Chicago	134.9	42	2014	concrete	residential
+1599	Lucerne Apartments	New York City	134.9	45	1991	concrete	residential
+1600	Harriman Building	New York City	134.7	37	1928	steel	residential / office
+1601	Texaco Center	New Orleans	134.7	32	1983	""	office
+1602	One Summit Square	Fort Wayne	134.7	27	1982	concrete	office
+1604	11 Greenway Plaza	Houston	134.4	31	1979	""	office
+1604	9 Greenway Plaza	Houston	134.4	31	1978	""	office
+1606	SunTrust Center	Orlando	134.4	30	1988	concrete	office
+1608	Hartford 21	Hartford	134.1	36	2006	steel	residential
+1609	The Beach Club Tower 1	Hallandale Beach	134.1	43	2005	concrete	residential
+1609	The Beach Club Tower 3	Hallandale Beach	134.1	43	2007	concrete	residential
+1612	Met 1	Miami	134.1	40	2007	concrete	residential
+1613	Fifteen Twenty-One Second Avenue	Seattle	134.1	38	2008	concrete	residential
+1614	One Seaport Plaza	New York City	134.1	35	1984	""	office
+1621	City Place	Oklahoma City	134.1	33	1931	steel	office
+1621	The Olivia	New York City	134.1	33	2001	composite	residential / office
+1623	One Canal Place	New Orleans	134	32	1979	steel	office
+1624	The Mondrian	New York City	133.8	43	1992	concrete	residential
+1625	Allison Tower	The Woodlands	133.8	32	2002	""	office
+1625	One Park Tower	Atlanta	133.8	32	1961	steel	office
+1627	Tower 52	New York City	133.8	34	1983	""	office
+1628	W Dallas Victory Hotel & Residences	Dallas	133.8	32	2006	concrete	hotel
+1629	Wrigley Building	Chicago	133.5	27	1922	steel	office
+1630	Park Laurel Condominiums	New York City	133.5	40	2001	concrete	residential
+1631	Willoughby Tower	Chicago	133.5	38	1929	steel	office
+1632	The Crest	New York City	133.5	35	1929	steel	residential
+1633	Borden Building	Columbus	133.5	34	1974	steel	office
+1634	Empire Trust Company Building	New York City	133.5	33	1927	steel	office
+1634	Fifth Avenue Tower	New York City	133.5	33	1986	""	residential / office
+1636	17th Street Plaza	Denver	133.5	32	1982	""	office
+1636	One California	San Francisco	133.5	32	1969	steel	office
+1638	1010 Common	New Orleans	133.5	31	1970	concrete	office
+1639	Cadillac Tower	Detroit	133.2	40	1927	steel	office
+1640	The Peninsula	Jacksonville	133.2	36	2006	concrete	residential
+1642	Regions Harbert Plaza	Birmingham	133.2	32	1989	""	office
+1643	Residence Inn New York Manhattan/Times Square	New York City	133.1	43	2006	concrete	residential / hotel
+1644	Cira Centre	Philadelphia	133.1	29	2005	steel	office
+1645	David Stott Building	Detroit	133.1	32	1929	steel	office
+1646	Crystal Point	Jersey City	132.9	42	2009	concrete	residential
+1647	San Francisco Marriott	San Francisco	132.9	39	1989	steel	hotel
+1649	750 3rd Avenue	New York City	132.9	34	1958	steel	office
+1650	Annenberg Pavillion	New York City	132.9	26	1974	steel	office
+1651	140 New Montgomery Street	San Francisco	132.7	26	1925	steel	residential / hotel
+1652	Russ Building	San Francisco	132.6	32	1927	steel	office
+1653	Archstone Midtown West	New York City	132.6	40	1998	concrete	residential
+1653	Trump Plaza	New Rochelle	132.6	40	2007	concrete	residential
+1655	Two Logan Square	Philadelphia	132.6	35	1987	""	office
+1656	745 5th Avenue	New York City	132.6	34	1931	steel	office
+1657	AT&T Tower	Jacksonville	132.6	32	1983	""	office
+1658	123 North Wacker	Chicago	132.6	30	1986	""	office
+1659	Caesars Palace Tower	Las Vegas	132.6	29	1998	""	hotel
+1660	60 East End Avenue	New York City	132.6	43	1972	""	residential
+1661	180 North LaSalle	Chicago	132.6	37	1972	concrete	office
+1662	1111 Brickell Avenue	Miami	132.6	31	2001	""	office
+1663	The Palisades	Fort Lee	132.3	41	2001	concrete	residential
+1664	First Interstate Tower North	Denver	132.3	32	1974	""	office
+1665	Oklahoma Tower	Oklahoma City	132.3	31	1982	""	office
+1666	Spring	Austin	132.3	43	2009	concrete	residential
+1667	Phoenix Tower	Houston	132.3	34	1984	""	office
+1668	1600 Pacific Tower	Dallas	132.3	31	1964	""	""
+1669	Silver Tower	Chicago	132.1	39	2010	concrete	residential
+1670	5900 Wilshire	Los Angeles	132	31	1971	steel	office
+1671	225 West Wacker	Chicago	132	28	1989	concrete	office
+1672	Confucius Plaza Apartments	New York City	132	44	1976	""	residential
+1673	The Vanderbilt	New York City	132	40	1986	concrete	residential
+1674	ITT Building	New York City	132	35	1928	steel	office
+1674	Loft 2	Miami	132	35	2007	concrete	residential
+1676	Two Wells Fargo Center	Charlotte	132	32	1971	""	office
+1677	Calyon Building	New York City	131.7	32	1952	steel	office
+1677	Kent Building	New York City	131.7	32	1952	steel	office
+1679	110 East 59th Street	New York City	131.7	37	1969	""	office
+1680	535 5th Avenue	New York City	131.7	36	1926	steel	office
+1681	National City Bank Building	New York City	131.7	32	1928	steel	office
+1682	Bush Tower	New York City	131.7	30	1917	steel	office
+1683	Riverplace Tower	Jacksonville	131.7	28	1967	precast	office
+1684	The Savoy Condominiums	New York City	131.7	42	1986	concrete	residential
+1685	BKLYN Air	New York City	131.7	39	2014	concrete	residential
+1687	Borgata Hotel & Casino	Atlantic City	131.4	42	2007	concrete	hotel / casino
+1688	1130 South Michigan	Chicago	131.4	43	1967	concrete	residential
+1689	Two Hanover Square	Raleigh	131.4	29	1991	""	office
+1690	Evo at Cira Centre South	Philadelphia	131.1	33	2014	concrete	residential
+1691	Bellevue Towers One	Bellevue	131.1	42	2008	concrete	residential
+1692	100 North Main Building	Memphis	131.1	37	1965	concrete	office
+1693	EQT Plaza	Pittsburgh	131.1	32	1987	""	office
+1694	135 East 57th Street	New York City	131.1	31	1988	""	office
+1695	One Woodward Avenue	Detroit	131.1	28	1963	""	office
+1696	Carl B. Stokes Federal Courthouse	Cleveland	131.1	23	2002	steel	government
+1698	Baltimore Marriott Waterfront Hotel	Baltimore	131.1	32	2001	concrete	hotel
+1699	Memorial Hermann Medical Plaza	Houston	131	28	2007	concrete	multiple
+1700	McClurg Court Center A	Chicago	131	46	1971	concrete	residential
+1700	McClurg Court Center B	Chicago	131	46	1971	concrete	residential
+1702	1700 Market Street	Philadelphia	131	32	1968	concrete	office
+1703	Trump Taj Mahal Casino Hotel	Atlantic City	130.8	42	1990	composite	hotel / casino
+1704	860 U.N. Plaza Apartments	New York City	130.8	40	1966	""	residential
+1704	870 U.N. Plaza Apartments	New York City	130.8	40	1966	""	residential
+1706	Fred F. French Building	New York City	130.8	38	1927	steel	office
+1708	AT&T Building	New York City	130.8	28	1930	steel	office
+1709	Linc LIC	New York City	130.8	41	2013	concrete	residential
+1710	First Hawaiian Center	Honolulu	130.8	30	1996	steel	office
+1711	1555 North Astor	Chicago	130.6	48	1975	concrete	residential
+1712	One Carnegie Hill	New York City	130.5	41	2006	concrete	residential
+1713	712 Main Street	Houston	130.5	37	1929	steel	office
+1715	Squibb Building	New York City	130.5	34	1972	""	office
+1716	101 Warren Street	New York City	130.5	32	2008	concrete	residential
+1717	1100 Peachtree	Atlanta	130.5	28	1990	""	office
+1718	Bank of America Building	Providence	130.5	26	1927	steel	abandoned
+1719	Manhattan Plaza Apartments I	New York City	130.4	46	1977	concrete	residential
+1719	Manhattan Plaza Apartments II	New York City	130.4	46	1977	concrete	residential
+1721	Harlem River Park Tower I	New York City	130.4	44	1975	concrete	residential
+1721	Harlem River Park Tower II	New York City	130.4	44	1975	concrete	residential
+1723	The Peabody Orlando Expansion Tower	Orlando	130.4	31	2010	concrete	hotel
+1724	Toren	New York City	130.3	37	2009	steel	residential
+1725	Marbella Apartments	Jersey City	130.2	40	2003	concrete	residential
+1726	Finland House	New York City	130.1	38	1970	concrete	office
+1727	225 West Randolph Street	Chicago	130.1	31	1965	""	office
+1728	Broad Financial Center	New York City	130.1	27	1986	""	office
+1729	Sheraton Kansas City Hotel at Crown Center	Kansas City	130	45	1980	steel	hotel
+1730	AMA Building	Chicago	130	30	1990	steel	office
+1732	500 Brickell East Tower	Miami	129.9	42	2007	concrete	residential
+1732	500 Brickell West Tower	Miami	129.9	42	2007	concrete	residential
+1732	Eugenie Square	Chicago	129.9	42	1972	concrete	residential
+1735	The Spires	Houston	129.9	40	1983	concrete	residential
+1736	The Carlyle	New York City	129.9	38	1931	steel	residential / hotel
+1737	The Vue at Lake Eola	Orlando	129.9	35	2007	concrete	residential
+1738	Milwaukee Center	Milwaukee	129.9	28	1988	concrete	office
+1740	The Promenade	New York City	129.8	37	1987	concrete	residential
+1741	Fairmont Hotel	Chicago	129.8	37	1987	concrete	hotel
+1742	The Rushmore	New York City	129.5	41	2008	concrete	residential
+1743	Avenue	Charlotte	129.5	36	2007	concrete	residential
+1743	Blue on the Bay	Miami	129.5	36	2005	concrete	residential
+1745	116 John Street	New York City	129.5	35	1931	""	office
+1746	ITT Building	New York City	129.5	34	1960	steel	office
+1747	Atlanta Plaza I	Atlanta	129.5	32	1986	""	office
+1748	1835 Market Street	Philadelphia	129.5	29	1986	steel	office
+1749	The Royale	New York City	129.5	42	1986	""	residential
+1749	Yorkville Towers	New York City	129.5	42	1975	concrete	residential
+1751	Two Worldwide Plaza	New York City	129.5	38	1989	""	residential
+1752	600 Lexington	New York City	129.5	36	1985	""	office
+1754	1201 Walnut	Kansas City	129.5	30	1991	""	office
+1755	Sky55	Chicago	129.4	40	2006	concrete	residential
+1756	Grand Hyatt San Antonio	San Antonio	129.3	34	2008	concrete	office / hotel
+1758	Harbor Club East	San Diego	129.2	41	1992	concrete	residential
+1758	Harbor Club West	San Diego	129.2	41	1992	concrete	residential
+1760	RSAâ€“BankTrust Building	Mobile	129.2	34	1965	""	office
+1761	Time Warner Building	New York City	129.2	33	1947	steel	office
+1762	Whitehall Building Annex	New York City	129.2	31	1911	steel	residential
+1763	One PNC Plaza	Pittsburgh	129.2	30	1972	steel	office
+1764	Mortimer B. Zuckerman Research Center	New York City	129.2	25	2008	steel	office / hospital / other
+1765	1800 Club	Miami	129.1	40	2007	concrete	residential
+1766	Rio Condominium & Spa	New York City	129	39	1986	concrete	residential
+1767	VUE at Brickell	Miami	129	36	2004	concrete	residential / office / retail
+1768	Fifth Third Center	Cincinnati	129	32	1969	steel	office
+1769	Brickell on the River South Tower	Miami	128.9	42	2007	concrete	residential
+1769	ICON at South Beach	Miami Beach	128.9	42	2004	concrete	residential
+1769	Palms Casino Hotel	Las Vegas	128.9	42	2001	concrete	hotel / casino
+1772	Murray Hill Mews Apartments	New York City	128.9	36	1974	""	residential
+1773	Wells Fargo Center	Sacramento	128.9	30	1992	""	office
+1775	Rio Masquerade Tower	Las Vegas	128.9	42	1997	concrete	hotel / casino
+1777	195 Broadway	New York City	128.6	29	1922	steel	office
+1778	Wells Fargo Center	Salt Lake City	128.6	26	1998	steel	office
+1779	Archstone Chelsea	New York City	128.6	36	2004	concrete	residential
+1780	180 Riverside Boulevard at Trump Place	New York City	128.6	40	1998	concrete	residential
+1781	Moana Pacific East Tower	Honolulu	128.5	46	2008	concrete	residential
+1781	Moana Pacific West Tower	Honolulu	128.5	46	2008	concrete	residential
+1783	2020 North Lincoln Park West	Chicago	128.3	39	1971	concrete	residential
+1784	45 East 89th Apartments	New York City	128.3	38	1969	""	residential
+1785	Gracie Mews Apartments	New York City	128.3	36	1980	""	residential
+1786	489 5th Avenue	New York City	128.3	34	1970	""	office
+1787	2 Broadway	New York City	128.3	32	1959	""	office
+1788	CenturyLink Building	Minneapolis	128.3	26	1932	steel	office
+1789	One Sutton Place North	New York City	128.2	41	2003	concrete	residential
+1789	Two Sutton Place North	New York City	128.2	41	2014	concrete	residential
+1791	Skybridge	Chicago	128.2	39	2003	concrete	residential
+1792	Market Tower	Indianapolis	128.2	32	1988	concrete	office
+1793	2 Columbus	New York City	128	41	1998	concrete	residential
+1793	The Infinity II	San Francisco	128	41	2009	concrete	residential
+1793	Vantage Pointe Condominium	San Diego	128	41	2009	concrete	residential
+1796	Park Place on Peachtree	Atlanta	128	40	1986	concrete	residential
+1797	110 William Street	New York City	128	32	1958	""	office
+1797	400 South Tryon	Charlotte	128	32	1974	""	office
+1799	PNC Plaza	Louisville	128	30	1971	concrete	office
+1800	Justice Center	Cleveland	128	26	1977	steel	office / government
+1801	Brooks Towers	Denver	128	42	1968	""	residential
+1802	The Grande North at Santa Fe Place	San Diego	128	39	2005	""	residential
+1802	The Grande South at Santa Fe Place	San Diego	128	39	2004	""	residential
+1804	Panorama Tower I	Las Vegas	128	32	2006	concrete	residential
+1804	Panorama Tower II	Las Vegas	128	32	2008	concrete	residential
+1806	JPMorgan Chase Building	San Francisco	128	31	2002	steel	office
+1807	1330 Post Oak Boulevard	Houston	128	30	1983	""	office
+1807	LDS Office Building	Salt Lake City	128	30	1973	steel	office
+1810	2828 Peachtree Luxury Condominiums	Atlanta	127.9	33	2002	concrete	residential
+1811	Federal Building	Cleveland	127.7	31	1967	steel	government
+1812	100 East Pratt Street	Baltimore	127.6	28	1992	steel	office
+1813	Hokua at 1288 Ala Moana	Honolulu	127.4	40	2006	concrete	residential
+1814	Oakbrook Terrace Tower	Oakbrook	127.4	31	1986	composite	office
+1815	Pacifica Honolulu	Honolulu	127.4	46	2012	concrete	residential
+1816	Axis on Brickell North Tower	Miami	127.4	40	2008	concrete	residential
+1816	Axis on Brickell South Tower	Miami	127.4	40	2008	concrete	residential
+1816	The Paramount	San Francisco	127.4	40	2002	precast	residential
+1821	80 Broad Street	New York City	127.4	36	1931	steel	office
+1822	Center 600 Vine	Cincinnati	127.4	30	1984	""	office
+1822	Pacwest Center	Portland	127.4	30	1984	composite	office
+1824	Nauru Tower	Honolulu	127.1	44	1992	concrete	residential
+1825	Alta at K Station - East Tower	Chicago	127.1	41	2010	concrete	residential
+1826	Hidden Bay 1	Aventura	127.1	40	2000	concrete	residential
+1827	First National Bank Building	St. Paul	127.1	32	1931	steel	office
+1828	Aramark Tower	Philadelphia	127.1	31	1984	""	office
+1829	The Pinnacle at Symphony Place	Nashville	127.1	29	2010	concrete	office
+1830	Humana Building	Louisville	127.1	27	1985	steel	office
+1831	Centre Square I	Philadelphia	127	32	1973	""	office
+1832	Providian Financial Building	San Francisco	127	30	1983	steel	office
+1833	Ko'olani	Honolulu	126.8	47	2006	concrete	residential
+1834	Ruppert House Apartments	New York City	126.8	42	1975	""	residential
+1836	Denver Place South Tower	Denver	126.8	34	1981	""	office
+1837	1350 Avenue of the Americas	New York City	126.8	33	1965	""	office
+1838	Crown Building	New York City	126.8	25	1921	steel	office
+1839	Orange County Courthouse	Orlando	126.8	24	1997	concrete	government
+1840	Galaxy Towers 1	Guttenberg	126.5	44	1976	concrete	residential
+1840	Galaxy Towers 2	Guttenberg	126.5	44	1976	concrete	residential
+1840	Galaxy Towers 3	Guttenberg	126.5	44	1976	concrete	residential
+1844	2 East Erie	Chicago	126.5	39	2002	concrete	residential
+1845	Hartford Plaza South	Chicago	126.5	33	1971	""	office
+1846	Northern Trust Building	Chicago	126.5	31	1974	""	office
+1847	Warner Plaza III	Los Angeles	126.5	25	1991	""	office
+1848	RSA Towers	Montgomery	126.5	22	1996	""	office
+1849	10 East Delaware	Chicago	126.4	35	2010	concrete	hospital
+1850	MCI Center	Los Angeles	126.3	33	1973	steel	office
+1851	Grolier Building	New York City	126.2	33	1958	""	office
+1852	120 Park Avenue	New York City	126.2	26	1982	""	office
+1855	One Broadway on Brickell	Miami	126	36	2005	concrete	residential / retail
+1856	Three Embarcadero Center	San Francisco	126	31	1976	steel	office
+1856	Two Embarcadero Center	San Francisco	126	31	1974	steel	office
+1858	Bank of America Center	Tulsa	125.6	32	1967	""	office
+1860	Advanced Equities Plaza	San Diego	125.6	23	2005	steel	residential / office
+1861	The Westin New York Grand Central Hotel	New York City	125.6	41	1981	""	hotel
+1862	280 Park Avenue	New York City	125.6	31	1962	""	office
+1863	Eddie Bauer at Lincoln Square	Bellevue	125.6	28	2007	composite	office
+1864	Ashton	Austin	125.5	36	2009	concrete	residential
+1866	Two Penn Plaza	New York City	125.5	29	1968	""	office
+1867	1 Metrotech Center	New York City	125.4	23	1992	""	office
+1868	One SeaGate	Toledo	125.3	32	1982	""	office
+1869	One Shoreline Plaza South Tower	Corpus Christi	125.3	28	1988	""	office
+1870	505 5th Avenue	New York City	125.3	26	2006	concrete	office
+1871	31 West 52nd Street	New York City	125.2	30	1985	""	office
+1872	425 Lexington Avenue	New York City	125.2	31	1987	""	office
+1873	MoMo	Chicago	125.1	32	2008	composite	residential
+1874	Niels Eperson Building	Houston	125.1	31	1927	steel	office
+1875	52 East End Avenue	New York City	125	40	1987	concrete	residential
+1877	1280 West	Atlanta	125	38	1989	""	residential
+1877	Silver Legacy Resort & Casino	Reno	125	38	1995	concrete	hotel / casino
+1879	National City Center	Cleveland	125	35	1980	concrete	office
+1880	Chemed Center	Cincinnati	125	32	1990	concrete	office
+1880	One City Centre	Houston	125	32	1961	steel	office
+1882	595 Market Street	San Francisco	125	30	1979	concrete	office
+1883	1100 North Lake Shore Drive	Chicago	125	40	1979	concrete	residential
+1884	641 Lexington Avenue	New York City	125	32	1964	""	office
+1885	110 Tower	Fort Lauderdale	125	30	1988	""	office
+1885	Lexington Financial Center	Lexington	125	30	1987	steel	office
+1885	Regional Enterprise Tower	Pittsburgh	125	30	1953	steel	office
+1888	Greater Hudson Store	Detroit	125	29	1911	steel	office / retail
+1888	Winston Tower	Winston-Salem	125	29	1966	steel	office
+1890	One Financial Plaza	Providence	125	28	1973	""	office
+1891	Bob Lanier Public Works Building	Houston	125	27	1968	""	office
+1891	Foley Square Federal Courthouse	New York City	125	27	1994	""	government
+1893	Citylights at Queens Landing	New York City	124.9	42	1997	concrete	residential
+1894	Westin Building	Seattle	124.7	34	1981	steel	office
+1895	Pfizer Building	New York City	124.7	33	1961	""	office
+1896	Nashville Life & Casualty Tower	Nashville	124.7	30	1957	steel	office
+1897	1270 Avenue of the Americas	New York City	124.7	31	1932	steel	office
+1898	Museum Tower	Chicago	124.6	38	2006	concrete	residential
+1899	The Plaza in Clayton Residential Tower	Clayton	124.5	30	2002	concrete	residential
+1901	909 3rd Avenue	New York City	124.4	33	1967	""	office
+1902	One Tabor Center	Denver	124.4	32	1984	""	office
+1903	Malibu East	Chicago	124.4	45	1970	concrete	residential
+1904	1410 Broadway	New York City	124.4	35	1931	steel	office
+1905	475 Park Avenue South	New York City	124.4	34	1969	""	office
+1906	411 East Wisconsin Center	Milwaukee	124.4	30	1985	""	office
+1907	300 North Meridian	Indianapolis	124.4	28	1989	concrete	office
+1908	Three Nationwide Plaza	Columbus	124.4	26	1988	steel	office
+1909	Bank of America Plaza	Fort Lauderdale	124.4	23	2002	concrete	office
+1910	Commerce Tower	Kansas City	124.1	32	1965	steel	office
+1911	U.S. Bank Center	Phoenix	124.1	31	1974	concrete	office
+1912	Rivertower Apartments	New York City	124.1	38	1982	""	residential
+1913	Murano Grande at Portofino	Miami Beach	124.1	37	2003	concrete	residential
+1914	World Trade Center New Orleans	New Orleans	124.1	33	1967	concrete	office / hotel
+1915	200 West Adams	Chicago	124.1	30	1985	""	office
+1915	Two First National Plaza	Chicago	124.1	30	1973	""	office
+1918	Carbonell Condominium	Miami	124	39	2005	concrete	residential
+1919	Aspira Apartments	Seattle	124	37	2010	concrete	residential
+1920	1010 Peachtree	Atlanta	124	36	2008	concrete	residential
+1921	123 Mission Building	San Francisco	124	29	1986	""	office
+1922	River House Condominiums	Grand Rapids	123.8	34	2008	concrete	residential
+1923	Peachtree Summit #1	Atlanta	123.8	31	1975	""	government / office
+1924	Benson Tower	New Orleans	123.8	26	1989	concrete	office
+1925	Kettering Tower	Dayton	123.6	30	1971	steel	office
+1926	River House Apartments	New York City	123.5	28	1931	steel	residential
+1927	Lake Shore Plaza	Chicago	123.4	38	1986	""	residential
+1928	DKLB BKLN	New York City	123.4	34	2010	concrete	residential
+1929	World Trade Center	Baltimore	123.4	32	1977	""	office
+1930	2727 Kirby	Houston	123.4	30	2009	concrete	residential
+1931	Wells Fargo Building	Philadelphia	123.4	29	1927	steel	office
+1932	Hilton Garden Inn	New York City	123.4	37	2014	concrete	hotel
+1933	Hilton Grand Vacations Club II	Las Vegas	123.4	38	2006	concrete	residential
+1934	Hennepin County Government Center	Minneapolis	123.2	24	1977	steel	government
+1935	1300 North Lake Shore Drive	Chicago	123.1	40	1965	concrete	residential
+1935	Knickerbocker Plaza Apartments	New York City	123.1	40	1974	""	residential
+1937	Miraval Living Condominiums	New York City	123.1	39	1985	""	residential
+1937	West End Towers	New York City	123.1	39	1995	concrete	residential
+1939	Barclay Apartments	New York City	123.1	37	1985	""	residential
+1940	Riverside Park Community Apartments	New York City	123.1	35	1976	""	residential
+1941	The Ritz-Carlton Philadelphia	Philadelphia	123.1	30	1930	steel	hotel
+1941	Time-Life Building	Chicago	123.1	30	1969	concrete	office
+1941	Tower Life Building	San Antonio	123.1	30	1929	steel	office
+1944	Bank of America Center	Orlando	123.1	28	1988	""	office
+1944	Ordway Building	Oakland	123.1	28	1970	steel	office
+1947	Johns Manville Plaza	Denver	123.1	29	1978	""	office
+1948	Fifty South Sixth	Minneapolis	123.1	30	2001	steel	office
+1949	The Montgomery	Chicago	123	28	1972	concrete	residential
+1950	Embarcadero Center West	San Francisco	123	33	1989	""	office
+1951	101 Montgomery Street	San Francisco	123	28	1984	""	office
+1952	Morgan Keegan Tower	Memphis	122.9	21	1985	""	hotel
+1953	Horizon Apartments	New York City	122.8	42	1989	concrete	residential
+1954	Three Lakeway Center	Metairie	122.8	34	1987	""	hotel / office
+1955	National Westminster Bank	New York City	122.8	30	1983	""	office
+1956	One Coca-Cola Plaza	Atlanta	122.8	29	1980	""	office
+1957	One River Place	New York City	122.8	40	2001	""	residential
+1958	Sapphire I	South Padre Island	122.8	30	2008	concrete	residential
+1960	Galter Pavilion	Chicago	122.7	22	1997	composite	hospital
+1961	US Bank Tower	Sacramento	122.6	25	2008	steel	office
+1962	55 Broad Street	New York City	122.5	31	1967	""	office
+1963	Nashville City Center	Nashville	122.5	27	1988	""	office
+1964	Murano at Portofino	Miami Beach	122.5	37	2001	concrete	residential
+1965	City Center Square	Kansas City	122.5	30	1977	""	office
+1966	3000 Town Center	Southfield	122.4	32	1975	steel	office
+1967	Four Seasons Residences Austin	Austin	122.3	32	2010	concrete	residential
+1968	BMO Plaza	Indianapolis	122.2	31	1988	steel	office
+1969	Hyatt Regency Houston	Houston	122.2	30	1972	""	hotel
+1970	Tower Place 100	Atlanta	122.2	29	1974	""	office
+1971	Bausch & Lomb Place	Rochester	122.2	20	1995	steel	hotel
+1972	The Helena	New York City	122.2	37	2005	concrete	residential
+1973	One American Center	Austin	122.2	32	1984	concrete	office
+1974	Affinia Dumont	New York City	122.2	37	1986	""	hotel
+1975	1441 Broadway	New York City	122.2	33	1930	steel	office
+1976	Laclede Gas Building	St. Louis	122.2	31	1969	""	office
+1977	New England SkyScreamer	Agawam	122.1	-	2014	steel	observation
+1978	The Mercer	Houston	122.1	30	2003	concrete	residential
+1980	Tiara Condominiums	Riviera Beach	122	42	1978	concrete	residential
+1981	420 East Ohio	Chicago	122	41	1990	concrete	residential
+1983	Keystone Building	Boston	122	32	1971	""	office
+1984	1706 Rittenhouse Square	Philadelphia	122	31	2010	""	residential
+1985	100 Van Ness	San Francisco	122	30	1974	steel	residential
+1986	100 Wall Street	New York City	122	29	1969	""	office
+1987	Hawaiki Tower	Honolulu	121.9	45	1999	concrete	residential
+1987	One Waterfront Tower - Makai	Honolulu	121.9	45	1990	concrete	residential
+1987	One Waterfront Tower - Mauka	Honolulu	121.9	45	1990	concrete	residential
+1990	Buckingham Plaza	Chicago	121.9	44	1982	concrete	residential
+1991	Tribeca Pointe	New York City	121.9	42	1998	""	residential
+1992	46-15 Center Boulevard	New York City	121.9	41	2013	concrete	residential
+1993	Harbor Towers I	Boston	121.9	40	1971	concrete	residential
+1993	Millennium Park Plaza	Chicago	121.9	40	1982	concrete	residential / office
+1993	Oro Condominium	New York City	121.9	40	2008	concrete	residential
+1997	777 North Michigan	Chicago	121.9	38	1964	concrete	residential
+1997	Ocean Palms Phase I	Hollywood	121.9	38	2006	concrete	residential
+2000	Avondale Center	Chicago	121.9	36	1980	""	office
+2001	Clark Tower	Memphis	121.9	34	1971	""	office
+2002	Fitzgeralds Casino & Hotel	Las Vegas	121.9	33	1980	""	hotel / casino
+2002	Mosaic I	Dallas	121.9	33	1959	""	""
+2004	Westin-St. Francis Hotel Tower	San Francisco	121.9	32	1972	""	hotel
+2005	One Logan Square	Philadelphia	121.9	31	1983	concrete	hospital / office
+2006	150 Fayetteville Street	Raleigh	121.9	30	1991	""	office
+2006	Tower on the Maumee	Toledo	121.9	30	1970	steel	abandoned
+2009	HSBC Tower	New York City	121.9	29	1985	""	office
+2010	Monarch Place	Springfield	121.9	26	1989	""	office
+2010	SunTrust Plaza	Richmond	121.9	26	1983	""	office
+2012	The Kingsley	New York City	121.9	42	1984	""	residential
+2012	The Stanford Condominium	New York City	121.9	42	1986	""	residential
+2016	420 West 42nd Street	New York City	121.9	41	2001	concrete	residential
+2016	One Archer Lane	Honolulu	121.9	41	1998	""	residential
+2016	Tracey Towers Apartments I	New York City	121.9	41	1974	""	residential
+2019	Imperial Plaza	Honolulu	121.9	40	1992	concrete	residential
+2020	Bard-Haven Tower I	New York City	121.9	39	1971	""	residential
+2020	Bard-Haven Tower II	New York City	121.9	39	1971	""	residential
+2020	Bard-Haven Tower III	New York City	121.9	39	1971	""	residential
+2020	The Saratoga	New York City	121.9	39	1985	""	residential
+2024	Helmsley Medical Tower	New York City	121.9	36	1987	""	office
+2026	The Chatham	New York City	121.9	34	2000	concrete	residential
+2030	The San Remo	New York City	121.9	27	1931	""	residential
+2031	320 South Boston Building	Tulsa	121.9	22	1928	steel	office
+2032	875 3rd Avenue	New York City	121.8	29	1982	""	office
+2033	Southwestern Telephone Building	St. Louis	121.7	26	1926	steel	office
+2034	River View II	Chicago	121.6	32	2004	concrete	residential
+2035	2000 Market Street	Philadelphia	121.6	29	1973	""	office
+2036	Magnolia Bldg.	Dallas	121.6	27	1923	""	""
+2037	600 Fifth Avenue	New York City	121.6	26	1952	""	office
+2038	75 Livingston Street	New York City	121.6	32	1926	steel	residential
+2039	1301 Fannin Street	Houston	121.6	25	1984	""	office
+2040	Four Seasons Hotel & Residences	San Francisco	121.3	40	2001	""	residential / hotel
+2041	Brooklyn Renaissance Plaza	New York City	121.3	32	1997	""	office
+2043	One Congress Plaza	Austin	121.3	30	1987	concrete	office
+2045	Capitol at Chelsea	New York City	121.3	37	2001	concrete	residential
+2045	Hamilton Apartments	New York City	121.3	37	1986	""	residential
+2047	MTA Building	Los Angeles	121.3	26	1995	""	office
+2048	One Maritime Plaza	San Francisco	121.3	25	1967	steel	office
+2049	James House	Chicago	121.3	43	1971	concrete	residential
+2050	Nebraska State Capitol	Lincoln	121.2	22	1932	steel	government
+2051	OHM	New York City	121.2	34	2009	concrete	residential
+2052	Westin Seattle South Tower	Seattle	121	40	1969	steel	hotel
+2053	Rockefeller University Scholars Building	New York City	121	37	1988	""	residential / education
+2054	One World Trade Center	Long Beach	121	30	1989	concrete	office
+2056	1900 Avenue of the Stars	Los Angeles	121	27	1969	""	office
+2057	Qwest Tower	Phoenix	121	25	1989	""	office
+2058	10 Park Avenue	New York City	120.9	28	1931	""	residential
+2059	One Devonshire Place	Boston	120.7	42	1983	""	residential / office
+2060	Cityfront Place	Chicago	120.7	40	1991	concrete	residential
+2060	Harbor Towers II	Boston	120.7	40	1971	concrete	residential
+2062	Ariel East	New York City	120.7	38	2007	concrete	residential
+2063	333 North Michigan	Chicago	120.7	34	1928	steel	office
+2064	10 Rittenhouse Square	Philadelphia	120.7	33	2009	concrete	residential
+2065	45 Broadway Atrium	New York City	120.7	32	1983	""	office
+2065	One Exchange Plaza	New York City	120.7	32	1982	""	office
+2067	One Commerce Square	Memphis	120.7	31	1973	""	office
+2068	999 Peachtree	Atlanta	120.7	28	1987	""	office
+2069	Metcalfe Federal Building	Chicago	120.7	27	1991	concrete	government
+2070	Five Hundred Capitol Mall	Sacramento	120.7	25	2009	steel	office
+2071	Armada Hoffler Tower	Virginia Beach	120.7	23	2002	""	office
+2072	Two Alliance Center	Atlanta	120.5	25	2009	steel/concrete	office
+2073	The Pearson	Chicago	120.5	35	2003	concrete	residential
+2074	Walton Colonnade	Chicago	120.4	44	1972	concrete	residential
+2075	The Plaza on Dewitt	Chicago	120.4	43	1966	concrete	residential
+2076	Evans View	New York City	120.4	39	1985	""	residential
+2077	The Aldyn	New York City	120.4	38	2011	concrete	residential
+2078	Tremont Plaza Hotel	Baltimore	120.4	37	1967	""	hotel
+2079	Westin Hotel at Copley Place	Boston	120.4	36	1983	""	hotel
+2080	Mayfair Renaissance	Atlanta	120.4	35	2002	""	residential
+2080	The Concorde Hotel	New York City	120.4	35	1985	concrete	hotel
+2080	The Grand Sutton	New York City	120.4	35	1990	concrete	residential
+2080	WaterMarke Tower	Los Angeles	120.4	35	2009	concrete	residential
+2085	1000 Town Center	Southfield	120.4	28	1989	""	office
+2086	The Gallagher Centre	Itasca	120.4	26	1991	concrete	office
+2087	Northwestern Mutual Tower	Milwaukee	120.4	19	1990	""	office
+2088	4 Metrotech Center	New York City	120.1	25	1993	""	office
+2089	Millennium Tower Residences	New York City	120.1	35	2007	concrete	residential
+2090	Place 57	New York City	120.1	34	2006	""	office
+2091	Carillon Tower	Charlotte	120.1	24	1991	""	office
+2092	1110 North Lake Shore Drive	Chicago	120	40	1970	concrete	residential
+2093	Brittany Apartments	New York City	120	36	1995	concrete	residential
+2094	100 High Street	Boston	120	28	1988	""	office
+2094	One Wilshire Building	Los Angeles	120	28	1968	steel	office
+2097	Avalon Fort Greene	New York City	119.8	41	2010	concrete	residential
+2098	Avenue Hotel	Chicago	119.8	40	1973	concrete	hotel / office
+2099	222 Broadway	New York City	119.8	31	1961	""	office
+2101	150 North Wacker	Chicago	119.8	30	1970	""	office
+2102	McNamara Federal Building	Detroit	119.8	27	1976	""	government
+2103	Federal Reserve Bank Building	Richmond	119.8	26	1978	""	office
+2104	Marmon Building	Chicago	119.8	28	1987	steel	office
+2105	Walker Tower	New York City	119.6	24	1929	steel	residential
+2106	Bellagio Spa Tower	Las Vegas	119.5	33	2004	concrete	hotel
+2107	Plaza 400 Apartments	New York City	119.5	40	1967	concrete	residential
+2108	1500 Broadway	New York City	119.5	33	1972	""	office
+2109	Adler Building	New York City	119.5	30	1929	""	office
+2110	Graybar Building	New York City	119.5	29	1927	""	office
+2111	Chase Tower	Rochester	119.5	27	1973	""	office
+2112	Riverside Church	New York City	119.5	19	1930	""	office / religious
+2113	Marriott Hotel City Center	Minneapolis	119.4	32	1983	steel	hotel
+2114	East Point	Chicago	119.2	43	1967	concrete	residential
+2115	450 Park Avenue	New York City	119.2	33	1972	""	office
+2116	420 5th Avenue	New York City	119.2	30	1989	steel	office
+2116	Park Row Building	New York City	119.2	30	1899	steel	office
+2118	Rand Building	Buffalo	119.2	29	1929	""	office
+2119	11 Penn Plaza	New York City	119.2	26	1924	steel	office
+2120	The Parklane	Houston	119	36	1983	concrete	residential
+2122	1500 Locust Street	Philadelphia	118.9	44	1973	""	residential
+2123	Planet Hollywood Las Vegas	Las Vegas	118.9	39	2000	steel	hotel / casino
+2124	200 Water Street	New York City	118.9	31	1971	""	residential
+2124	75 State Street	Boston	118.9	31	1988	""	office
+2126	AT&T City Center	Birmingham	118.9	30	1972	steel	office
+2126	Regions Center	Birmingham	118.9	30	1972	composite	office
+2128	900 Euclid Tower	Cleveland	118.9	28	1971	composite	office
+2129	20 Broad Street	New York City	118.9	23	1956	steel	office
+2130	United States Federal Courthouse	Seattle	118.9	21	2004	steel	office / government
+2132	40 Broad Street	New York City	118.6	32	1982	""	residential / office
+2133	Aria	Philadelphia	118.6	33	1929	steel	residential
+2134	Hanover Bank Building	New York City	118.6	30	1962	""	office
+2135	Five Post Oak Park	Houston	118.6	28	1982	""	office
+2135	Unigard Financial Center	Seattle	118.6	28	1972	composite	office
+2137	The Chandler	Chicago	118.5	36	2008	concrete	residential
+2138	The Lex	Chicago	118.3	35	2010	concrete	residential
+2139	The Carlyle	Chicago	118.3	40	1967	concrete	residential
+2140	Westin Bonaventure Hotel	Los Angeles	118.3	35	1976	composite	hotel
+2141	Alfred E. Smith State Office Building	Albany	118.3	34	1930	steel	office
+2143	Marine Midland Bank Building	New York City	118.3	32	1959	""	office
+2144	425 Park Avenue	New York City	118.3	31	1957	""	office
+2145	250 Broadway	New York City	118.3	29	1963	""	office
+2146	Charlotte Plaza	Charlotte	118.3	27	1982	""	office
+2147	Sam Nunn Federal Center	Atlanta	118.3	24	1997	""	office
+2148	Somerset Apartments	New York City	118.3	37	1977	""	residential
+2149	Loews Midtown	Atlanta	118.2	39	2010	concrete	residential / hotel
+2150	Wells Street Tower	Chicago	118.1	35	2002	""	residential
+2151	Forty-One East Eighth	Chicago	118.1	33	2003	""	""
+2152	NEMA North Tower	San Francisco	118	37	2014	""	residential
+2153	Chelsea Tower	New York City	118	33	2003	concrete	residential
+2154	The Aurora	New York City	118	30	2003	concrete	residential
+2155	Monarch Tower	Atlanta	118	24	1997	""	office
+2156	New York Marriott East Side	New York City	118	34	1924	steel	hotel
+2157	Bank of America Plaza	San Antonio	118	28	1983	""	office
+2158	First National Bank Building	Pittsburgh	118	26	1912	steel	office
+2159	1412 Broadway	New York City	118	25	1927	steel	office
+2160	The Fairbanks at Cityfront Plaza	Chicago	117.9	31	2008	composite	residential
+2161	1812 North Moore Street	Arlington	117.8	30	2014	concrete	office
+2162	Civil Courts Building	St. Louis	117.7	13	1929	steel	government
+2163	The Centria	New York City	117.7	34	2006	concrete	residential
+2164	Tower 56	New York City	117.7	32	1982	""	office
+2165	Endeavour Clear Lake	Pasadena	117.7	30	2007	""	residential / hotel
+2166	Bank of America Tower	St. Petersburg	117.7	28	1990	""	office
+2166	Houston Police Dept. Headquarters	Houston	117.7	28	1967	""	government
+2168	U.S. Trust Building	New York City	117.7	26	1989	""	office
+2169	Pan-American Exhibition Electric Tower	Buffalo	117.7	-	1901	""	exhibition
+2170	LaSalle Plaza	Minneapolis	117.6	28	1991	concrete	office
+2172	Northwestern Medicine Outpatient Care Pavilion	Chicago	117.5	25	2014	steel/concrete	hospital
+2173	Avalon Riverview North	New York City	117.3	39	2007	concrete	residential
+2173	Channel Club Condominiums	New York City	117.3	39	1987	""	residential
+2175	The Elm at Clark	Chicago	117.3	37	1989	""	""
+2176	Hotel 71	Chicago	117.3	36	1960	""	""
+2177	Archstone Murray Hill	New York City	117.3	34	1975	""	residential
+2178	Liberty Tower	New York City	117.3	33	1910	steel	residential
+2179	Charles Towers South Apartments	Baltimore	117.3	30	1969	concrete	residential
+2180	KeyBank Tower	Dayton	117.3	27	1976	""	office
+2181	200 Madison Avenue	New York City	117.3	25	1926	steel	office
+2182	Verizon Building	New York City	117.3	24	1967	""	office
+2183	Hanover National Bank Building	New York City	117.3	22	1903	steel	office
+2184	Wachovia Tower	Phoenix	117.3	27	2010	concrete	office
+2185	2626 North Lakeview	Chicago	117.1	44	1970	""	""
+2185	2650 North Lakeview	Chicago	117.1	44	1973	""	""
+2187	Bank of America Plaza	St. Louis	117.1	31	1981	""	office
+2188	PECO Building	Philadelphia	117.1	25	1970	""	office
+2189	Colorado Apartments	New York City	117	35	1987	concrete	residential
+2190	1650 Arch Street	Philadelphia	117	27	1975	""	office
+2191	Carnegie Towers Apartments	New York City	116.7	38	1973	""	residential
+2193	Atlanta Hilton Hotel	Atlanta	116.7	30	1974	""	hotel
+2193	Dirksen Federal Building	Chicago	116.7	30	1964	steel	office
+2195	Connecticut Financial Center	New Haven	116.7	27	1990	""	office
+2196	Russell Federal Building	Atlanta	116.7	26	1978	""	office
+2197	Boston Marriott Copley Place	Boston	116.4	39	1984	""	hotel
+2198	Harris Tower	Atlanta	116.4	31	1975	""	office
+2199	230 Peachtree Building	Atlanta	116.4	27	1965	steel	office / hotel
+2201	BP West Lake One	Houston	116.4	28	1982	""	office
+2202	The Beach Club	Galveston	116.4	27	2007	concrete	residential
+2202	The Trade Winds	Galveston	116.4	27	2007	concrete	residential
+2204	The Milan Condominium	New York City	116.3	31	2005	concrete	residential
+2205	Guardian Life Building	New York City	116.2	27	1983	""	office
+2206	Tower 53 Condominiums	New York City	116.1	38	1967	""	residential
+2207	950 3rd Avenue	New York City	116.1	32	1971	""	office
+2208	Ocean Tower	South Padre Island	116.1	31	2008	concrete	residential
+2209	Century Square	Seattle	116.1	30	1986	steel	office
+2210	Rosslyn Twin Tower One	Arlington	116.1	27	1980	""	office
+2211	Rosslyn Twin Tower Two	Arlington	116.1	26	1982	""	office
+2212	8500 Tower	Bloomington	116.1	24	1988	concrete	office
+2213	Century Park Plaza Tower A	Pearl City	116	43	1975	concrete	residential
+2213	Century Park Plaza Tower B	Pearl City	116	43	1975	concrete	residential
+2215	Knickerbocker Trust Building	New York City	116	27	1909	steel	office
+2216	801 Tower	Los Angeles	116	24	1992	steel	office
+2217	Hotel Palomar	Chicago	115.8	36	2010	""	hotel / residential
+2218	Element	New York City	115.8	33	2008	""	residential
+2219	Landmark Tower	Fort Worth	115.8	30	1957	steel	office
+2220	AT&T Communications Building	Atlanta	115.8	14	1929	""	office
+2221	Liberty View Towers West	Jersey City	115.8	38	2002	""	residential
+2222	Carnegie Mews Apartments	New York City	115.8	36	1979	""	residential
+2222	Liberty View Towers East	Jersey City	115.8	36	2002	""	residential
+2224	44 Monroe	Phoenix	115.8	34	2008	concrete	residential
+2225	The Residences Providence	Providence	115.8	31	2007	""	residential
+2226	40 Fulton Street	New York City	115.8	29	1989	""	office
+2227	Benjamin Franklin Bridge	Philadelphia	115.8	-	1926	""	bridge
+2228	Tracey Towers Apartments II	New York City	115.8	38	1974	""	residential
+2231	Kilbourn Tower	Milwaukee	115.8	33	2005	concrete	residential
+2232	Oak Tower	Kansas City	115.5	28	1913	concrete	office
+2234	Siena Condominiums	New York City	115.5	31	1997	""	residential
+2235	Alta at K Station - West Tower	Chicago	115.3	37	2010	concrete	residential
+2236	One Sherman Square	New York City	115.2	42	1972	""	residential
+2237	Outer Drive East	Chicago	115.2	40	1963	concrete	residential
+2238	Parker Meridien Hotel	New York City	115.2	37	1981	""	hotel
+2239	Buffalo City Hall	Buffalo	115.2	32	1931	steel	government
+2240	Marquis I	Atlanta	115.2	30	1985	""	office
+2240	Marquis II	Atlanta	115.2	30	1986	""	office
+2242	Shell Building	San Francisco	115.2	29	1929	steel	office
+2243	The Alfred	New York City	115.2	37	1987	""	residential
+2244	The Grand Beekman	New York City	115.2	32	2003	concrete	residential
+2245	Jehovah`s Witnesses Dormitory	New York City	115.2	30	1995	concrete	residential
+2246	Harris County Civil Justice Center	Houston	115.2	18	2005	""	government
+2247	Waterside Apartments I	New York City	115.2	39	1974	""	residential
+2248	535 Mission Street	San Francisco	115.2	27	2014	""	office
+2249	456 Montgomery Street	San Francisco	115.2	26	1986	""	office
+2249	Smith Tower at Methodist Hospital	Houston	115.2	26	1988	""	education / hospital
+2251	505 West 37th Street West Tower	New York City	115	34	2008	concrete	residential
+2252	Austin Hilton Covention Center Hotel	Austin	114.9	31	2004	concrete	hotel
+2253	485 Lexington Avenue	New York City	114.9	30	1956	""	office
+2253	99 West City Creek Condominium Tower	Salt Lake City	114.9	30	2011	concrete	residential
+2255	Academy House	Philadelphia	114.9	37	1975	""	residential
+2256	Turquoise Place East	Orange Beach	114.9	32	2009	concrete	residential
+2257	Museum Tower	Miami	114.9	30	1986	concrete	office
+2259	25 Park Place	Atlanta	114.9	28	1971	""	education
+2260	Canadian Pacific Plaza	Minneapolis	114.8	28	1960	steel	office
+2261	JW Marriott Indianapolis Downtown	Indianapolis	114.7	34	2011	concrete	hotel
+2262	Skyline on Brickell	Miami	114.7	34	2004	concrete	residential
+2263	1700 East 56th Street	Chicago	114.6	38	1968	concrete	residential
+2264	Xerox Building	New York City	114.6	32	1965	""	office
+2265	Peachtree Center International Tower	Atlanta	114.6	30	1972	""	office
+2266	New York Hospital Cornell Medical Center	New York City	114.6	27	1932	steel	hospital
+2267	461 5th Avenue	New York City	114.6	28	1988	""	office
+2268	Mutual of New York Building	New York City	114.6	27	1950	steel	office
+2269	5 Houston Center	Houston	114.5	27	2003	concrete	office
+2270	Avalon on the Sound East	New Rochelle	114.3	39	2008	concrete	residential
+2271	Bally`s Atlantic City	Atlantic City	114.3	37	1989	""	hotel / casino
+2272	1400 Museum Park	Chicago	114.3	34	2008	concrete	residential
+2273	Drake Hotel	Philadelphia	114.3	32	1929	""	hotel
+2273	Two Illinois Center	Chicago	114.3	32	1972	""	office
+2277	Azure	Dallas	114.3	31	2007	""	""
+2277	SunTrust International Center	Miami	114.3	31	1973	concrete	office
+2277	Symphony House	Philadelphia	114.3	31	2007	""	residential
+2280	Las Vegas Hilton	Las Vegas	114.3	30	1969	""	hotel / casino
+2281	33 West Monroe	Chicago	114.3	29	1980	steel	office
+2282	One Financial Plaza	Fort Lauderdale	114.3	28	1973	""	office
+2283	2 Federal Reserve Plaza	New York City	114.3	27	1986	""	office
+2283	633 North St. Clair	Chicago	114.3	27	1991	""	hotel / office
+2285	388 Market Street	San Francisco	114.3	26	1985	steel	residential / office
+2285	Mellon Bank Center	Los Angeles	114.3	26	1982	steel	office
+2287	222 East 41st Street	New York City	114.3	25	2002	""	office
+2287	600 Washington	St. Louis	114.3	25	1986	""	office
+2287	BB&T Tower	Atlanta	114.3	25	2009	""	office
+2290	Bank of America Plaza	Little Rock	114.3	24	1969	""	office
+2291	One Shoreline Plaza North Tower	Corpus Christi	114.3	22	1988	""	office
+2292	Penn Mutual Towers	Philadelphia	114.3	20	1972	""	office
+2293	Sam Gibbons Federal Courthouse	Tampa	114.3	17	1997	""	government
+2294	LPM Apartments	Minneapolis	114.1	36	2014	concrete	residential
+2296	The Westin San Francisco Market Street	San Francisco	114	34	1984	""	hotel
+2297	One Lincoln Park	Denver	114	32	2009	concrete	residential
+2298	Chase Tower	Amarillo	114	31	1971	""	office
+2298	Le Rivage	New York City	114	31	1931	""	residential
+2300	DTE Energy Plaza	Detroit	114	25	1971	""	office
+2300	Trinity Court	New York City	114	25	1927	steel	office
+2302	Lincoln Financial Building	Greensboro	114	20	1990	""	office
+2303	Astoria Tower	Chicago	113.9	30	2009	concrete	residential
+2304	Prysmian Copper Wire Tower	Abbeville	113.7	30	2009	""	industrial
+2305	City-County Building	Indianapolis	113.5	28	1962	steel	government
+2306	2800 North Lake Shore Drive	Chicago	113.4	43	1968	concrete	residential
+2307	Clinton Towers	New York City	113.4	39	1975	""	residential
+2308	Brookdale Plaza	Chicago	113.4	38	1990	concrete	residential
+2309	Fox Tower	Portland	113.4	27	2000	steel	office
+2310	Three AT&T Plaza	Dallas	113.4	24	1928	steel	office
+2311	303 West Madison	Chicago	113.4	26	1988	""	office
+2312	Sheraton Seattle Hotel	Seattle	113.1	34	1982	steel	hotel
+2313	Ritz-Carlton Central Park	New York City	113.1	33	1930	""	hotel
+2314	One Georgia Center	Atlanta	113.1	24	1968	steel	office
+2315	Camden City Hall	Camden	113.1	18	1931	steel	government
+2316	Bristol Tower	Miami	113	41	1993	concrete	residential
+2317	Western Union Building	New York City	113	24	1930	steel	office
+2318	Crystal Pavilion	New York City	112.9	29	1983	""	office
+2319	2000 Town Center	Southfield	112.9	28	1986	""	office
+2321	Park Belvedere Condominiums	New York City	112.8	35	1986	""	residential
+2322	Archstone 101 West End	New York City	112.8	33	2000	concrete	residential
+2323	Salmon Tower	New York City	112.8	32	1927	""	office
+2325	Claridge Tower at Bally`s	Atlantic City	112.8	23	1930	steel	hotel
+2326	Evans Tower Condominiums	New York City	112.8	36	1986	""	residential
+2327	Domen East	New York City	112.8	36	1967	""	residential
+2328	Biltmore Plaza Apartments	New York City	112.8	34	1980	""	residential
+2328	North Shore Towers - Beaumont Tower	New York City	112.8	34	1975	""	residential
+2330	Terminus 200	Atlanta	112.7	25	2009	concrete	office
+2331	Broderick Tower Lofts	Detroit	112.6	35	1928	steel	residential
+2332	Normandie Court Apartments II-IV	New York City	112.5	34	1986	concrete	residential
+2335	AT&T Switching Center	New York City	112.5	21	1964	""	telecommunications
+2336	310 Greenwich Street	New York City	112.5	39	1975	""	residential
+2336	376 Greenwich Street	New York City	112.5	39	1975	""	residential
+2336	40 Harrison Street	New York City	112.5	39	1975	""	residential
+2339	Hudsonview Terrace	New York City	112.5	38	1976	""	residential
+2340	919 Milam	Houston	112.5	24	1956	""	office
+2340	Prudential Plaza	Newark	112.5	24	1960	""	office
+2342	Sheraton Chicago Hotel & Towers	Chicago	112.3	33	1992	concrete	hotel
+2343	1720 South Michigan	Chicago	112.2	32	2008	concrete	residential
+2344	The Parker 86th	New York City	112.2	36	1974	""	residential
+2344	Treasure Island Hotel & Casino	Las Vegas	112.2	36	1993	concrete	hotel / casino
+2346	National City Bank Building	Toledo	112.2	27	1932	steel	office
+2347	Grand Waikikian	Honolulu	112.2	38	2008	concrete	residential / hotel
+2348	Chelsea Landmark	New York City	112.2	36	2007	concrete	residential
+2349	The Admiral at the Lake	Chicago	112.2	32	2012	concrete	residential
+2350	The Towers at Park Lane	San Antonio	112.2	23	1988	""	residential
+2351	New United States Mission to the United Nations	New York City	112.2	26	2009	concrete	government
+2352	Paris Las Vegas	Las Vegas	112.1	34	1999	""	hotel / casino
+2353	211 West Fort Street	Detroit	112.1	27	1963	""	office
+2354	Trump International Hotel Waikiki Beach Walk	Honolulu	112.1	39	2009	concrete	hotel
+2356	Roybal Federal Building	Los Angeles	112	22	1991	steel	office
+2357	Hawthorne House	Chicago	111.9	42	1966	concrete	residential
+2358	Waterside Apartments II	New York City	111.9	38	1974	""	residential
+2359	The Future Condominiums	New York City	111.9	35	1991	""	residential
+2360	1111 South Wabash	Chicago	111.9	34	2004	concrete	residential
+2361	Standard Insurance Center	Portland	111.9	27	1970	steel	office
+2362	The Campanile	Atlanta	111.9	20	1987	""	office
+2363	Buhl Building	Detroit	111.6	29	1925	steel	office
+2364	One Columbus Center	Columbus	111.6	26	1987	""	office
+2365	One East Delaware	Chicago	111.6	36	1989	concrete	residential
+2365	Trump Plaza	New York City	111.6	36	1984	""	residential
+2367	Hotel Inter-Continental Miami	Miami	111.6	34	1982	concrete/steel	hotel
+2368	K2 at K Station	Chicago	111.6	33	2013	concrete	residential
+2369	29 Broadway	New York City	111.6	31	1931	""	office
+2369	St. James' Tower	New York City	111.6	31	1982	""	residential
+2371	Eastman Kodak Building	Rochester	111.6	19	1913	""	office
+2372	Two Lincoln Square	New York City	111.6	36	1975	""	residential
+2373	Left Bank at K Station	Chicago	111.4	36	2006	concrete	residential
+2374	Kinzie Park Tower	Chicago	111.3	34	2001	concrete	residential
+2375	Hyatt Regency Chicago West Tower	Chicago	111.3	33	1974	""	hotel
+2376	123 William Street	New York City	111.3	26	1957	""	office
+2376	Augustus Tower	Las Vegas	111.3	26	2005	""	hotel
+2378	Sterick Building	Memphis	111.3	29	1930	steel	abandoned
+2379	Hillsborough County Center	Tampa	111.3	28	1993	steel	office
+2379	San Francisco Hilton Hotel Financial District	San Francisco	111.3	28	1971	""	hotel
+2381	199 Fremont Street	San Francisco	111.3	27	2000	""	office
+2381	The Towne House	New York City	111.3	27	1930	""	residential
+2383	Lyric Center	Houston	111.3	26	1984	""	""
+2384	Ohio Bell Huron Building	Cleveland	111.3	22	1927	steel	office
+2385	Landmark Hotel & Casino	Las Vegas	111	31	1969	""	hotel
+2386	Beaudry Center	Los Angeles	111	29	1986	""	office
+2386	The Evian	Los Angeles	111	29	1989	""	residential
+2388	5670 Wilshire Boulevard	Los Angeles	111	28	1967	""	office
+2389	Steuart Tower	San Francisco	111	27	1976	steel	office
+2390	10100 Santa Monica Boulevard	Los Angeles	111	26	1971	""	office
+2390	Wilshire at Westwood	Los Angeles	111	26	1971	""	office
+2392	Regions Tower	Shreveport	111	25	1986	""	office
+2393	MacMillan Building	New York City	110.9	31	1966	""	office
+2394	Medical Tower Building	Philadelphia	110.9	30	1930	""	office
+2395	General Telephone Building	New York City	110.9	28	1959	""	office
+2396	One Skyline Tower	Arlington	110.9	26	1988	""	office
+2398	Echelon at K Station	Chicago	110.7	36	2008	concrete	residential
+2399	Warwick Hotel	New York City	110.6	36	1927	""	hotel
+2400	Manhattan Place	New York City	110.6	35	1985	concrete	residential
+2400	Park Lane Tower	New York City	110.6	35	1967	""	residential
+2402	InterContinental New York Times Square	New York City	110.6	34	2010	concrete	hotel
+2403	Pershing Square Building	New York City	110.6	30	1923	steel	office
+2404	B & W Tower	Louisville	110.6	26	1982	""	office
+2404	Meidinger Tower	Louisville	110.6	26	1982	""	office
+2406	1 Times Square	New York City	110.6	25	1904	steel	office
+2407	Rhodes Tower	Cleveland	110.6	20	1971	steel	education
+2408	Cosmopolitan Condominiums	New York City	110.6	35	1986	""	residential
+2409	110 Wall Street	New York City	110.6	28	1965	""	office
+2410	240 Riverside Boulevard at Trump Place	New York City	110.4	31	2004	concrete	residential
+2411	Bally's North Tower	Las Vegas	110.3	26	1973	""	hotel / casino
+2411	Bally's South Tower	Las Vegas	110.3	26	1981	""	hotel / casino
+2413	The Chicagoan	Chicago	110.3	37	1990	concrete	residential / retail
+2414	One Illinois Center	Chicago	110.3	30	1970	concrete	office
+2415	Warwick Towers	Houston	110	30	1984	""	residential
+2416	Edgewater Plaza North	Chicago	110	38	1968	concrete	residential
+2417	Center West	Los Angeles	110	23	1990	""	office
+2418	Edith Green-Wendell Wyatt Federal Building	Portland	110	18	1974	steel	government
+2419	101 West Ohio	Indianapolis	109.8	22	1987	concrete	office
+2420	Ocean Club Condominiums - East Tower	Atlantic City	109.7	34	1984	""	residential
+2420	Ocean Club Condominiums - West Tower	Atlantic City	109.7	34	1984	""	residential
+2422	The Royalton at River Oaks	Houston	109.7	33	2003	""	""
+2422	The Visionaire	New York City	109.7	33	2008	""	residential
+2425	Blaustein Building	Baltimore	109.7	30	1962	""	office
+2426	520 Pike Tower	Seattle	109.7	29	1983	steel	office
+2427	Emigrant Savings Bank	New York City	109.7	28	1969	""	office
+2427	Tower Square	Springfield	109.7	28	1971	""	office
+2427	West 8th	Seattle	109.7	28	2009	steel	office
+2430	777 Main Street	Hartford	109.7	26	1967	""	office
+2430	80 Park Plaza	Newark	109.7	26	1980	""	office
+2430	Herald Towers Apartments	New York City	109.7	26	1912	""	residential / hotel
+2433	The Allerton Hotel Chicago	Chicago	109.7	25	1924	steel	hotel
+2434	250 West Pratt Street	Baltimore	109.7	24	1986	steel	office
+2435	Mercantile Dallas Bldg.	Dallas	109.7	22	1954	""	""
+2436	Test Stand 4550	Huntsville	109.7	-	1964	""	government
+2437	2 East Oak Street	Chicago	109.7	39	1967	concrete	residential
+2438	Chestnut Tower	Chicago	109.7	36	2000	concrete	residential
+2438	Holiday Inn Express Times Square	New York City	109.7	36	2008	""	hotel
+2440	Hilary Gardens	New York City	109.7	34	1972	""	residential
+2441	Monte Carlo Las Vegas	Las Vegas	109.7	32	1996	""	hotel / casino
+2442	Walton on the Park South Tower	Chicago	109.7	31	2010	concrete	residential
+2443	Escala	Seattle	109.7	30	2009	concrete	residential
+2445	45 Wall Street	New York City	109.7	27	1959	""	residential
+2445	650 Madison Avenue	New York City	109.7	27	1987	""	office
+2447	Pacific Corporate Towers III	El Segundo	109.7	24	1984	""	office
+2448	The Magellan	New York City	109.4	34	2003	""	residential
+2449	Camden Post Oak	Houston	109.4	33	2003	""	""
+2450	Renaissance Apartments	New York City	109.4	31	1931	""	residential
+2451	425 California Street	San Francisco	109.4	27	1967	""	office
+2452	River Gate Apartments	New York City	109.1	35	1985	concrete	residential
+2453	Montage	Houston	109.1	29	2009	""	residential
+2453	Mosaic 1	Houston	109.1	29	2007	""	residential
+2455	Federated Tower	Pittsburgh	109.1	27	1982	""	office
+2456	One Moody Plaza	Galveston	109.1	23	1972	""	office
+2457	The New York Tower	New York City	109	36	1982	""	residential
+2458	Figueroa Tower	Los Angeles	109	28	1989	steel	office
+2459	Regents Park South	Chicago	108.9	37	1972	concrete	residential
+2460	1600 Museum Park	Chicago	108.9	32	2009	concrete	residential
+2462	Jacksonville Center	Jacksonville	108.8	24	1989	""	office
+2463	Corning Glass Building	New York City	108.8	28	1959	""	office
+2464	Park Central Hotel	New York City	108.8	25	1927	""	hotel
+2465	215 East 68th Street	New York City	108.8	33	1962	""	residential
+2466	Lorillard Building	New York City	108.8	28	1959	""	office
+2467	Sofitel New York Hotel	New York City	108.6	30	2000	concrete	hotel
+2468	Stardust West Tower	Las Vegas	108.5	32	1976	""	hotel
+2469	Eaton Center	Cleveland	108.5	28	1983	concrete	office
+2469	Towers at Harbor Court	Baltimore	108.5	28	1987	""	residential
+2471	100 Montgomery Street	San Francisco	108.5	25	1955	""	office
+2472	University Tower	Durham	108.5	17	1986	""	office
+2473	211 East 70th Street	New York City	108.5	35	1976	""	residential
+2474	Dynetech Centre	Orlando	108.5	31	2008	""	residential / office
+2475	Fifth Street Towers I	Minneapolis	108.4	26	1987	composite	office
+2476	Westinghouse Tower	Pittsburgh	108.2	23	1970	steel	office
+2477	Waterside Apartments III	New York City	108.2	37	1974	""	residential
+2478	Grand Hyatt San Francisco	San Francisco	108.2	35	1972	""	hotel
+2478	The Columbia	New York City	108.2	35	1983	concrete	residential
+2478	The Fontaine	New York City	108.2	35	1982	""	residential
+2483	Gateway One	Newark	108.2	30	1971	""	office
+2484	261 Madison Avenue	New York City	108.2	28	1952	""	office
+2485	Capitol One Bank Building	New Orleans	108.2	20	1921	""	office
+2486	RiverCourt	New York City	108.1	36	1975	""	residential
+2487	Landmark Apartments	New York City	108	36	1971	""	residential
+2489	Grand Tower	Los Angeles	108	28	1989	concrete	residential
+2490	101 Second Street	San Francisco	108	26	1999	steel	office
+2491	One City Place	White Plains	107.9	35	2004	concrete	residential
+2491	Trump Tower at City Center	White Plains	107.9	35	2005	concrete	residential
+2493	160 Riverside Boulevard at Trump Place	New York City	107.9	33	2001	concrete	residential
+2494	Carnegie Hill Tower	New York City	107.9	32	1982	""	residential
+2495	Fox Plaza	San Francisco	107.9	29	1967	""	residential / residential / office / office
+2497	Three Galleria Tower	Dallas	107.9	26	1991	""	""
+2498	New York Marriott Downtown	New York City	107.6	37	1991	""	hotel
+2499	230 West Monroe Street	Chicago	107.6	29	1970	""	office
+2500	One Fifth Avenue	New York City	107.6	27	1927	""	residential
+2501	Glendale Plaza	Glendale	107.6	25	1999	steel	office
+2502	Azure	New York City	107.3	32	2010	concrete	residential
+2503	Post Toscana Apartments	New York City	107.3	31	2003	concrete	residential
+2504	Florsheim Tower	Chicago	107.3	30	1984	""	office
+2504	Springfield Hilton	Springfield	107.3	30	1973	""	hotel
+2506	Mutual Benefit Life Building	Kansas City	107.3	28	1977	""	office
+2506	Sheraton Dallas Hotel South Tower	Dallas	107.3	28	1958	""	hotel
+2506	Sheraton-Lincoln Hotel	Houston	107.3	28	1962	""	hotel
+2509	60 Wall Street	New York City	107.3	26	1905	steel	office
+2510	550 South Hope Street	Los Angeles	107	28	1991	steel	office
+2511	Key Bank Tower	Salt Lake City	107	27	1976	""	office
+2512	527 Madison Avenue	New York City	107	26	1986	""	office
+2513	580 California Street	San Francisco	107	23	1984	""	office
+2514	Albuquerque Plaza	Albuquerque	107	22	1990	""	office
+2515	300 East 34th Street	New York City	107	36	1975	""	residential
+2516	Dominion at Post Oak	Houston	107	31	2004	""	residential
+2517	1360 Post Oak Tower	Houston	107	25	1985	""	office
+2517	Wells Fargo Tower	Houston	107	25	1983	""	office
+2519	1400 Spring Garden Street	Philadelphia	107	19	1958	""	office
+2520	Malibu Condominiums	Chicago	106.7	39	1969	concrete	residential
+2523	The Infinity I	San Francisco	106.7	35	2008	concrete	office
+2524	Clermont Towers	New York City	106.7	34	1964	""	residential
+2524	Stratford Apartments	New York City	106.7	34	1969	""	residential
+2526	45-40 Center Boulevard	New York City	106.7	32	2013	concrete	residential
+2526	Samuel B. & David Rose Building	New York City	106.7	32	1990	""	residential / education
+2528	Luxor Pyramid	Las Vegas	106.7	30	1993	steel	hotel / casino
+2528	Marriott Riverwalk	San Antonio	106.7	30	1979	concrete	hotel
+2528	The Metropolitan	New York City	106.7	30	2004	concrete	residential
+2531	Three Illinois Center	Chicago	106.7	28	1979	""	office
+2534	Trump Parc Stamford	Stamford	106.7	35	2009	""	residential
+2536	Trump Park Avenue	New York City	106.7	32	1929	steel	residential
+2537	10 West End	New York City	106.7	31	2007	concrete	residential
+2537	Winstar Building and Addition	New York City	106.7	31	1976	""	office
+2539	Chamber of Commerce Building	New York City	106.7	30	1926	steel	office
+2540	201 North Charles Street Building	Baltimore	106.7	28	1967	""	office
+2541	625 North Michigan	Chicago	106.7	27	1971	""	office
+2541	Charles Towers North Apartments	Baltimore	106.7	27	1967	concrete	residential
+2543	Main Place Tower	Buffalo	106.7	26	1969	""	office
+2544	Legg Mason Tower	Baltimore	106.7	24	2009	concrete	office
+2544	One Utah Center	Salt Lake City	106.7	24	1991	""	office
+2546	Octavius Tower	Las Vegas	106.7	23	2012	steel	hotel
+2547	Trinity Building	New York City	106.7	22	1905	steel	office
+2548	Westin Book-Cadillac Detroit	Detroit	106.4	29	1924	steel	hotel
+2549	Bunker Hill Towers	Los Angeles	106.4	32	1968	steel	office
+2550	2 Park Avenue	New York City	106.4	28	1928	""	office
+2550	280 Trumbull Street	Hartford	106.4	28	1984	""	office
+2552	Capitol Center	Columbia	106.4	25	1987	""	office
+2553	601 California Street	San Francisco	106.4	22	1960	steel	office
+2555	Falcon Towers	New York City	106.2	31	1987	""	residential
+2556	Mercedes House	New York City	106.1	32	2012	concrete	residential
+2557	Greektown Casino Hotel	Detroit	106.1	30	2009	concrete	hotel
+2558	The Century	New York City	106.1	32	1931	steel	residential
+2559	The Moderne	Milwaukee	106.1	30	2013	concrete	residential
+2560	BellTel Lofts	New York City	106.1	27	1931	""	residential
+2561	Bank of America Building	New York City	106.1	26	1914	steel	office
+2562	33 North Dearborn	Chicago	106.1	25	1966	""	office
+2563	City National Bank Building	Los Angeles	106.1	24	1968	steel	office
+2564	Manhattan Life Insurance Building	New York City	106.1	18	1894	steel	office
+2565	Pavillion Apartments	New York City	106	33	1963	""	residential
+2566	Hilton San Francisco Union Square Tower II	San Francisco	106	23	1987	""	hotel
+2567	Park Alexandria	Chicago	105.8	32	2003	concrete	residential
+2568	Hyatt Regency Chicago East Tower	Chicago	105.8	33	1980	""	hotel
+2569	Sofitel Chicago Water Tower	Chicago	105.8	33	2002	concrete	hotel
+2570	Le Premier	New York City	105.8	32	1980	""	residential
+2572	Drake Tower	Chicago	105.8	30	1929	""	residential
+2573	10960 Wilshire Boulevard	Los Angeles	105.8	24	1971	""	office
+2574	National City Center	Troy	105.6	25	1975	""	office
+2575	Edgewater Plaza South	Chicago	105.5	38	1971	concrete	residential
+2576	North Shore Towers - Amherst Tower	New York City	105.5	34	1975	""	residential
+2576	North Shore Towers - Coleridge Tower	New York City	105.5	34	1975	""	residential
+2578	777 Avenue of the Americas	New York City	105.5	31	2001	concrete	residential
+2580	Beau Rivage Casino Hotel	Biloxi	105.5	32	1999	""	hotel / casino
+2581	The Eldorado	New York City	105.5	30	1931	""	residential
+2582	The Majestic	New York City	105.5	29	1931	steel	residential
+2583	The Wellesley	New York City	105.2	35	1983	""	residential
+2584	New Yorker East Apartments	New York City	105.2	34	1975	concrete	residential
+2584	Regent Apartments	New York City	105.2	34	1981	""	residential
+2588	Zeckendorf Towers I	New York City	105.2	27	1987	""	residential / hospital
+2588	Zeckendorf Towers II	New York City	105.2	27	1987	""	residential / office
+2588	Zeckendorf Towers III	New York City	105.2	27	1987	""	residential / office
+2588	Zeckendorf Towers IV	New York City	105.2	27	1987	""	residential / office
+2592	Nigerian Mission to the United Nations	New York City	105.2	22	1992	""	office
+2593	Plaza Towers	Grand Rapids	105.2	34	1991	concrete	residential / hotel
+2594	West Sixth Tempe Tower 2	Tempe	105.2	30	2011	concrete	residential
+2595	West Ocean Condominiums I	Long Beach	105.2	29	2007	concrete	residential
+2596	New York Coliseum Tower	New York City	105.2	26	1956	""	office
+2597	University Center Tower	Houston	105.2	25	1974	""	""
+2598	Boji Tower	Lansing	105.2	23	1931	steel	office
+2599	Ruppert-Yorkville Towers	New York City	105.1	34	1975	""	residential
+2600	Sessanta	New York City	105	27	2009	concrete	residential
+2601	Fourth & Blanchard Building	Seattle	105	25	1979	""	office
+2602	Three PNC Plaza	Pittsburgh	105	23	2010	steel/concrete	residential / hotel / office
+2603	Arthur M. Schomberg Plaza I	New York City	104.9	34	1975	""	residential
+2603	Arthur M. Schomberg Plaza II	New York City	104.9	34	1975	""	residential
+2605	Astor Terrace	New York City	104.9	32	1986	""	residential
+2606	The Avery	New York City	104.8	30	2008	concrete	residential
+2607	The Wilshire	Los Angeles	104.8	27	1990	concrete	residential
+2608	111 Wall Street	New York City	104.8	24	1966	""	office
+2609	Land Title Building Annex	Philadelphia	104.8	22	1902	steel	office
+2610	Hyatt Regency McCormick Place	Chicago	104.8	33	1998	concrete	hotel
+2611	414 Water Street	Baltimore	104.8	33	2008	concrete	residential
+2612	New Gotham	New York City	104.6	34	1998	""	residential
+2613	Hyatt Hotel	Dallas	104.6	30	1978	""	hotel
+2614	450 Sutter Street	San Francisco	104.6	26	1929	""	office
+2615	5 Penn Plaza	New York City	104.6	24	1916	steel	office
+2616	HarborView Condominium	Baltimore	104.4	29	1993	concrete	residential
+2617	The Chesapeake	New York City	104.3	31	1977	""	residential
+2619	Connaught Tower	New York City	104.2	34	1974	""	residential
+2620	210 West Rittenhouse Square	Philadelphia	104.2	33	1982	""	hotel
+2621	Affinia Manhattan	New York City	104.2	31	1930	""	hotel
+2622	Broadway Plaza	Rochester	104.2	29	2004	concrete	residential
+2623	Builders Building	Chicago	104.2	26	1986	""	office
+2624	Regents Park North	Chicago	104.2	36	1974	concrete	residential
+2625	Freeport-McMoRan Center	Phoenix	104.1	26	2009	steel/concrete	office
+2626	Hilton Hotel at 54th	New York City	103.9	34	2013	concrete	hotel
+2627	High Point I	Fort Myers	103.9	33	2007	concrete	residential
+2628	Two Shell Plaza	Houston	103.9	26	1971	""	office
+2629	Candler Building	New York City	103.9	24	1912	""	office
+2630	333 Market Street	Harrisburg	103.9	22	1979	""	office
+2631	Hampton House Apartments	New York City	103.9	31	1985	""	residential
+2633	First National Building	Detroit	103.9	26	1930	steel	office
+2634	100 Washington Square	Minneapolis	103.8	22	1981	concrete	office
+2635	High Point II	Fort Myers	103.6	33	2007	concrete	office
+2636	Courtyard by Marriott New York Times Square South	New York City	103.6	32	1998	""	hotel
+2636	Morgan Court	New York City	103.6	32	1984	""	residential
+2636	Oasis I	Fort Myers	103.6	32	2008	concrete	residential
+2639	Ariel West	New York City	103.6	31	2008	concrete	residential
+2640	Chicago Hilton & Towers	Chicago	103.6	29	1927	steel	hotel
+2642	Dominion Tower	Norfolk	103.6	26	1987	steel	office
+2643	Biltmore Tower	Los Angeles	103.6	25	1987	""	office
+2643	Merchandise Mart	Chicago	103.6	25	1930	steel	""
+2643	Waterfront Plaza I	Louisville	103.6	25	1991	""	office
+2643	Waterfront Plaza II	Louisville	103.6	25	1993	""	office
+2647	Hyatt Regency Atlanta	Atlanta	103.6	24	1967	""	hotel
+2648	135 Main Street	San Francisco	103.6	22	1990	""	office
+2649	400 North Broad Street	Philadelphia	103.6	18	1924	""	residential
+2650	Tower 58	New York City	103.6	34	1969	""	residential
+2651	30 Lincoln Plaza	New York City	103.6	33	1978	""	residential
+2652	The Cielo	New York City	103.6	27	2006	""	residential
+2653	Two Rector Street	New York City	103.6	26	1907	steel	office
+2654	Oasis II	Fort Myers	103.6	32	2008	concrete	residential
+2655	3150 North Lake Shore Drive	Chicago	103.3	38	1963	concrete	residential
+2656	Fairmont Apartments	New York City	103.3	33	1979	""	residential
+2657	The Dorchester	Philadelphia	103.3	32	1963	""	residential
+2658	Windsor on the Lake	Austin	103.3	31	2008	concrete	residential
+2659	501 Madison Avenue	New York City	103.3	30	1930	""	office
+2660	National City Center	Fort Wayne	103.3	26	1970	""	office
+2661	Laurence G. Payson House	New York City	103.3	35	1966	""	residential
+2662	The Grand Tier	New York City	103.3	30	2004	""	residential
+2663	99 John Street	New York City	103.1	28	1933	""	residential
+2664	Hilton Alexandria Mark Center	Alexandria	103	30	1985	concrete	hotel
+2665	140 Riverside Boulevard at Trump Place	New York City	103	26	2003	""	residential
+2666	1550 North Lake Shore Drive Apartments	Chicago	103	34	1960	concrete	residential
+2667	Co-Op City Building 13	New York City	103	33	1970	""	residential
+2667	Co-Op City Building 19	New York City	103	33	1970	""	residential
+2667	Co-Op City Building 25	New York City	103	33	1970	""	residential
+2667	Co-Op City Building 34	New York City	103	33	1970	""	residential
+2667	Co-Op City Building 7	New York City	103	33	1970	""	residential
+2672	Capital Plaza Office Tower	Frankfort	103	28	1972	""	government
+2672	University Hall	Chicago	103	28	1965	concrete	education / office
+2674	Catalyst	Charlotte	103	27	2009	""	residential
+2675	71 Stevenson Street	San Francisco	103	26	1986	""	office
+2675	Bank of Tokyo Building	New York City	103	26	1896	steel	office
+2677	Wells Fargo Plaza	Tacoma	103	25	1970	concrete	office
+2678	1001 Woodward	Detroit	103	23	1965	steel	office
+2678	The Bryant Park Hotel	New York City	103	23	1924	steel	hotel
+2680	McKnight Tower Apartments	Minneapolis	102.8	39	1973	concrete	residential
+2681	2400 Chestnut Street Apartments	Philadelphia	102.7	34	1979	""	residential
+2682	Lefcourt Clothing Center	New York City	102.7	26	1928	""	office
+2683	ParkWest Tower I	Houston	102.7	25	1984	""	""
+2683	Wortham Tower	Houston	102.7	25	1965	""	""
+2685	J Condominium	New York City	102.7	31	2007	""	residential
+2686	Circus Circus West Tower	Las Vegas	102.7	35	1996	concrete	hotel / casino
+2686	The Concerto	New York City	102.7	35	1991	""	residential
+2688	200 East Delaware	Chicago	102.4	36	1972	concrete	residential
+2689	Century Tower	Chicago	102.4	28	1930	concrete	residential
+2690	Loop Transportation Center	Chicago	102.4	27	1985	concrete	office
+2691	Main Tower	Dallas	102.4	26	1973	""	""
+2691	Twelve Atlantic Station	Atlanta	102.4	26	2005	concrete	residential / hotel
+2693	Bank of America Center	Austin	102.4	25	1975	""	office
+2693	The Packard Grande	Philadelphia	102.4	25	1924	""	residential
+2695	Frost Bank Bldg.	Corpus Christi	102.4	23	1983	""	office
+2696	One Dayton Centre	Dayton	102.4	20	1989	concrete	office
+2697	401 Broadway	New York City	102.4	26	1930	""	office
+2698	875 Avenue of the Americas	New York City	102.4	25	1927	""	office
+2699	One Financial Plaza	Hartford	102.1	26	1975	""	office
+2700	Elm Street Plaza	Chicago	102.1	33	1974	concrete	residential
+2701	Imperial Palace Casino Hotel	Biloxi	102.1	32	1998	concrete	hotel / casino
+2702	The Oliver Cromwell	New York City	102.1	30	1927	concrete	residential
+2703	99 Wall Street	New York City	102.1	24	1931	""	office
+2704	800 5th Avenue	New York City	102.1	33	1978	""	residential
+2705	The Mirage	Las Vegas	102.1	31	1989	""	hotel / casino
+2706	World's Tower Building	New York City	102.1	30	1914	""	office
+2707	Michigan Plaza North	Chicago	102.1	25	1981	""	office
+2708	990 North Lake Shore Drive	Chicago	102	33	1973	concrete	residential
+2708	Andover Apartments	New York City	102	33	1975	""	residential
+2710	Columbus Tower	New York City	102	26	1928	steel	office
+2711	35XV Residences	New York City	102	25	2014	concrete/steel	residential / education
+2712	The Mark	Houston	101.8	30	2001	""	residential
+2713	285 Madison Avenue	New York City	101.8	27	1926	""	office
+2713	Kratter Building	New York City	101.8	27	1954	""	office
+2715	Saint Ann Court	Dallas	101.8	25	2009	""	residential
+2716	Transunion Building	Chicago	101.8	24	1961	concrete	office
+2717	Newport Lofts	Las Vegas	101.8	23	2007	steel	residential
+2718	1212 North Lake Shore Drive	Chicago	101.5	36	1969	concrete	residential
+2719	2500 North Lakeview	Chicago	101.5	35	1974	concrete	residential
+2720	Dorchester Towers	New York City	101.5	34	1964	""	residential
+2722	Canada House	New York City	101.5	27	1957	""	office
+2723	Bank of America Center	Richmond	101.5	26	1974	steel	office
+2723	One Galleria Tower I	Dallas	101.5	26	1983	""	""
+2725	Galleria Tower I	Houston	101.5	25	1973	""	""
+2726	CNA Plaza North	Chicago	101.5	24	1962	steel	office
+2727	Bridgeview	San Francisco	101.4	26	2002	concrete	residential / retail
+2728	200 Cadman Plaza	New York City	101.4	33	1973	""	residential
+2729	Arkes Family Pavilion	Chicago	101.3	25	1979	""	hospital
+2730	Inland Steel Building	Chicago	101.3	19	1958	steel	office
+2732	Concerto Tower 1	Los Angeles	101.2	28	2009	concrete	residential
+2734	1st Tennessee Bank Building	Memphis	101.2	25	1964	steel	office
+2734	Chase Tower	South Bend	101.2	25	1971	""	hotel / office
+2736	Concord City Centre	Chicago	101.2	23	1927	steel	residential
+2737	Martin Tower	Bethlehem	101.2	21	1972	steel	office
+2738	Mayfair Towers	New York City	101.2	36	1964	steel	residential
+2739	270 Broadway	New York City	101.2	28	1930	""	office
+2740	Peachtree Center South	Atlanta	101.2	27	1969	""	office
+2741	Millender Center Apartments	Detroit	101.1	33	1985	""	residential
+2742	Tropicana Casino & Resort Atlantic City - Havana Tower	Atlantic City	101	33	2004	""	hotel
+2743	Morongo Casino Tower	Cabazon	101	27	2004	""	hotel / casino
+2745	W Downtown Atlanta Hotel & Residences	Atlanta	100.9	28	2009	concrete	residential / hotel
+2746	Gold Coast Galleria	Chicago	100.9	32	1991	concrete	residential
+2747	Peachtree Center North	Atlanta	100.9	27	1967	""	office
+2748	American Center	Southfield	100.9	25	1975	steel	office
+2749	40 West 4th Centre	Dayton	100.9	22	1969	""	office
+2750	180 Montague Street	New York City	100.9	33	2000	""	residential
+2751	Park East Tower	St. Louis	100.7	26	2007	concrete	residential
+2752	Belmont Apartments	New York City	100.6	33	1981	""	residential
+2753	Cosmopolitan	Seattle	100.6	33	2007	concrete	residential
+2754	FirstMerit Tower	Akron	100.6	27	1931	steel	office
+2755	525 West Monroe Street	Chicago	100.6	26	1983	concrete	office
+2756	Charles Center South	Baltimore	100.6	25	1975	steel	office
+2756	Sage Plaza	Houston	100.6	25	1983	""	office
+2756	Wells Fargo Tower	Baltimore	100.6	25	1985	""	office
+2759	Bank of America Building	Midland	100.6	24	1976	""	office
+2760	1201 North Market Street	Wilmington	100.6	23	1988	steel	office
+2760	ADA Building	Chicago	100.6	23	1965	composite	office
+2760	UniSource Energy Tower	Tucson	100.6	23	1986	steel	office
+2763	500 West Fifth Street	Winston-Salem	100.6	21	1980	steel	office
+2764	525 North Tryon	Charlotte	100.6	19	1999	""	office
+2765	Tower Building	Baltimore	100.6	16	1912	steel	office
+2766	150 East 57th Street	New York City	100.6	34	1999	""	residential
+2767	Aquablu	Jersey City	100.6	33	2009	""	residential
+2768	Montebello	Houston	100.6	30	2004	""	residential
+2769	Four Seasons Hotel	Houston	100.6	29	1981	""	hotel
+2769	Sheraton Philadelphia Downtown Hotel	Philadelphia	100.6	29	1980	""	hotel
+2771	55 Second Street	San Francisco	100.6	25	2002	steel	office
+2772	Avenue of the Americas Plaza	New York City	100.6	24	1989	""	office
+2772	Royal Towers Apartments	San Francisco	100.6	24	1964	""	residential
+2774	150 California Street	San Francisco	100.6	23	1999	steel	office
+2774	Standard & Poor's Building	New York City	100.6	23	1921	""	office
+2776	65 Broadway	New York City	100.6	22	1917	""	office
+2777	One Penn Center	Philadelphia	100.6	20	1930	""	office
+2778	Museum Park Place 2	Chicago	100.4	30	2009	concrete	residential
+2779	Adams Tower	New York City	100.3	32	1968	""	residential
+2779	Glenn Gardens Apartments	New York City	100.3	32	1975	""	residential
+2781	Two Northside Piers	New York City	100.3	30	2009	concrete	residential
+2782	The Regatta	Philadelphia	100.3	29	2006	""	residential
+2783	Hilton Memphis	Memphis	100.3	27	1975	""	hotel
+2784	The Westin Providence	Providence	100.3	25	1993	""	hotel
+2785	44 Wall Street	New York City	100.3	22	1926	steel	office
+2786	840 North Lake Shore Drive	Chicago	100.2	27	2004	concrete	residential
+2787	East River Tower Apartments	New York City	100	33	1971	""	residential
+2787	Michigan Terrace Condominiums	Chicago	100	33	1963	concrete	residential
+2789	The Laurel	New York City	100	31	2009	concrete	residential
+2790	The Aurora	New York City	100	30	1996	""	residential
+2791	Colgate-Palmolive Building	New York City	100	25	1955	""	office
+2791	LVMH Tower	New York City	100	25	1999	steel	office
+2793	545 8th Avenue	New York City	100	23	1927	steel	office
+2793	E.ON U.S. Center	Louisville	100	23	1989	composite	office
+2795	Premier Health Center	Dayton	100	20	1989	steel	office
