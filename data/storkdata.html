@@ -70,53 +70,42 @@ img {
 
 <pre class="r"><code>require(reshape2)</code></pre>
 <pre><code>## Loading required package: reshape2</code></pre>
-<pre class="r"><code>storkbirths &lt;- read.delim(&quot;/extra/akd/MA2300/storkbirths.txt&quot;, header=FALSE, stringsAsFactors=FALSE)
-storkbirths$V2=(1:5)
-dcast(storkbirths,V2~V1)</code></pre>
-<pre><code>## Using V2 as value column: use value.var to override.
-## Aggregation function missing: defaulting to length</code></pre>
-<pre><code>##   V2 1 10 100 106 11 111000 117 118 120 124 132000 140 15 150 1500 1576
-## 1  1 0  0   0   0  0      0   0   0   0   0      0   0  0   0    0    0
-## 2  2 0  0   0   0  0      1   0   0   0   0      1   0  0   0    0    0
-## 3  3 1  0   1   0  0      0   0   0   0   0      0   1  0   1    1    0
-## 4  4 0  2   0   0  1      0   0   0   0   0      0   0  1   0    0    0
-## 5  5 0  0   0   1  0      0   1   1   1   1      0   0  0   0    0    1
-##   188 23 237500 2500 25000 28750 3.2 300 30000 301280 30520 312680 3300
-## 1   0  0      0    0     0     0   0   0     0      0     0      0    0
-## 2   0  0      1    0     0     1   0   0     0      1     1      1    0
-## 3   0  0      0    1     1     0   0   1     1      0     0      0    1
-## 4   0  1      0    0     0     0   1   0     0      0     0      0    0
-## 5   1  0      0    0     0     0   0   0     0      0     0      0    0
-##   357000 367 38 39 4 41290 41900 43100 439 5 5.1 5000 504750 544000 551 56
-## 1      0   0  0  0 0     0     0     0   0 0   0    0      0      0   0  0
-## 2      1   0  0  0 0     1     1     1   0 0   0    0      1      1   0  0
-## 3      0   0  0  0 1     0     0     0   0 1   0    3      0      0   0  0
-## 4      0   0  1  1 0     0     0     0   0 0   1    0      0      0   0  2
-## 5      0   1  0  0 0     0     0     0   1 0   0    0      0      0   1  0
-##   57 59 6.7 610 7.6 774 779450 78 8000 82 83 83860 87 9 9.0 9.9 901 92390
-## 1  0  0   0   0   0   0      0  0    0  0  0     0  0 0   0   0   0     0
-## 2  0  0   0   0   0   0      1  0    0  0  0     1  0 0   0   0   0     1
-## 3  0  0   0   0   0   0      0  0    1  0  0     0  0 1   0   0   0     0
-## 4  1  0   1   0   1   0      0  1    0  0  0     0  0 0   1   1   0     0
-## 5  0  1   0   1   0   1      0  0    0  1  1     0  1 0   0   0   1     0
-##   93000 Albania Area (km2 ) Austria Belgium Birth rate (103 /yr) Bulgaria
-## 1     0       1           0       1       1                    0        1
-## 2     1       0           1       0       0                    0        0
-## 3     0       0           0       0       0                    0        0
-## 4     0       0           0       0       0                    0        0
-## 5     0       0           0       0       0                    1        0
-##   Country Denmark France Germany Greece Holland Humans (106 ) Hungary
-## 1       1       1      1       1      1       1             0       1
-## 2       0       0      0       0      0       0             0       0
-## 3       0       0      0       0      0       0             0       0
-## 4       0       0      0       0      0       0             1       0
-## 5       0       0      0       0      0       0             0       0
-##   Italy Poland Portugal Romania Spain Storks (pairs) Switzerland Turkey
-## 1     1      1        1       1     1              0           1      1
-## 2     0      0        0       0     0              0           0      0
-## 3     0      0        0       0     0              1           0      0
-## 4     0      0        0       0     0              0           0      0
-## 5     0      0        0       0     0              0           0      0</code></pre>
+<pre class="r"><code>raw &lt;- read.delim(&quot;/extra/akd/MA2300/data/storkbirths.txt&quot;, header=FALSE, stringsAsFactors=FALSE)
+raw$V2=(1:5)
+rawx=raw[6:nrow(raw),]</code></pre>
+<pre class="r"><code>storkbirths=data.frame(Country=rawx$V1[rawx$V2==1],
+                       Area=as.numeric(rawx$V1[rawx$V2==2]),
+                       Storks=as.numeric(rawx$V1[rawx$V2==3]),
+                      Humans=as.numeric(rawx$V1[rawx$V2==4]),
+                      BirthRate=as.numeric(rawx$V1[rawx$V2==5]),
+                      stringsAsFactors=F)
+
+storkbirths$Storks=with(storkbirths,Storks/Area*10000)
+storkbirths$Humans=with(storkbirths,Humans/Area*10000)
+head(storkbirths)</code></pre>
+<pre><code>##    Country   Area    Storks  Humans BirthRate
+## 1  Albania  28750  34.78261 1.11304        83
+## 2  Austria  83860  35.77391 0.90627        87
+## 3  Belgium  30520   0.32765 3.24377       118
+## 4 Bulgaria 111000 450.45045 0.81081       117
+## 5  Denmark  43100   2.08817 1.18329        59
+## 6   France 544000   2.57353 1.02941       774</code></pre>
+<pre class="r"><code>summary(storkbirths)</code></pre>
+<pre><code>##    Country               Area            Storks           Humans     
+##  Length:17          Min.   : 28750   Min.   :  0.17   Min.   :0.719  
+##  Class :character   1st Qu.: 43100   1st Qu.:  2.57   1st Qu.:0.906  
+##  Mode  :character   Median :111000   Median : 92.44   Median :1.113  
+##                     Mean   :219675   Mean   :187.91   Mean   :1.427  
+##                     3rd Qu.:312680   3rd Qu.:210.53   3rd Qu.:1.623  
+##                     Max.   :779450   Max.   :959.45   Max.   :3.580  
+##    BirthRate   
+##  Min.   :  59  
+##  1st Qu.: 106  
+##  Median : 124  
+##  Mean   : 371  
+##  3rd Qu.: 551  
+##  Max.   :1576</code></pre>
+<pre class="r"><code>save(storkbirths,file=&quot;storkbirths.rdata&quot;)</code></pre>
 
 
 </div>

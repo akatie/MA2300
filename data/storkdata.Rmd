@@ -9,7 +9,7 @@ output: html_document
 
 ```{r read-data}
 require(reshape2)
-raw <- read.delim("/extra/akd/MA2300/storkbirths.txt", header=FALSE, stringsAsFactors=FALSE)
+raw <- read.delim("/extra/akd/MA2300/data/storkbirths.txt", header=FALSE, stringsAsFactors=FALSE)
 raw$V2=(1:5)
 rawx=raw[6:nrow(raw),]
 ```
@@ -22,8 +22,10 @@ storkbirths=data.frame(Country=rawx$V1[rawx$V2==1],
                       BirthRate=as.numeric(rawx$V1[rawx$V2==5]),
                       stringsAsFactors=F)
 
-
+storkbirths$Storks=with(storkbirths,Storks/Area*10000)
+storkbirths$Humans=with(storkbirths,Humans/Area*10000)
 head(storkbirths)
-
+summary(storkbirths)
+save(storkbirths,file="storkbirths.rdata")
 ```
 

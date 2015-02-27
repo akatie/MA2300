@@ -175,45 +175,47 @@ print(xtable(fivestat,digits=c(0,1,2,1),caption="Summary Statistics for US Arres
 \newpage
 \section{Scatterplots}
 A \textbf{Scatterplot} of any two of the three variables shows the relationship on the same observation, in this case, State. 
-<<scatterplotsxz,echo=FALSE,comment='',fig.cap="A scatterplot of Assault Arrests vs. Proportion Urban Population does not show a relationship",fig.env="marginfigure">>=
-scp=ggplot(dsn,aes(y=Assault,x=UrbanPop,color=devxzsign))+geom_point()+
-  scale_x_continuous(name=obstext[3])+
-  scale_y_continuous(name=obstext[1])+
-  geom_hline(yintercept=hmean[1],color="green")+
-  geom_vline(xintercept=hmean[3],color="green")+
-  theme(axis.text = element_text(size=1),legend.position="none")
-print(scp)
-@
-<<scatterplotsyz,echo=FALSE,comment='',fig.cap="A scatterplot of Murder Arrests vs. Proportion Urban Population does not show a relationship",fig.env="marginfigure">>=
-scp=ggplot(dsn,aes(x=Murder,y=UrbanPop,color=devyzsign))+geom_point()+
-  scale_x_continuous(name=obstext[2])+
-  scale_y_continuous(name=obstext[3])+
-  geom_hline(yintercept=hmean[3],color="green")+
-  geom_vline(xintercept=hmean[2],color="green")+
-  theme(axis.text = element_text(size=1),legend.position="none")
-print(scp)
-@
 <<scatterplotsxy,echo=FALSE,comment='',fig.cap="A scatterplot of Assault vs. Murder Arrests shows a possible linear relationship">>=
 scp=ggplot(dsn,aes(y=Assault,x=Murder,color=devxysign))+geom_point()+
-  scale_x_continuous(name=obstext[2])+
-  scale_y_continuous(name=obstext[1])+
+    theme_igray() + 
+  scale_x_continuous(name=obstext[2],breaks=fivestat$Murder[1:6])+
+  scale_y_continuous(name=obstext[1],breaks=fivestat$Assault[1:6])+
   geom_hline(yintercept=hmean[1],color="green")+
   geom_vline(xintercept=hmean[2],color="green")+
   theme(axis.text = element_text(size=1),legend.position="none")
 print(scp)
 @
 \section{Covariance}
+<<scatterplotsxz,echo=FALSE,comment='',fig.cap="No Linear relationship",fig.env="marginfigure">>=
+scp=ggplot(dsn,aes(y=Assault,x=UrbanPop,color=devxzsign))+geom_point()+
+  theme_igray() + 
+  scale_x_continuous(name=obstext[3],breaks=fivestat$UrbanPop[1:6])+
+  scale_y_continuous(name=obstext[1],breaks=fivestat$Assault[1:6])+
+  geom_hline(yintercept=hmean[1],color="green")+
+  geom_vline(xintercept=hmean[3],color="green")+
+  theme(axis.text = element_text(size=1),legend.position="none")
+print(scp)
+@
+<<scatterplotsyz,echo=FALSE,comment='',fig.cap="No linear relationship",fig.env="marginfigure">>=
+scp=ggplot(dsn,aes(x=Murder,y=UrbanPop,color=devyzsign))+geom_point()+
+  theme_igray() + 
+  scale_x_continuous(name=obstext[2],breaks=fivestat$Murder[1:6])+
+  scale_y_continuous(name=obstext[3],breaks=fivestat$UrbanPop[1:6])+
+  geom_hline(yintercept=hmean[3],color="green")+
+  geom_vline(xintercept=hmean[2],color="green")+
+  theme(axis.text = element_text(size=1),legend.position="none")
+print(scp)
+@
 We would like to quantify the linear relationship between each of the variables. The \textbf{Covariance}, a measure of strength of the association between any two variables $X$ and $Y$, denoted $Cov(X,Y)$ is calculated by first multiplying the deviations from their means, $\dev{x}$ and $\dev{y}$, then summing over all observations and dividing by $N$, the number of observations. This is very similar to the population variance calculation, and the variance can be thought of as the covariance of a variable with itself ie. $Var(X)=Cov(X,X)$. 
 \begin{equation*}
 Cov(X,Y)=\frac{\Sigma_{i=1}^{N} Dev_{\bar{x}}Dev_{\bar{y}}}{N}
 \end{equation*}
 The Covariance of Assault Arrests with Murder Arrests is \Sexpr{covxy} "Assault Arrests x Murder Arrests". These units make very little sense. We cannot compare covariances among variables in a data set if the units are different.
 
-
 <<covariance-table-1,echo=FALSE,include=TRUE,results='asis'>>=
 maxlin=30
 dcols=c("Obs",obsname,"DeviationXY","DeviationXZ","DeviationYZ")
-dnames=c("Observation",obsname,"$\\dev{xy}$","${\\dev{xz}}$","${\\dev{xz}}$")
+dnames=c("Observation",obsname,"$\\dev{x}\\dev{y}$","$\\dev{x}\\dev{z}$","$\\dev{y}\\dev{z}$")
 tdata=orgdata[1:maxlin,dcols]
 names(tdata)=dnames
 dtable=xtable(tdata,caption = "Covariances, Part 1")
@@ -277,7 +279,12 @@ Correlations are always between $-1$ and $1$, and are a quantification of the li
 \textcircled{4} $Corr(X,Y) approaching -1$ Negative Linear Correlation\\
 \end{knitrout}
 
-The Squared value of the correlation, \Sexpr{lpercent((covxy/(stddevx*stddevy))^2)}  is a measure of the "shared variance" of two variable, and the complement \Sexpr{lpercent(1-((covxy/(stddevx*stddevy)))^2)} is the proportion of variance not explained by the association.
+The Squared value of the correlation, \Sexpr{lpercent((covxy/(stddevx*stddevy))^2)}, called the Coefficient of Determination, and noted as $R^2$ is a measure of the "shared variance" of two variable, and the complement \Sexpr{lpercent(1-((covxy/(stddevx*stddevy)))^2)} is the proportion of variance not explained by the association.
+<<venn>>=
+require(venneuler)
+vd=venneuler(c(Murder=1,Assault=1,"Murder&Assault"=((covxy/(stddevx*stddevy))^2)))
+#plot(vd)
+@
 \newpage
 \section{Covariance and Correlation Extras}
 The covariance relationship between multiple variables can be expressed in a variance-covariance matrix:
@@ -299,7 +306,6 @@ The Variance-Covariance Matrix (also referred to as the VCV or simply the Covari
   \item Factor Analysis
   \item Hierarchical Clustering
 \end{itemize}
-
 Similarly, the correlation matrix expresses all the correlations among variables.
 
 \bordermatrix{   ~ & X & Y & Z\cr
@@ -328,13 +334,14 @@ When two variables have very different distributions, two non-parametric methods
 
 When a linear correlation exists between two variables, we can explore causation using a \textbf{Simple Linear Regression}, also called Ordinary Least Squares (OLS), regressing a dependent variable, denoted $Y$, on an independent variable, denoted $X$ as a line with the form:
 \begin{equation*}
-Y=\alpha + \hat{\beta}X
+Y=\alpha + {\beta}X +{\epsilon}=\hat{\alpha} + \hat{\beta}X 
 \end{equation*}
 <<ols,fig.cap="Green regression line with prediction error, as noted in red on the chart",fig.env="marginfigure">>=
 beta=covxy/variancex
 alpha=hmean[2]-beta*hmean[1]
 dsn$mint=alpha+beta*dsn$Assault
 scp=ggplot(dsn,aes(y=Murder,x=Assault))+geom_point()+
+    theme_igray() + 
   scale_x_continuous(name=obstext[1])+
   scale_y_continuous(name=obstext[2])+
  geom_abline(intercept = alpha, slope = beta,colour="green",size=1)+
@@ -343,14 +350,13 @@ scp=ggplot(dsn,aes(y=Murder,x=Assault))+geom_point()+
 
 print(scp)
 @
-
 This is very similar to the traditional algebra formula $y=mx+b$ with slope $m$ and y-intercept $b$. In this case, the slope is $\hat{\beta}$.
 \begin{equation*}
 \hat{\beta}=\frac{Cov(X,Y)}{Var(X)}=Corr(X,Y)\frac{StdDev(Y)}{StdDev(X)}
 \end{equation*}
 Note that $\hat{\beta}$ is very close to the correlation value of $\frac{Cov(X,Y)}{StDev(X)StDev(Y)}$, but with $StDev(X)$ replacing $StDev(Y)$, to indicate the dependency of $Y$ upon $X$.
 
-For the US Arrests data set, 
+For the US Arrests data set, regressing Murder arrests on Assault arrests
 \begin{equation*}
 \hat{\beta}=\frac{\Sexpr{covxy}}{\Sexpr{variancex}}=\Sexpr{covxy/variancex}
 \end{equation*}
@@ -360,13 +366,15 @@ The linear regression always goes through the point $(\bar{x},\bar{y})$, so retu
 \hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}
 \end{equation*}
 
-The predicted value for any $y_i$ is $\hat{y_i}$, and the prediction error is $\hat{\epsilon}=y_i - \hat{y_i}$.
+$\hat{\alpha}=\Sexpr{alpha}$ for our regression.
+
+The predicted value for any $y_i$ is $\hat{y_i}$, and the prediction error is $\hat{\epsilon}_i=y_i - \hat{y_i}$.
 
 Some properties of the Simple Linear Regression:
 \begin{itemize}
-  \item $\Sigma_{i=1}^{N} \hat{\epsilon}=0 $
-  \item $\Sigma_{i=1}^{N} x_i \hat{\epsilon}=0 $
-  \item The predicted values $\hat{y_i}$ minimize the sum of the squared prediction errors, $\Sigma_{i=1}^{N} \hat{\epsilon}^2$, often referred to as Sum Squared Errors, or SSE.
+  \item $\Sigma_{i=1}^{N} \hat{\epsilon}_i=0 $
+  \item $\Sigma_{i=1}^{N} x_i \hat{\epsilon}_i=0 $
+  \item The predicted values $\hat{y_i}$ minimize the sum of the squared prediction errors, $\Sigma_{i=1}^{N} \hat{\epsilon}_i^2$, often referred to as Sum Squared Errors, or SSE.
   \item The regression equation is valid to predict $\hat{y}$ values in the range of X, that is, on the interval (min(X),max(X)), and any prediction will be in the range of (min(Y),max(Y))
 \end{itemize}
 

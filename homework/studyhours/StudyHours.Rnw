@@ -1,0 +1,310 @@
+\documentclass[nohyper,justified]{tufte-handout}
+\usepackage{mathtools}
+%%\usepackage{marginnote}
+%%\usepackage[top=1in, bottom=1in, outer=5.5in, inner=1in, heightrounded, marginparwidth=1in, marginparsep=1in]{geometry}
+\usepackage{enumerate}
+%% mess with the fonts
+%%\usepackage{fontspec}
+%%\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% For package xtable
+\usepackage{booktabs}  % Nice toprules and bottomrules
+\heavyrulewidth=1.5pt  % Change the default to heavier lines
+\usepackage{longtable} 
+%%\usepackage{tabularx}  % To control the width of the table
+
+% this should make caption font bold.
+%%\usepackage{xstring}
+%%\usepackage{etoolbox}
+
+%%\usepackage{url}
+
+%% xetex only \usepackage{breakurl}
+\usepackage{float} % for fig.pos='H'
+%%\usepackage{wrapfig}
+%%\usepackage{tikz}
+
+
+\usepackage{colortbl,xcolor}
+\makeatletter
+% Paragraph indentation and separation for normal text
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{0pc}%
+  \setlength{\JustifyingParindent}{0pc}%
+  \setlength{\parindent}{0pc}%
+  \setlength{\parskip}{3pt}%
+}
+\@tufte@reset@par
+
+% Paragraph indentation and separation for marginal text
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0pc}%
+  \setlength{\JustifyingParindent}{0pc}%
+  \setlength{\parindent}{0pc}%
+  \setlength{\parskip}{2pt}%
+}
+\makeatother
+\makeatletter
+\title{Descriptive Statistics -- Associations}
+\author{Kate Davis}
+\makeatother
+
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
+
+\begin{document}
+\widowpenalty=10000 
+\clubpenalty=10000
+<<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
+library(knitr)
+options(formatR.arrow=TRUE,width=50)
+opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='pdf', fig.width=5, fig.height=5,  cache=FALSE,comment="",message=FALSE,echo=FALSE,warnings=FALSE,errors=FALSE)
+knit_hooks$set(crop=hook_pdfcrop)
+## ---- latex-functions ---- 
+lcurrency<-function(incur) {
+  #  gsub("$","\\\\$",currfmt(incur))
+  currfmt(incur)
+}
+rpercent<-function(inval){
+  percent(ceil(inval*100)/100)
+}
+lpercent<-function(inval) {
+  gsub("%","\\\\%",percent(inval))
+  #  percent(inval)
+}
+ltext<-function(inval) {
+  xval=gsub("%","\\\\%",percent(inval))
+  xval=gsub("&","\\\\&",percent(inval))
+}
+ldate<-function(indate){
+  gsub(" 0"," ",format(indate,"%B %d, %Y"))
+}
+lmname<-function(indate){
+  format(indate,"%B %Y")
+}
+ltable<-function(t,...){
+  ltable=xtable(t,latex.environments='width=1.2\\textwidth,center',...)
+}
+ltableprint<-function(t,...){
+  print( t, floating=TRUE, booktabs=TRUE, table.placement='h!',...)
+}
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)}
+
+
+@
+
+<<data,include=FALSE,cache=FALSE,echo=FALSE>>=
+require(plyr)
+require(reshape2)
+require(xtable)
+require(ggplot2)
+require(ggthemes)
+require(scales)
+studyhours=c(6, 2, 1, 5, 3, 2)
+
+examgrade=c(82,63,57,88,68,75)
+dsn=data.frame(studyhours,examgrade)
+rownames(dsn)=toupper(letters[1:6])
+obsname=c("examgrade","studyhours")
+obstext=c("Exam Grade","Hours Studied")
+#cc=c("Observation","Hours","Grade")
+
+ofmt="%4.1f"
+xround=function(x){round(x,1)}
+yround=function(x){round(x,1)}
+#ofmt="%d"
+Answers=TRUE
+#dsn$Candies=with(dsn,Red+Green+Blue+Orange+Yellow+Brown)
+Nobs=nrow(dsn)
+dsn$Observation=(1:Nobs)
+hsum=as.matrix(sapply(dsn[,obsname],sum))
+fivestat=as.data.frame(sapply(dsn[,obsname],summary))
+fivestat[,1]=sapply(fivestat[,1],xround)
+fivestat[,2]=sapply(fivestat[,2],yround)
+hmin=as.matrix(fivestat[1,])
+hmax=as.matrix(fivestat[6,])
+hrange=hmax-hmin
+hmean=as.matrix(fivestat[4,])
+dsn$DeviationX=dsn[,obsname[1]]-hmean[1]
+dsn$DeviationY=dsn[,obsname[2]]-hmean[2]
+dsn$DeviationXSq=xround(with(dsn,DeviationX^2))
+dsn$DeviationYSq=xround(with(dsn,DeviationY^2))
+dsn$DeviationXY=xround(with(dsn,DeviationX*DeviationY))
+dsn$Obs=row.names(dsn)
+#orgdata$DeviationSign[orgdata$Deviation<=0]="Negative"
+sumDevxy=sum(dsn$DeviationXY)
+covxy=xround(sumDevxy/Nobs)
+dsn$devxysign=ifelse(sign(dsn$DeviationXY)==-1,"blue","yellow")
+sumDevx=sum(dsn$DeviationXSq)
+variancex=xround(sumDevx/Nobs)
+stddevx=xround(variancex^0.5)
+sumDevy=sum(dsn$DeviationYSq)
+variancey=yround(sumDevy/Nobs)
+stddevy=yround(variancey^0.5)
+corrxy=covxy/(stddevx*stddevy)
+rsquared=corrxy^2
+fivestat[7,]=c(sumDevx,sumDevy)
+fivestat[8,]=c(variancex,variancey)
+fivestat[9,]=c(stddevx,stddevy)
+fsr=row.names(fivestat)
+fsr[7]="Sum Sq Deviation"
+fsr[8]="Variance"
+fsr[9]="Standard Deviation"
+row.names(fivestat)=fsr
+orgdata=dsn #[order(dsn[,obsname]),]
+@
+\section{Association of Hours Studied to Exam Grade}
+Six students enrolled in a reading section of organic chemistry are preparing for their first exam. How are the hours each student studied and their exam grade associated?
+
+\section{Scatterplot}
+A \textbf{Scatterplot} of exam grade by hours studied variables shows the relationship on the same observation, in this case, student. 
+<<scatterplotsxy,echo=FALSE,comment='',fig.cap="A scatterplot of Hours Studied v Exam Grade shows a possible linear relationship">>=
+scp=ggplot(dsn,aes_string(y=obsname[1],x=obsname[2],color="devxysign"))+geom_point()+
+    theme_igray() + 
+  scale_x_continuous(name=obstext[2],breaks=fivestat[1:6,obsname[1]])+
+  scale_y_continuous(name=obstext[1],breaks=fivestat[1:6,obsname[2]])+
+  geom_hline(yintercept=hmean[1],color="green")+
+  geom_vline(xintercept=hmean[2],color="green")+
+  theme(axis.text = element_text(size=1),legend.position="none")
+print(scp)
+@
+
+
+
+<<basic-stats,comment="",results='asis'>>=
+print(xtable(fivestat,digits=c(0,1,1),caption="Summary Statistics Hours Studied and Grades"))
+@
+
+<<covariance-table-1,echo=FALSE,include=TRUE,results='asis'>>=
+dcols=c(obsname,"DeviationX","DeviationY")
+dnames=c(obstext,"$\\dev{x} hours$","$\\dev{y} grade$")
+ncols=length(dcols)
+tdata=orgdata[,dcols]
+names(tdata)=dnames
+dtable=xtable(tdata,caption = "")
+rws <- seq(1, (nrow(tdata)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+align(dtable)=paste0("r",paste0(rep("p{1.5cm}",length(dcols)),collapse=""))
+#digits(dtable)=rep(0,0,0,length(dcols)-1)
+digits(dtable)=c(0,0,0,1,1)
+tt=capture.output(print(dtable,include.rownames=T, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
+endrow=which(tt=="\\end{tabular}")
+ltt=length(tt)
+saveend=tt[endrow:ltt]
+xfmt=(paste0("Total ",paste0(rep(paste0("& ",ofmt),ncols),collapse=""),"  \\\\ "))
+  tt[endrow]=sprintf(xfmt,hsum[1],hsum[2],0,0)
+xfmt=sprintf("\\rowcolor[gray]{0.95}Total/N &  $\\bar{x}=%s$ & $\\bar{y}=%s$ &%s & %s  \\\\ ",ofmt,ofmt,ofmt,ofmt,ofmt)
+ tt[endrow+1]=sprintf(xfmt,stddevx,stddevy,0,0)
+tt[(endrow+2):(endrow+2+length(saveend)-1)]=saveend
+cat(tt, sep = "\n")
+
+@
+<<covariance-table-2,echo=FALSE,include=TRUE,results='asis'>>=
+dcols=c(obsname,"DeviationXSq","DeviationYSq","DeviationXY")
+dnames=c(obstext,"$(\\dev{x})^2$","$(\\dev{y})^2$","$\\dev{x}\\dev{y} hours grade $")
+
+tdata=orgdata[,dcols]
+names(tdata)=dnames
+dtable=xtable(tdata,caption = "")
+rws <- seq(1, (nrow(tdata)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+align(dtable)=paste0(paste0(rep("p{1.5cm}",length(dcols)+1),collapse=""))
+digits(dtable)=rep(1,length(dcols)+1)
+
+tt=capture.output(print(dtable,include.rownames=T, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
+endrow=which(tt=="\\end{tabular}")
+ltt=length(tt)
+saveend=tt[endrow:ltt]
+xfmt=(paste0("& & Total ",paste0(rep(paste0("& ",ofmt),ncols-1),collapse=""),"  \\\\ "))
+  tt[endrow]=sprintf(xfmt,sumDevx,sumDevy,sumDevxy)
+xfmt=sprintf("\\rowcolor[gray]{0.95}& & Total/N  &  $Var(X)=%s$ & $Var(Y)=%s$ & $Cov(X,Y)=%s$   \\\\ ",ofmt,ofmt,ofmt)
+ tt[endrow+1]=sprintf(xfmt,variancex,variancey,covxy)
+xfmt=sprintf(" & & StdDev &  $\\sqrt{Var(X)}=%s$ & $\\sqrt{Var(Y)}=%s$ & \\\\ ",ofmt,ofmt)
+ tt[endrow+2]=sprintf(xfmt,hmean[1],hmean[2],0,0,covxy)
+tt[(endrow+3):(endrow+3+length(saveend)-1)]=saveend
+cat(tt, sep = "\n")
+
+@
+
+\section{Covariance}
+ The \textbf{Covariance}, a measure of strength of the association between any two variables $X$ and $Y$, denoted $Cov(X,Y)$ is calculated by first multiplying the deviations from their means, $\dev{x}$ and $\dev{y}$, then summing over all observations and dividing by $N$, the number of observations. This is very similar to the population variance calculation, and the variance can be thought of as the covariance of a variable with itself ie. $Var(X)=Cov(X,X)$. 
+\begin{equation*}
+Cov(X,Y)=\frac{\Sigma_{i=1}^{N} Dev_{\bar{x}}Dev_{\bar{y}}}{N}
+\end{equation*}
+The Covariance of Hours Studied with Exam Grade is \Sexpr{covxy} "Hours x Grade". These units make very little sense. We cannot compare covariances among variables in a data set if the units are different.
+
+\section{Linear Correlation}
+
+A standardized Covariance is the \textbf{Linear Correlation}, calculated by dividing each Covariance by the Standard Deviations of each of the variables:
+
+\begin{equation*}
+Corr(X,Y)=\frac{Cov(Y,X)}{(StdDev(X)StdDev(Y))}
+\end{equation*}
+
+The Correlation of Hours Studied with Exam Grade is \Sexpr{covxy/(stddevx*stddevy)} with \textbf{no units}, so the correlations of multiple pairs of variables can be compared.
+
+Correlations are always between $-1$ and $1$, and are a quantification of the linear relationship between two variables. A correlation of zero means that there is linear relationship between two variables, although there may be a non-linear relationship. A correlation of $1$ or $-1$ is indicates a perfect positive or negative linear relationship. $Corr(X,X)=1$ always.
+
+\textbf{Correlation does not imply Causation!} Even if two variables have a high or perfect correlation, there is not necessarily causation. Causation means X depends on Y or Y depends on X. 
+
+The Squared value of the correlation, \Sexpr{lpercent(rsquared)}, called the Coefficient of Determination, and noted as $R^2$ is a measure of the "shared variance" of two variable, and the complement \Sexpr{lpercent(1-rsquared)} is the proportion of variance not explained by the association.
+
+\section{Simple Linear Regression}
+
+When a linear correlation exists between two variables, we can explore causation using a \textbf{Simple Linear Regression}, also called Ordinary Least Squares (OLS), regressing a dependent variable, denoted $Y$, on an independent variable, denoted $X$ as a line with the form:
+\begin{equation*}
+Y=\alpha + {\beta}X +{\epsilon}
+\hat{Y}={\alpha} + {\beta}X 
+\end{equation*}
+<<ols,fig.cap="Green regression line with prediction error, as noted in red on the chart",fig.env="marginfigure">>=
+beta=round(covxy/variancex,2)
+alpha=round(hmean[2]-beta*hmean[1],2)
+dsn$mint=alpha+beta*dsn[,obsname[2]]
+scp=ggplot(dsn,aes(y=examgrade,x=studyhours))+geom_point()+
+    theme_igray() + 
+  scale_x_continuous(name=obstext[1])+
+  scale_y_continuous(name=obstext[2])+
+ geom_abline(intercept = alpha, slope = beta,colour="green",size=1)
+print(scp)
+@
+This is very similar to the traditional algebra formula $y=mx+b$ with slope $m$ and y-intercept $b$. In this case, the slope is ${\beta}$.
+\begin{equation*}
+{\beta}=\frac{Cov(X,Y)}{Var(X)}=Corr(X,Y)\frac{StdDev(Y)}{StdDev(X)}
+\end{equation*}
+
+Regressing exam grade on hours studied
+\begin{equation*}
+{\beta}=\frac{\Sexpr{covxy}}{\Sexpr{variancex}}=\Sexpr{beta}
+\end{equation*}
+
+The linear regression always goes through the point $(\bar{x},\bar{y})$, so returning to algebra, any point plus the slope determines the line:
+\begin{equation*}
+{\alpha}=\bar{y}-{\beta}\bar{x}
+\end{equation*}
+
+$\hat{\alpha}=\Sexpr{alpha}$ for our regression.
+
+So,
+\begin{equation*}
+\hat{y}=\Sexpr{alpha} +\Sexpr{beta}\bar{x}
+\end{equation*}
+
+
+
+The predicted value for any $y_i$ is $\hat{y_i}$, and the prediction error is $\hat{\epsilon}_i=y_i - \hat{y_i}$.
+
+Some properties of the Simple Linear Regression:
+\begin{itemize}
+  \item $\Sigma_{i=1}^{N} \hat{\epsilon}_i=0 $
+  \item $\Sigma_{i=1}^{N} x_i \hat{\epsilon}_i=0 $
+  \item The predicted values $\hat{y_i}$ minimize the sum of the squared prediction errors, $\Sigma_{i=1}^{N} \hat{\epsilon}_i^2$, often referred to as Sum Squared Errors, or SSE.
+  \item The regression equation is valid to predict $\hat{y}$ values in the range of X, that is, on the interval (min(X),max(X)), and any prediction will be in the range of (min(Y),max(Y))
+\end{itemize}
+
+
+
+\end{document}

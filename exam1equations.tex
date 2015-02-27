@@ -1,0 +1,97 @@
+\documentclass[addpoints,12pt]{exam}
+\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+
+\usepackage{alltt}
+\usepackage{mathtools}
+%%\usepackage{marginnote}
+%%\usepackage[top=1in, bottom=1in, outer=5.5in, inner=1in, heightrounded, marginparwidth=1in, marginparsep=1in]{geometry}
+\usepackage{enumerate}
+%% mess with the fonts
+%%\usepackage{fontspec}
+%%\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% For package xtable
+\usepackage{booktabs}  % Nice toprules and bottomrules
+\heavyrulewidth=1.5pt  % Change the default to heavier lines
+\usepackage{longtable} 
+%%\usepackage{tabularx}  % To control the width of the table
+% this should make caption font bold.
+%%\usepackage{xstring}
+%%\usepackage{etoolbox}
+%%\usepackage{url}
+%% xetex only \usepackage{breakurl}
+\usepackage{float} % for fig.pos='H'
+%%\usepackage{wrapfig}
+%%\usepackage{tikz}
+\usepackage{colortbl,xcolor}
+
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
+
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\header{Math 2300 Section 2}{Equations 1}{February 27, 2015}
+\section{Measures of Center}
+Mean
+\begin{equation*}
+\bar{x}=\frac{\sum\limits_{i=1}^{N} x_i }{N} 
+\end{equation*}
+\section{Measures of Spread}
+Deviation
+\begin{equation*}
+Dev_{\bar{x}}=(x_i-\bar{x}) 
+\end{equation*}
+\begin{equation*}
+Dev_{\bar{x}}^2=(x_i-\bar{x})^2 
+\end{equation*}
+Variance
+\begin{multline*}
+Var(X)=\frac{\sum_{i=1}^{N} Dev_{\bar{x}}^2}{N}=\frac{\sum_{i=1}^{N} (x_i-\bar{x})^2}{N}
+\end{multline*}
+Standard Deviation
+\begin{equation*}
+StdDev(X)=\sqrt{Var(X)} 
+\end{equation*}
+\section{Measures of Association}
+Covariance
+\begin{equation*}
+Cov(X,Y)=\frac{\Sigma_{i=1}^{N} Dev_{\bar{x}}Dev_{\bar{y}}}{N}
+\end{equation*}
+Correlation
+\begin{equation*}
+Corr(X,Y)=\frac{Cov(Y,X)}{(StdDev(X)StdDev(Y))}
+\end{equation*}
+Regression Equation
+\begin{equation*}
+Y=\alpha + \beta X + \epsilon
+\end{equation*}
+\begin{equation*}
+{\beta}=\frac{Cov(X,Y)}{Var(X)}=Corr(X,Y)\frac{StdDev(Y)}{StdDev(X)}
+\end{equation*}
+\begin{equation*}
+{\alpha}=\bar{y}-{\beta}\bar{x}
+\end{equation*}
+\end{document}

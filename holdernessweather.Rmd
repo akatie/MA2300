@@ -1,0 +1,20 @@
+---
+title: "Holderness Weather Station"
+author: "Kate Davis"
+date: "2/26/2015"
+output: html_document
+---
+
+```{r}
+require(curl)
+url="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KNHHOLDE2&day=17&month=2&year=2015&dayend=24&monthend=2&yearend=2015&graphspan=custom&format=1"
+data=read.table(url)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

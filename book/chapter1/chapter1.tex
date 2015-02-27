@@ -117,7 +117,7 @@ This data set contains statistics, in arrests per 100,000 residents for assault 
 
 
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Feb 13 02:14:45 2015
+% Fri Feb 13 10:57:03 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrr}
@@ -142,30 +142,6 @@ Min. & 45.0 & 0.80 & 32.0 \\
 \section{Scatterplots}
 A \textbf{Scatterplot} of any two of the three variables shows the relationship on the same observation, in this case, State. 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{marginfigure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-scatterplotsxz-1} 
-
-}
-
-\caption[A scatterplot of Assault Arrests vs]{A scatterplot of Assault Arrests vs. Proportion Urban Population does not show a relationship}\label{fig:scatterplotsxz}
-\end{marginfigure}
-
-
-\end{knitrout}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{marginfigure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/graphics-scatterplotsyz-1} 
-
-}
-
-\caption[A scatterplot of Murder Arrests vs]{A scatterplot of Murder Arrests vs. Proportion Urban Population does not show a relationship}\label{fig:scatterplotsyz}
-\end{marginfigure}
-
-
-\end{knitrout}
-\begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
 
 {\centering \includegraphics[width=\maxwidth]{figure/graphics-scatterplotsxy-1} 
@@ -178,20 +154,43 @@ A \textbf{Scatterplot} of any two of the three variables shows the relationship 
 
 \end{knitrout}
 \section{Covariance}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{marginfigure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-scatterplotsxz-1} 
+
+}
+
+\caption[No Linear relationship]{No Linear relationship}\label{fig:scatterplotsxz}
+\end{marginfigure}
+
+
+\end{knitrout}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{marginfigure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/graphics-scatterplotsyz-1} 
+
+}
+
+\caption[No linear relationship]{No linear relationship}\label{fig:scatterplotsyz}
+\end{marginfigure}
+
+
+\end{knitrout}
 We would like to quantify the linear relationship between each of the variables. The \textbf{Covariance}, a measure of strength of the association between any two variables $X$ and $Y$, denoted $Cov(X,Y)$ is calculated by first multiplying the deviations from their means, $\dev{x}$ and $\dev{y}$, then summing over all observations and dividing by $N$, the number of observations. This is very similar to the population variance calculation, and the variance can be thought of as the covariance of a variable with itself ie. $Var(X)=Cov(X,X)$. 
 \begin{equation*}
 Cov(X,Y)=\frac{\Sigma_{i=1}^{N} Dev_{\bar{x}}Dev_{\bar{y}}}{N}
 \end{equation*}
 The Covariance of Assault Arrests with Murder Arrests is 285.2416 "Assault Arrests x Murder Arrests". These units make very little sense. We cannot compare covariances among variables in a data set if the units are different.
 
-
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Feb 13 02:14:45 2015
+% Fri Feb 13 10:57:04 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrrr}
   \toprule
-Observation & Assault & Murder & UrbanPop & $\dev{xy}$ & ${\dev{xz}}$ & ${\dev{xz}}$ \\ 
+Observation & Assault & Murder & UrbanPop & $\dev{x}\dev{y}$ & $\dev{x}\dev{z}$ & $\dev{y}\dev{z}$ \\ 
   \midrule
 Alabama & 236 & 13.20 &  58 & 351.65 & -487.50 & -40.57 \\ 
    \rowcolor[gray]{0.95}Alaska & 263 & 10.00 &  48 & 203.32 & -1610.00 & -38.67 \\ 
@@ -231,7 +230,7 @@ Alabama & 236 & 13.20 &  58 & 351.65 & -487.50 & -40.57 \\
 
 \newpage
 % latex table generated in R 3.1.2 by xtable 1.7-4 package
-% Fri Feb 13 02:14:45 2015
+% Fri Feb 13 10:57:04 2015
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrrrrr}
@@ -294,7 +293,8 @@ Correlations are always between $-1$ and $1$, and are a quantification of the li
 \textcircled{4} $Corr(X,Y) approaching -1$ Negative Linear Correlation\\
 \end{knitrout}
 
-The Squared value of the correlation, 64.3\%  is a measure of the "shared variance" of two variable, and the complement 35.7\% is the proportion of variance not explained by the association.
+The Squared value of the correlation, 64.3\%, called the Coefficient of Determination, and noted as $R^2$ is a measure of the "shared variance" of two variable, and the complement 35.7\% is the proportion of variance not explained by the association.
+
 \newpage
 \section{Covariance and Correlation Extras}
 The covariance relationship between multiple variables can be expressed in a variance-covariance matrix:
@@ -316,7 +316,6 @@ The Variance-Covariance Matrix (also referred to as the VCV or simply the Covari
   \item Factor Analysis
   \item Hierarchical Clustering
 \end{itemize}
-
 Similarly, the correlation matrix expresses all the correlations among variables.
 
 \bordermatrix{   ~ & X & Y & Z\cr
@@ -353,7 +352,7 @@ When two variables have very different distributions, two non-parametric methods
 
 When a linear correlation exists between two variables, we can explore causation using a \textbf{Simple Linear Regression}, also called Ordinary Least Squares (OLS), regressing a dependent variable, denoted $Y$, on an independent variable, denoted $X$ as a line with the form:
 \begin{equation*}
-Y=\alpha + \hat{\beta}X
+Y=\alpha + {\beta}X +{\epsilon}=\hat{\alpha} + \hat{\beta}X 
 \end{equation*}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{marginfigure}
@@ -367,14 +366,13 @@ Y=\alpha + \hat{\beta}X
 
 
 \end{knitrout}
-
 This is very similar to the traditional algebra formula $y=mx+b$ with slope $m$ and y-intercept $b$. In this case, the slope is $\hat{\beta}$.
 \begin{equation*}
 \hat{\beta}=\frac{Cov(X,Y)}{Var(X)}=Corr(X,Y)\frac{StdDev(Y)}{StdDev(X)}
 \end{equation*}
 Note that $\hat{\beta}$ is very close to the correlation value of $\frac{Cov(X,Y)}{StDev(X)StDev(Y)}$, but with $StDev(X)$ replacing $StDev(Y)$, to indicate the dependency of $Y$ upon $X$.
 
-For the US Arrests data set, 
+For the US Arrests data set, regressing Murder arrests on Assault arrests
 \begin{equation*}
 \hat{\beta}=\frac{285.2416}{6806.32}=0.04191
 \end{equation*}
@@ -384,13 +382,15 @@ The linear regression always goes through the point $(\bar{x},\bar{y})$, so retu
 \hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}
 \end{equation*}
 
-The predicted value for any $y_i$ is $\hat{y_i}$, and the prediction error is $\hat{\epsilon}=y_i - \hat{y_i}$.
+$\hat{\alpha}=0.62367$ for our regression.
+
+The predicted value for any $y_i$ is $\hat{y_i}$, and the prediction error is $\hat{\epsilon}_i=y_i - \hat{y_i}$.
 
 Some properties of the Simple Linear Regression:
 \begin{itemize}
-  \item $\Sigma_{i=1}^{N} \hat{\epsilon}=0 $
-  \item $\Sigma_{i=1}^{N} x_i \hat{\epsilon}=0 $
-  \item The predicted values $\hat{y_i}$ minimize the sum of the squared prediction errors, $\Sigma_{i=1}^{N} \hat{\epsilon}^2$, often referred to as Sum Squared Errors, or SSE.
+  \item $\Sigma_{i=1}^{N} \hat{\epsilon}_i=0 $
+  \item $\Sigma_{i=1}^{N} x_i \hat{\epsilon}_i=0 $
+  \item The predicted values $\hat{y_i}$ minimize the sum of the squared prediction errors, $\Sigma_{i=1}^{N} \hat{\epsilon}_i^2$, often referred to as Sum Squared Errors, or SSE.
   \item The regression equation is valid to predict $\hat{y}$ values in the range of X, that is, on the interval (min(X),max(X)), and any prediction will be in the range of (min(Y),max(Y))
 \end{itemize}
 

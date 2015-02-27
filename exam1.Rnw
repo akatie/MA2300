@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+\usepackage{mathtools}
+%%\usepackage{marginnote}
+%%\usepackage[top=1in, bottom=1in, outer=5.5in, inner=1in, heightrounded, marginparwidth=1in, marginparsep=1in]{geometry}
+\usepackage{enumerate}
+%% mess with the fonts
+%%\usepackage{fontspec}
+%%\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% For package xtable
+\usepackage{booktabs}  % Nice toprules and bottomrules
+\heavyrulewidth=1.5pt  % Change the default to heavier lines
+\usepackage{longtable} 
+%%\usepackage{tabularx}  % To control the width of the table
+% this should make caption font bold.
+%%\usepackage{xstring}
+%%\usepackage{etoolbox}
+%%\usepackage{url}
+%% xetex only \usepackage{breakurl}
+\usepackage{float} % for fig.pos='H'
+%%\usepackage{wrapfig}
+%%\usepackage{tikz}
+\usepackage{colortbl,xcolor}
+
+\newcommand{\dev}[1] {Dev_{\bar{#1}}}
+<<setup, include=FALSE, cache=FALSE,echo=FALSE>>=
+library(knitr)
+options(formatR.arrow=TRUE,width=50)
+opts_chunk$set(fig.path='figure/graphics-', cache.path='cache/graphics-', fig.align='center', dev='pdf', fig.width=5, fig.height=5,  cache=FALSE,comment="",message=FALSE,echo=FALSE,warnings=FALSE,errors=FALSE)
+knit_hooks$set(crop=hook_pdfcrop)
+## ---- latex-functions ---- 
+lcurrency<-function(incur) {
+  #  gsub("$","\\\\$",currfmt(incur))
+  currfmt(incur)
+}
+rpercent<-function(inval){
+  percent(ceil(inval*100)/100)
+}
+lpercent<-function(inval) {
+  gsub("%","\\\\%",percent(inval))
+  #  percent(inval)
+}
+ltext<-function(inval) {
+  xval=gsub("%","\\\\%",percent(inval))
+  xval=gsub("&","\\\\&",percent(inval))
+}
+ldate<-function(indate){
+  gsub(" 0"," ",format(indate,"%B %d, %Y"))
+}
+lmname<-function(indate){
+  format(indate,"%B %Y")
+}
+ltable<-function(t,...){
+  ltable=xtable(t,latex.environments='width=1.2\\textwidth,center',...)
+}
+ltableprint<-function(t,...){
+  print( t, floating=TRUE, booktabs=TRUE, table.placement='h!',...)
+}
+g_legend<-function(a.gplot){
+  tmp <- ggplot_gtable(ggplot_build(a.gplot))
+  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
+  legend <- tmp$grobs[[leg]]
+  return(legend)}
+
+
+@
+
+<<icecreamdata,echo=F,include=F>>=
+icecreamsales <- read.table("/extra/akd/MA2300/data/icecreamsales", header=TRUE, quote="\"", stringsAsFactors=FALSE)
+icecreamsales=icecreamsales[order(icecreamsales$Temp),]
+
+require(plyr)
+require(reshape2)
+require(xtable)
+require(ggplot2)
+require(ggthemes)
+require(scales)
+
+@
+
+<<icecreamxdata,include=FALSE,cache=FALSE,echo=FALSE>>=
+dsn=icecreamsales[1:10,]
+obsname=c("Sales","Temp")
+obstext=c("Sales","Temp deg F")
+#cc=c("Observation","Hours","Grade")
+@
+<<weather>>=
+obsname=c("TemperatureF", "DewpointF", "PressureIn", "WindSpeedMPH")
+obstext=obsname #c("Sales","Temp deg F")
+dsn=weather
+@
+<<data>>=
+ofmt="%4.1f"
+xround=function(x){round(x,1)}
+yround=function(x){round(x,1)}
+#ofmt="%d"
+Answers=TRUE
+Nobs=nrow(dsn)
+dsn$Observation=(1:Nobs)
+hsum=as.matrix(sapply(dsn[,obsname],sum))
+fivestat=as.data.frame(sapply(dsn[,obsname],summary))
+fivestat[,1]=sapply(fivestat[,1],xround)
+fivestat[,2]=sapply(fivestat[,2],yround)
+hmin=as.matrix(fivestat[1,])
+hmax=as.matrix(fivestat[6,])
+hrange=hmax-hmin
+hmean=as.matrix(fivestat[4,])
+dsn$DeviationX=dsn[,obsname[1]]-hmean[1]
+dsn$DeviationY=dsn[,obsname[2]]-hmean[2]
+dsn$DeviationXSq=xround(with(dsn,DeviationX^2))
+dsn$DeviationYSq=xround(with(dsn,DeviationY^2))
+dsn$DeviationXY=xround(with(dsn,DeviationX*DeviationY))
+dsn$Obs=row.names(dsn)
+#orgdata$DeviationSign[orgdata$Deviation<=0]="Negative"
+sumDevxy=sum(dsn$DeviationXY)
+covxy=xround(sumDevxy/Nobs)
+dsn$devxysign=ifelse(sign(dsn$DeviationXY)==-1,"blue","yellow")
+sumDevx=sum(dsn$DeviationXSq)
+variancex=xround(sumDevx/Nobs)
+stddevx=xround(variancex^0.5)
+sumDevy=sum(dsn$DeviationYSq)
+variancey=yround(sumDevy/Nobs)
+stddevy=yround(variancey^0.5)
+corrxy=covxy/(stddevx*stddevy)
+rsquared=corrxy^2
+fivestat[7,]=c(sumDevx,sumDevy)
+fivestat[8,]=c(variancex,variancey)
+fivestat[9,]=c(stddevx,stddevy)
+fsr=row.names(fivestat)
+fsr[7]="Sum Sq Deviation"
+fsr[8]="Variance"
+fsr[9]="Standard Deviation"
+row.names(fivestat)=fsr
+orgdata=dsn #[order(dsn[,obsname]),]
+@
+\begin{document}
+
+\section{Ice Cream Sales and Temperature}
+An ice cream stand opened for the season in June. For each of the first ten days, the daily high temperature in \textdegree F was recorded with the daily sales in dollars.
+
+<<covariance-table,echo=FALSE,include=TRUE,results='asis'>>=
+dcols=c(rev(obsname),"DeviationX","DeviationY")
+dnames=c(rev(obstext),"$\\dev{x}$","$\\dev{y}$")
+dcols=c(dcols,"DeviationXSq","DeviationYSq","DeviationXY")
+dnames=c(dnames,"$(\\dev{x})^2$","$(\\dev{y})^2$","$\\dev{x}\\dev{y}$")
+ncols=length(dcols)
+tdata=orgdata[,dcols]
+names(tdata)=dnames
+dtable=xtable(tdata,caption = "")
+rws <- seq(1, (nrow(tdata)-1), by = 2)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+#align(dtable)=paste0("r",paste0(rep("p{1.5cm}",length(dcols)),collapse=""))
+#digits(dtable)=rep(0,0,0,length(dcols)-1)
+#digits(dtable)=c(0,0,1,1,1,1,1)
+tt=capture.output(print(dtable,include.rownames=T, booktabs = TRUE, add.to.row = list(pos = as.list(rws), command = col),sanitize.text.function=function(x){x}))
+endrow=which(tt=="\\end{tabular}")
+ltt=length(tt)
+saveend=tt[endrow:ltt]
+xfmt=(paste0("Total ",paste0(rep(paste0("& ",ofmt),ncols),collapse=""),"  \\\\ "))
+  tt[endrow]=sprintf(xfmt,hsum[1],hsum[2],0,0,sumDevx,sumDevy,sumDevxy)
+
+xfmt=("\\rowcolor[gray]{0.95}& & Total/N  &  $Var(X)=$ & $Var(Y)=$ & $Cov(X,Y)=$   \\\\ ")
+ tt[endrow+1]=xfmt #sprintf(xfmt,variancex,variancey,covxy)
+xfmt=" & & StdDev &   &  & \\\\ "
+ tt[endrow+2]=xfmt #sprintf(xfmt,hmean[1],hmean[2],0,0,covxy)
+tt[(endrow+3):(endrow+3+length(saveend)-1)]=saveend
+cat(tt, sep = "\n")
+
+@
+
+<<ols,fig.cap="Green regression line with prediction error, as noted in red on the chart">>=
+beta=round(covxy/variancex,2)
+alpha=round(hmean[2]-beta*hmean[1],2)
+dsn$mint=alpha+beta*dsn[,obsname[2]]
+scp=ggplot(dsn[1:10,],aes(y=Sales,x=Temp))+geom_point()+
+    theme_igray() + 
+  scale_x_continuous(name=obstext[2])+
+  scale_y_continuous(name=obstext[1])
+print(scp)
+@
+
+<<extradays,include=FALSE,echo=F>>=
+dsn=icecreamsales[11:18,]
+@
+
+
+\end{document}
