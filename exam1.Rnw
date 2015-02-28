@@ -80,7 +80,7 @@ require(scales)
 @
 
 <<icecreamxdata,include=FALSE,cache=FALSE,echo=FALSE>>=
-dsn=icecreamsales[1:10,]
+dsn=icecreamsales[11:18,]
 obsname=c("Sales","Temp")
 obstext=c("Sales","Temp deg F")
 #cc=c("Observation","Hours","Grade")
@@ -125,8 +125,8 @@ stddevy=yround(variancey^0.5)
 corrxy=covxy/(stddevx*stddevy)
 rsquared=corrxy^2
 fivestat[7,]=c(sumDevx,sumDevy)
-fivestat[8,]=c(variancex,variancey)
-fivestat[9,]=c(stddevx,stddevy)
+fivestat[8,]=diag(cov(dsn[,obsname]))*(Nobs-1)/Nobs
+fivestat[9,]=sqrt(fivestat[8,])
 fsr=row.names(fivestat)
 fsr[7]="Sum Sq Deviation"
 fsr[8]="Variance"
